@@ -1,0 +1,45 @@
+{
+  "name": "vie-react",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier \"**/*.{js,jsx,json,md}\" --check",
+    "prettier:write": "prettier \"**/*.{js,jsx,json,md}\" --write"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "formik": "^2.2.9",
+    "next": "^12.3.4",
+    "react": "17.0.2",
+    "react-circular-progressbar": "^2.0.4",
+    "react-countup": "^6.1.0",
+    "react-dom": "17.0.2",
+    "react-modal-video": "^1.2.8",
+    "react-scroll": "^1.8.4",
+    "react-slick": "^0.28.1",
+    "react-tsparticles": "^1.37.4",
+    "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.45.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.9",
+    "swiper": "^7.3.0",
+    "typewriter-effect": "^2.18.2"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "eslint": "^8.37.0",
+    "eslint-config-next": "13.1.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.7"
+  }
+}

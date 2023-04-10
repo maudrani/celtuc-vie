@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import appData from '../../data/app.json';
 import { handleDropdown, handleMobileDropdown } from '../../common/navbar';
-import { StylesContext } from '@/contexts/styles';
+import { StylesContext, THEME_NAMES } from '@/contexts/styles';
 
 const Navbar = ({ lr, nr }) => {
   const { theme, toggleMobileAppStyle, changeTheme, toggleSkinStyle } =
@@ -12,42 +12,47 @@ const Navbar = ({ lr, nr }) => {
   const logoRef = useRef(null);
 
   useEffect(() => {
-    const navbar = navbarRef.current,
-      logo = logoRef.current;
+    const navbar = navbarRef.current;
+    const logo = logoRef.current;
 
-    if (!navbar) return;
+    if (!navbar || !logo) return;
 
-    if (window.pageYOffset > 300) {
-      navbar.classList.add('nav-scroll');
-    } else {
-      navbar.classList.remove('nav-scroll');
-    }
-    window.addEventListener('scroll', () => {
+    const handleNavbarClass = () => {
       if (window.pageYOffset > 300) {
         navbar.classList.add('nav-scroll');
       } else {
         navbar.classList.remove('nav-scroll');
       }
+    };
+
+    const checkLogoStyle = () => {
+      if (window.pageYOffset > 300) {
+        logo.src = theme.isLight ? appData.darkLogo : appData.lightLogo;
+      } else {
+        logo.src = theme.isLight ? appData.lightLogo : appData.lightLogo;
+      }
+    };
+
+    checkLogoStyle();
+    handleNavbarClass();
+
+    window.addEventListener('scroll', () => {
+      checkLogoStyle();
+      handleNavbarClass();
     });
-  }, [navbarRef]);
+  }, [navbarRef, theme]);
 
   return (
     <nav
       ref={nr || navbarRef}
-      className={`navbar navbar-expand-lg change ${theme.themeName}`}
+      className={`navbar navbar-expand-lg change ${
+        theme.isLight ? THEME_NAMES.dark : THEME_NAMES.light
+      }`}
     >
       <div className="container">
         <Link href="/">
           <a className="logo">
-            {theme ? (
-              theme.isLight ? (
-                <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
-              ) : (
-                <img ref={lr || logoRef} src={appData.lightLogo} alt="logo" />
-              )
-            ) : (
-              <img ref={lr || logoRef} src={appData.lightLogo} alt="logo" />
-            )}
+            <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
           </a>
         </Link>
 

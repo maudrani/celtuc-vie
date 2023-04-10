@@ -6,6 +6,7 @@ import ScrollToTop from '@/components/scrollToTop';
 import LoadingScreen from '@/components/Loading-Screen';
 import '../styles/main.scss';
 import Contexts from '@/contexts/index';
+import { GlobalStyles } from '@/styles/global';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
       <Contexts>
+        <GlobalStyles />
         <Cursor />
         <LoadingScreen />
         <Component {...pageProps} />

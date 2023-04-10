@@ -1,7 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
     Theme Name: Vie
-    Theme URI: http://
     Description: Creative Agency & Portfolio
     Author: ThemesCamp
     Author URI: http://themeforest.net/user/ThemesCamp
@@ -1279,6 +1278,10 @@ span:hover {
 
 /* ====================== [ End Text Animation & Images ] ====================== */
 /* ====================== [ Start Cursor Style ] ====================== */
+body {
+  cursor: none;
+}
+
 .mouse-cursor {
   position: fixed;
   left: 0;
@@ -1291,6 +1294,8 @@ span:hover {
 }
 
 .cursor-inner {
+  margin-left: 2px;
+  margin-top: 2px;
   width: 6px;
   height: 6px;
   z-index: 10000001;
@@ -1304,19 +1309,19 @@ span:hover {
 }
 
 .cursor-inner.cursor-hover {
-  margin-left: -35px;
-  margin-top: -35px;
-  width: 70px;
-  height: 70px;
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
   background-color: #12c2e9;
   opacity: 0.3;
 }
 
 .cursor-outer {
-  margin-left: -12px;
-  margin-top: -12px;
-  width: 30px;
-  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #12c2e9;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

@@ -14,6 +14,8 @@ const initialState = {
   },
 };
 
+export { THEME_NAMES };
+
 export const stylesActionTypes = {
   CHANGE_THEME: 'CHANGE_THEME',
   TOGGLE_MOBILE_APP_STYLE: 'TOGGLE_MOBILE_APP_STYLE',

@@ -6,7 +6,7 @@ import ScrollToTop from '@/components/scrollToTop';
 import LoadingScreen from '@/components/Loading-Screen';
 import '../styles/main.scss';
 import Contexts from '@/contexts/index';
-import { GlobalStyles } from '@/styles/global';
+import { GlobalStyles } from '../styles';
 
 function MyApp({ Component, pageProps }) {
   return (

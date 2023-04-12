@@ -29,7 +29,7 @@ const Navbar = ({ lr, nr }) => {
       if (window.pageYOffset > 300) {
         logo.src = theme.isLight ? appData.darkLogo : appData.lightLogo;
       } else {
-        logo.src = theme.isLight ? appData.lightLogo : appData.lightLogo;
+        logo.src = !theme.isLight ? appData.lightLogo : appData.darkLogo;
       }
     };
 
@@ -46,7 +46,7 @@ const Navbar = ({ lr, nr }) => {
     <nav
       ref={nr || navbarRef}
       className={`navbar navbar-expand-lg change ${
-        theme.isLight ? THEME_NAMES.dark : THEME_NAMES.light
+        !theme.isLight ? THEME_NAMES.dark : THEME_NAMES.light
       }`}
     >
       <div className="container">

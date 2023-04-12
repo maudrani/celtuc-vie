@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const FontStyles = css`
+export const font_family = css`
   /* SF PRO DISPLAY */
   @font-face {
     font-family: SF Pro Display;
@@ -79,20 +79,4 @@ const FontStyles = css`
       sans-serif;
     background-color: #fff;
   }
-
-  p {
-    font-weight: 400;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 700;
-    line-height: 1;
-  }
 `;
-
-export default FontStyles;

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import Head from 'next/head';
 import { StylesContext } from '@/contexts/styles';
+import { ThemeProvider } from 'styled-components';
+import { themes } from '@/styles/theme';
 
 const Theme = ({ children }) => {
   const { theme } = useContext(StylesContext);
@@ -11,7 +13,7 @@ const Theme = ({ children }) => {
   }, [themeName]);
 
   return (
-    <>
+    <ThemeProvider theme={themes[themeName]}>
       <Head>
         <link rel="stylesheet" href={`/css/${themeName}.css`} />
         {useSkin ? (
@@ -26,7 +28,7 @@ const Theme = ({ children }) => {
         )}
       </Head>
       {children}
-    </>
+    </ThemeProvider>
   );
 };
 

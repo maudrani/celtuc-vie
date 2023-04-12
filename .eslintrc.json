@@ -10,7 +10,7 @@
   ],
   "plugins": ["react", "react-hooks", "import", "prettier"],
   "rules": {
-    "prettier/prettier": "warn",
+    "prettier/prettier": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",

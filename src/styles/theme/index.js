@@ -1,3 +1,4 @@
+import { THEME_NAMES } from '@/contexts/styles';
 import { colors } from 'brand/styles/colors';
 
 export const dark = {
@@ -9,6 +10,7 @@ export const dark = {
     background_1: colors.woodsmoke,
     background_2: colors.woodsmoke,
   },
+  name: THEME_NAMES.dark
 };
 
 export const light = {
@@ -20,6 +22,7 @@ export const light = {
     background_1: colors.white,
     background_2: colors.wild_sand,
   },
+  name: THEME_NAMES.light
 };
 
 export const themes = {

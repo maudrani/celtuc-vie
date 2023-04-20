@@ -1,0 +1,111 @@
+{
+  "id": "info_status_image1",
+  "type": "SharedSlice",
+  "name": "InfoStatsImage1",
+  "description": "InfoStatusImage1",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "InfoStatusImage1",
+      "primary": {
+        "top_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Top title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading6"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "link_name": {
+          "type": "Text",
+          "config": {
+            "label": "Link Name",
+            "placeholder": ""
+          }
+        },
+        "link_url": {
+          "type": "Link",
+          "config": {
+            "label": "Link Url",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 975,
+              "height": 1120
+            },
+            "thumbnails": [
+              {
+                "name": "tablet",
+                "width": 624,
+                "height": 718
+              },
+              {
+                "name": "mobile",
+                "width": 520,
+                "height": 598
+              },
+              {
+                "name": "desktop",
+                "width": 650,
+                "height": 747
+              }
+            ]
+          }
+        }
+      },
+      "items": {
+        "stat_number": {
+          "type": "Number",
+          "config": {
+            "label": "Stat Number",
+            "placeholder": ""
+          }
+        },
+        "stat_suffix": {
+          "type": "Text",
+          "config": {
+            "label": "Stat Suffix",
+            "placeholder": ""
+          }
+        },
+        "stat_name": {
+          "type": "Text",
+          "config": {
+            "label": "Stat Name",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

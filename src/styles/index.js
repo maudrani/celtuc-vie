@@ -16,6 +16,9 @@ import { UNCATEGORIZED_Light } from './UNCATEGORIZED/light'; */
 export const GlobalStyles = createGlobalStyle`
     ${global}
     
+    .margin-center {
+      margin: 0 auto;
+    }
 `;
 
 export default GlobalStyles;

@@ -3840,38 +3840,28 @@ body {
   margin-left: 30px;
 }
 
-.about .ftbox ul {
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.about .ftbox ul li {
+.about .ftbox .icon-card {
   width: 100%;
-  padding: 35px 25px;
+  padding: 35px 10px;
   text-align: center;
   background: #f5f5f5;
   border-radius: 5px;
   position: relative;
+  word-wrap: break-word;
 }
 
-.about .ftbox ul li.space {
-  margin: 0 10px;
-}
-
-.about .ftbox ul li .icon {
+.about .ftbox .icon-card .icon {
   color: #12c2e9;
   font-size: 30px;
   margin-bottom: 20px;
 }
 
-.about .ftbox ul li h6 {
+.about .ftbox .icon-card h6 {
   font-size: 16px;
   font-weight: 400;
 }
 
-.about .ftbox ul li .dots span {
+.about .ftbox .icon-card .dots span {
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -3882,11 +3872,11 @@ body {
   opacity: 0.1;
 }
 
-.about .ftbox ul li .dots span:first-of-type {
+.about .ftbox .icon-card .dots span:first-of-type {
   bottom: 18px;
 }
 
-.about .ftbox ul li .dots span:last-of-type {
+.about .ftbox .icon-card .dots span:last-of-type {
   right: 16px;
 }
 

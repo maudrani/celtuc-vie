@@ -1,42 +1,85 @@
 import React from 'react';
 import Link from 'next/link';
-import AboutUs1Date from '../../data/sections/about-us1.json';
+import Image from 'next/image';
+import { isEmpty } from 'lodash';
+import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
+import { getDataFromProps } from './adapters';
 
-const AboutUs = () => {
+const AboutUs = props => {
+  const windowsWidth = useWindowWidth();
+
+  const {
+    top_title,
+    title,
+    content,
+    link,
+    stats,
+    hasLeftCol,
+    hasRightCol,
+    image,
+  } = getDataFromProps({ props, windowsWidth });
+
+  if (!hasLeftCol && !hasRightCol) return null;
+
   return (
     <section className="about-us section-padding">
       <div className="container">
         <div className="row">
-          <div className="col-lg-5 valign md-mb50">
-            <div className="mb-50">
-              <h6 className="fw-100 text-u ls10 mb-10">
-                {AboutUs1Date.smallTitle}
-              </h6>
-              <h3 className="fw-600 text-u ls1 mb-30 color-font">
-                {AboutUs1Date.title}
-              </h3>
-              <p>{AboutUs1Date.content}</p>
-              <Link href="/about">
-                <a className="butn bord curve mt-30">
-                  <span>Read More</span>
-                </a>
-              </Link>
+          {hasLeftCol && (
+            <div
+              className={`col-lg-${
+                hasRightCol ? '5' : '6'
+              } margin-center valign md-mb50`}
+            >
+              <div className="mb-50">
+                {top_title && (
+                  <h6 className="fw-100 text-u ls10 mb-10">{top_title}</h6>
+                )}
+                {title && (
+                  <h3 className="fw-600 text-u ls1 mb-30 color-font">
+                    {title}
+                  </h3>
+                )}
+                {content &&
+                  !isEmpty(content) &&
+                  content.map((item, idx) => <p key={`item-${idx}`}>{item}</p>)}
+
+                {link?.valid && (
+                  <Link href={link.url} className="butn bord curve mt-30">
+                    <span>{link.name}</span>
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="col-lg-7 img">
-            <img src={AboutUs1Date.image} alt="" />
-            <div className="stauts">
-              {AboutUs1Date.stauts.map(item => (
-                <div className="item" key={item.id}>
-                  <h4>
-                    {item.number}
-                    <span>{item.letter}</span>
-                  </h4>
-                  <h6>{item.stautsName}</h6>
+          )}
+          {hasRightCol && (
+            <div
+              className={`col-lg-${hasLeftCol ? '7' : '8'} margin-center img`}
+            >
+              {image && windowsWidth && (
+                <Image
+                  src={image.url}
+                  alt={image.alt}
+                  width={image.dimensions.width || 1000}
+                  height={image.dimensions.width || 1150}
+                  priority
+                />
+              )}
+              {stats && !isEmpty(stats) && (
+                <div className="stauts">
+                  {stats.map(item => (
+                    <div className="item" key={item.id}>
+                      <h4>
+                        {item.stat_number}
+                        <span>{item.stat_suffix}</span>
+                      </h4>
+                      <h6>{item.stat_name}</h6>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

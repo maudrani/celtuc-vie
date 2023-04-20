@@ -1,0 +1,204 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "bear"
+  },
+  "display_title": {
+    "__TYPE__": "FieldContent",
+    "value": "dirt",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "title_text1$e853c15b-2140-4cc6-a9a2-05b655193601",
+        "name": "title_text1",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading4",
+                  "content": {
+                    "text": "Nervous"
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "paragraph",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Adipisicing deserunt ad elit consequat quis est cillum."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "info_status_image1$5ce91406-2824-430e-9ba6-a2a119100ac4",
+        "name": "info_status_image1",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "top_title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading6",
+                  "content": {
+                    "text": "Island"
+                  }
+                }
+              ]
+            },
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Follow"
+                  }
+                }
+              ]
+            },
+            "content": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Anim sint pariatur laborum exercitation cillum magna in aute minim culpa sit laborum occaecat minim. Irure labore aliquip et do mollit incididunt ea ut nulla enim minim aliqua. Quis exercitation id Lorem aute est."
+                  }
+                }
+              ]
+            },
+            "link_name": {
+              "__TYPE__": "FieldContent",
+              "value": "speak",
+              "type": "Text"
+            },
+            "link_url": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+                "width": 3024,
+                "height": 3778
+              },
+              "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C151%2C3024%2C3475&w=650&h=747",
+              "width": 650,
+              "height": 747,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 151
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {
+                "tablet": {
+                  "origin": {
+                    "id": "tablet",
+                    "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+                    "width": 5616,
+                    "height": 3744
+                  },
+                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?rect=1181%2C0%2C3254%2C3744&w=624&h=718",
+                  "width": 624,
+                  "height": 718,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 1181,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                },
+                "mobile": {
+                  "origin": {
+                    "id": "mobile",
+                    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+                    "width": 6000,
+                    "height": 4000
+                  },
+                  "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?rect=1261%2C0%2C3478%2C4000&w=520&h=598",
+                  "width": 520,
+                  "height": 598,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 1261,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "stat_number",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "9",
+                    "type": "Number"
+                  }
+                ],
+                [
+                  "stat_suffix",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "desk",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "stat_name",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "pipe",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

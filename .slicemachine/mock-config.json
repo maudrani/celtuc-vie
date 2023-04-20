@@ -1,0 +1,25 @@
+{
+  "_cts": {
+    "page": {}
+  },
+  "slices": {
+    "TitleText1": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "InfoStatusImage1": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "InfoStatsImage1": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}

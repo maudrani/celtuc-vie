@@ -1,8 +1,26 @@
 import React from 'react';
 import Split from '../Split';
 import AboutUs2Date from '../../data/sections/about-us2.json';
+import SimpleGrid from '../_UI/SimpleGrid';
+import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
+import { getDataFromProps } from './adapters';
 
-const AboutUs2 = () => {
+const AboutUs2 = (props) => {
+  const windowsWidth = useWindowWidth();
+
+  const {
+    top_title,
+    title,
+    content,
+    link,
+    stats,
+    hasLeftCol,
+    hasRightCol,
+    image,
+  } = getDataFromProps({ props, windowsWidth });
+
+  if (!hasLeftCol && !hasRightCol) return null;
+
   return (
     <div className="about section-padding">
       <div className="container">
@@ -51,11 +69,11 @@ const AboutUs2 = () => {
                 </p>
               </Split>
               <div className="ftbox mt-30">
-                <ul>
+                <SimpleGrid columnSize={80} gap={10} fitItems>
                   {AboutUs2Date.features.map(feature => (
-                    <li
+                    <div
                       key={feature.id}
-                      className={`wow fadeIn ${feature.id == 2 ? 'space' : ''}`}
+                      className={`icon-card wow fadeIn`}
                       data-wow-delay={feature.wowDelay}
                     >
                       <span
@@ -69,9 +87,9 @@ const AboutUs2 = () => {
                         <span></span>
                         <span></span>
                       </div>
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </SimpleGrid>
               </div>
             </div>
           </div>

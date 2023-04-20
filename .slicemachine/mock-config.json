@@ -20,6 +20,17 @@
         "primary": {},
         "items": {}
       }
+    },
+    "InfoStats2": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ImagesInfoData1": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

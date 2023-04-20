@@ -61,7 +61,7 @@ const AboutUs = props => {
                   src={image.url}
                   alt={image.alt}
                   width={image.dimensions.width || 1000}
-                  height={image.dimensions.width || 1150}
+                  height={image.dimensions.height || 1150}
                   priority
                 />
               )}

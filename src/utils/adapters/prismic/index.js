@@ -1,7 +1,11 @@
+import { isEmpty } from 'lodash';
+
 // @richTextProp parameter is the one you use on the PrismicRichText component
 export const GetRichTextContent = (richTextProp = []) => richTextProp[0]?.text;
 
-export const GetImage = (imageObj = {}) => {
+export const GetImage = imageObj => {
+  if (isEmpty(imageObj.dimensions)) return;
+
   const parsedImg = {
     main: {
       dimensions: imageObj.dimensions,

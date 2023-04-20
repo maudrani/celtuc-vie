@@ -7,7 +7,7 @@ export const getSliceData = slice => {
   return {
     top_title: GetRichTextContent(primary?.top_title),
     title: GetRichTextContent(primary?.title),
-    content: primary?.content.map(item => item.text),
+    content: primary?.content.filter(item => item.text).map(item => item.text),
     link: {
       name: primary?.link_name,
       url: primary?.link_url.url,

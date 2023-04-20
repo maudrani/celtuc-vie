@@ -48,6 +48,101 @@ type PageDocumentDataSlicesSlice = TitleText1Slice | InfoStatusImage1Slice;
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 export type AllDocumentTypes = PageDocument;
 /**
+ * Primary content in ImagesInfoData1 → Primary
+ *
+ */
+interface InfoStats2SliceDefaultPrimary {
+    /**
+     * Top Title field in *ImagesInfoData1 → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: info_stats2.primary.top_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    top_title: prismicT.KeyTextField;
+    /**
+     * Title field in *ImagesInfoData1 → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: info_stats2.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Content field in *ImagesInfoData1 → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: info_stats2.primary.content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    content: prismicT.RichTextField;
+    /**
+     * Image 1 field in *ImagesInfoData1 → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: info_stats2.primary.image_1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image_1: prismicT.ImageField<"desktop" | "tablet" | "mobile">;
+}
+/**
+ * Item in ImagesInfoData1 → Items
+ *
+ */
+export interface InfoStats2SliceDefaultItem {
+    /**
+     * Feature Icon field in *ImagesInfoData1 → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: Icon name
+     * - **API ID Path**: info_stats2.items[].feature_icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    feature_icon: prismicT.KeyTextField;
+    /**
+     * Feature Name field in *ImagesInfoData1 → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: info_stats2.items[].feature_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    feature_name: prismicT.KeyTextField;
+}
+/**
+ * Default variation for ImagesInfoData1 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `InfoStats2`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type InfoStats2SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<InfoStats2SliceDefaultPrimary>, Simplify<InfoStats2SliceDefaultItem>>;
+/**
+ * Slice variation for *ImagesInfoData1*
+ *
+ */
+type InfoStats2SliceVariation = InfoStats2SliceDefault;
+/**
+ * ImagesInfoData1 Shared Slice
+ *
+ * - **API ID**: `info_stats2`
+ * - **Description**: `InfoStats2`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type InfoStats2Slice = prismicT.SharedSlice<"info_stats2", InfoStats2SliceVariation>;
+/**
  * Primary content in InfoStatsImage1 → Primary
  *
  */
@@ -226,6 +321,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
+        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
     }
 }

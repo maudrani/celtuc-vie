@@ -4132,7 +4132,6 @@ body {
 
 .about-cr .img img {
   width: 105%;
-  margin-left: -5%;
 }
 
 .about-cr .cont {
@@ -4143,7 +4142,6 @@ body {
   font-size: 60px;
   font-weight: 600;
   margin-bottom: 30px;
-  margin-left: -120px;
 }
 
 .about-cr .cont h6 {

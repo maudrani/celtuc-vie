@@ -50,10 +50,8 @@ const Navbar = ({ lr, nr }) => {
       }`}
     >
       <div className="container">
-        <Link href="/">
-          <a className="logo">
-            <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
-          </a>
+        <Link href="/" className="logo">
+          <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
         </Link>
 
         <div
@@ -133,35 +131,35 @@ const Navbar = ({ lr, nr }) => {
                 Home
               </span>
               <div className="dropdown-menu">
-                <Link href={`/homepage/home1-dark`}>
-                  <a className="dropdown-item">Main Home</a>
+                <Link href={`/homepage/home1-dark`} className="dropdown-item">
+                  Main Home
                 </Link>
-                <Link href={`/homepage/home2-dark`}>
-                  <a className="dropdown-item">Creative Agency</a>
+                <Link href={`/homepage/home2-dark`} className="dropdown-item">
+                  Creative Agency
                 </Link>
-                <Link href={`/homepage/home5-dark`}>
-                  <a className="dropdown-item">Digital Agency</a>
+                <Link href={`/homepage/home5-dark`} className="dropdown-item">
+                  Digital Agency
                 </Link>
-                <Link href={`/homepage/home4-dark`}>
-                  <a className="dropdown-item">Business One Page</a>
+                <Link href={`/homepage/home4-dark`} className="dropdown-item">
+                  Business One Page
                 </Link>
-                <Link href={`/homepage/home3-dark`}>
-                  <a className="dropdown-item">Corporate Business</a>
+                <Link href={`/homepage/home3-dark`} className="dropdown-item">
+                  Corporate Business
                 </Link>
-                <Link href={`/homepage/home6-dark`}>
-                  <a className="dropdown-item">Modern Agency</a>
+                <Link href={`/homepage/home6-dark`} className="dropdown-item">
+                  Modern Agency
                 </Link>
-                <Link href={`/homepage/home7-dark`}>
-                  <a className="dropdown-item">Freelancer</a>
+                <Link href={`/homepage/home7-dark`} className="dropdown-item">
+                  Freelancer
                 </Link>
-                <Link href={`/homepage/home8-dark`}>
-                  <a className="dropdown-item">Architecture</a>
+                <Link href={`/homepage/home8-dark`} className="dropdown-item">
+                  Architecture
                 </Link>
               </div>
             </li>
             <li className="nav-item">
-              <Link href={`/about/about`}>
-                <a className="nav-link">About</a>
+              <Link href={`/about/about`} className="nav-link">
+                About
               </Link>
             </li>
             <li className="nav-item dropdown" onClick={handleDropdown}>
@@ -175,23 +173,32 @@ const Navbar = ({ lr, nr }) => {
                 Works
               </span>
               <div className="dropdown-menu">
-                <Link href={`/showcase/showcase-dark`}>
-                  <a className="dropdown-item">Showcase Parallax</a>
+                <Link
+                  href={`/showcase/showcase-dark`}
+                  className="dropdown-item"
+                >
+                  Showcase Parallax
                 </Link>
-                <Link href={`/showcase4/showcase4-dark`}>
-                  <a className="dropdown-item">Showcase Carousel</a>
+                <Link
+                  href={`/showcase4/showcase4-dark`}
+                  className="dropdown-item"
+                >
+                  Showcase Carousel
                 </Link>
-                <Link href={`/showcase3/showcase3-dark`}>
-                  <a className="dropdown-item">Showcase Circle</a>
+                <Link
+                  href={`/showcase3/showcase3-dark`}
+                  className="dropdown-item"
+                >
+                  Showcase Circle
                 </Link>
-                <Link href={`/works/works-dark`}>
-                  <a className="dropdown-item">Portfolio Masonry</a>
+                <Link href={`/works/works-dark`} className="dropdown-item">
+                  Portfolio Masonry
                 </Link>
-                <Link href={`/works2/works2-dark`}>
-                  <a className="dropdown-item">Portfolio Filtering</a>
+                <Link href={`/works2/works2-dark`} className="dropdown-item">
+                  Portfolio Filtering
                 </Link>
-                <Link href={`/works3/works3-dark`}>
-                  <a className="dropdown-item">Portfolio Gallery</a>
+                <Link href={`/works3/works3-dark`} className="dropdown-item">
+                  Portfolio Gallery
                 </Link>
               </div>
             </li>
@@ -206,23 +213,32 @@ const Navbar = ({ lr, nr }) => {
                 Blog
               </span>
               <div className="dropdown-menu">
-                <Link href={`/blog/blog-dark`}>
-                  <a className="dropdown-item">Blog Standerd</a>
+                <Link href={`/blog/blog-dark`} className="dropdown-item">
+                  Blog Standerd
                 </Link>
-                <Link href={`/blog-list/blog-list-dark`}>
-                  <a className="dropdown-item">Blog List</a>
+                <Link
+                  href={`/blog-list/blog-list-dark`}
+                  className="dropdown-item"
+                >
+                  Blog List
                 </Link>
-                <Link href={`/blog-grid/blog-grid-dark`}>
-                  <a className="dropdown-item">Blog Grid</a>
+                <Link
+                  href={`/blog-grid/blog-grid-dark`}
+                  className="dropdown-item"
+                >
+                  Blog Grid
                 </Link>
-                <Link href={`/blog-details/blog-details-dark`}>
-                  <a className="dropdown-item">Blog Details</a>
+                <Link
+                  href={`/blog-details/blog-details-dark`}
+                  className="dropdown-item"
+                >
+                  Blog Details
                 </Link>
               </div>
             </li>
             <li className="nav-item">
-              <Link href={`/contact/contact-dark`}>
-                <a className="nav-link">Contact</a>
+              <Link href={`/contact/contact-dark`} className="nav-link">
+                Contact
               </Link>
             </li>
           </ul>

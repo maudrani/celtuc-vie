@@ -29,6 +29,9 @@
             },
             "info_status_image1": {
               "type": "SharedSlice"
+            },
+            "video_description_launcher": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -1,6 +1,5 @@
 import React from 'react';
 import Split from '../Split';
-import AboutUs2Date from '../../data/sections/about-us2.json';
 import SimpleGrid from '../_UI/SimpleGrid';
 import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
 import { getDataFromProps } from './adapters';
@@ -104,19 +103,17 @@ const AboutUs2 = props => {
                 )}
                 {isArray(content) && !isEmpty(content) && (
                   <Split>
-                    {content &&
-                      !isEmpty(content) &&
-                      content.map((item, idx) => (
-                        <p
-                          key={`item-${idx}`}
-                          className={`words chars splitting wow txt ${
-                            idx + 1 !== content.length ? 'mb-10' : ''
-                          }`}
-                          data-splitting
-                        >
-                          {item}
-                        </p>
-                      ))}
+                    {content.map((item, idx) => (
+                      <p
+                        key={`item-${idx}`}
+                        className={`words chars splitting wow txt ${
+                          idx + 1 !== content.length ? 'mb-10' : ''
+                        }`}
+                        data-splitting
+                      >
+                        {item}
+                      </p>
+                    ))}
                   </Split>
                 )}
                 {isArray(features) && !isEmpty(features) && (

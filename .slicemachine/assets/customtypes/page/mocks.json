@@ -1,18 +1,18 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "bear"
+    "value": "additional"
   },
   "display_title": {
     "__TYPE__": "FieldContent",
-    "value": "dirt",
+    "value": "bar",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "title_text1$e853c15b-2140-4cc6-a9a2-05b655193601",
+        "key": "title_text1$13ee42e7-0438-45da-94e0-47f7ce1662de",
         "name": "title_text1",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -24,7 +24,18 @@
                 {
                   "type": "heading4",
                   "content": {
-                    "text": "Nervous"
+                    "text": "During"
+                  }
+                }
+              ]
+            },
+            "content": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ea laboris minim cillum tempor quis ut incididunt amet cupidatat."
                   }
                 }
               ]
@@ -33,28 +44,13 @@
           "items": [
             {
               "__TYPE__": "GroupItemContent",
-              "value": [
-                [
-                  "paragraph",
-                  {
-                    "__TYPE__": "StructuredTextContent",
-                    "value": [
-                      {
-                        "type": "paragraph",
-                        "content": {
-                          "text": "Adipisicing deserunt ad elit consequat quis est cillum."
-                        }
-                      }
-                    ]
-                  }
-                ]
-              ]
+              "value": []
             }
           ]
         }
       },
       {
-        "key": "info_status_image1$5ce91406-2824-430e-9ba6-a2a119100ac4",
+        "key": "info_status_image1$6ecef247-474b-4f09-88d3-83aec69d3d01",
         "name": "info_status_image1",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -66,7 +62,7 @@
                 {
                   "type": "heading6",
                   "content": {
-                    "text": "Island"
+                    "text": "Means"
                   }
                 }
               ]
@@ -77,7 +73,7 @@
                 {
                   "type": "heading3",
                   "content": {
-                    "text": "Follow"
+                    "text": "Village"
                   }
                 }
               ]
@@ -88,14 +84,14 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Anim sint pariatur laborum exercitation cillum magna in aute minim culpa sit laborum occaecat minim. Irure labore aliquip et do mollit incididunt ea ut nulla enim minim aliqua. Quis exercitation id Lorem aute est."
+                    "text": "Fugiat exercitation adipisicing ullamco sint amet id nulla commodo voluptate. Duis aliquip quis cillum commodo proident fugiat fugiat mollit eiusmod adipisicing Lorem do id ut."
                   }
                 }
               ]
             },
             "link_name": {
               "__TYPE__": "FieldContent",
-              "value": "speak",
+              "value": "teacher",
               "type": "Text"
             },
             "link_url": {
@@ -109,18 +105,18 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
-                "width": 3024,
-                "height": 3778
+                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+                "width": 4172,
+                "height": 4000
               },
-              "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C151%2C3024%2C3475&w=650&h=747",
-              "width": 650,
-              "height": 747,
+              "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?rect=345%2C0%2C3482%2C4000&w=975&h=1120",
+              "width": 975,
+              "height": 1120,
               "edit": {
                 "zoom": 1,
                 "crop": {
-                  "x": 0,
-                  "y": 151
+                  "x": 345,
+                  "y": 0
                 },
                 "background": "transparent"
               },
@@ -128,17 +124,17 @@
                 "tablet": {
                   "origin": {
                     "id": "tablet",
-                    "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
-                    "width": 5616,
-                    "height": 3744
+                    "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+                    "width": 3424,
+                    "height": 3424
                   },
-                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?rect=1181%2C0%2C3254%2C3744&w=624&h=718",
+                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?rect=224%2C0%2C2976%2C3424&w=624&h=718",
                   "width": 624,
                   "height": 718,
                   "edit": {
                     "zoom": 1,
                     "crop": {
-                      "x": 1181,
+                      "x": 224,
                       "y": 0
                     },
                     "background": "transparent"
@@ -147,18 +143,37 @@
                 "mobile": {
                   "origin": {
                     "id": "mobile",
-                    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-                    "width": 6000,
-                    "height": 4000
+                    "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+                    "width": 3810,
+                    "height": 5715
                   },
-                  "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?rect=1261%2C0%2C3478%2C4000&w=520&h=598",
+                  "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?rect=0%2C667%2C3810%2C4382&w=520&h=598",
                   "width": 520,
                   "height": 598,
                   "edit": {
                     "zoom": 1,
                     "crop": {
-                      "x": 1261,
-                      "y": 0
+                      "x": 0,
+                      "y": 667
+                    },
+                    "background": "transparent"
+                  }
+                },
+                "desktop": {
+                  "origin": {
+                    "id": "desktop",
+                    "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+                    "width": 3024,
+                    "height": 3778
+                  },
+                  "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C151%2C3024%2C3475&w=650&h=747",
+                  "width": 650,
+                  "height": 747,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 151
                     },
                     "background": "transparent"
                   }
@@ -174,7 +189,7 @@
                   "stat_number",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "9",
+                    "value": "46",
                     "type": "Number"
                   }
                 ],
@@ -182,7 +197,7 @@
                   "stat_suffix",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "desk",
+                    "value": "close",
                     "type": "Text"
                   }
                 ],
@@ -190,11 +205,74 @@
                   "stat_name",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "pipe",
+                    "value": "sharp",
                     "type": "Text"
                   }
                 ]
               ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "video_description_launcher$655e81f3-631c-41bb-a7cb-ef5e96305e2a",
+        "name": "video_description_launcher",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Glass"
+                  }
+                }
+              ]
+            },
+            "content": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Amet exercitation ea tempor magna dolor Lorem."
+                  }
+                }
+              ]
+            },
+            "video": {
+              "embed_url": "https://twitter.com/prismicio/status/1354835716430319617",
+              "author_name": "Prismic",
+              "author_url": "https://twitter.com/prismicio",
+              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Does anyone want to create a wildly popular website for discussing &#39;Wall Street Bets&#39; using Prismic?<br><br>It may or may not have to look a lot like <a href=\"https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw\">#reddit</a> and we won&#39;t make it private.<br><br>Just asking for some friends...</p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1354835716430319617?ref_src=twsrc%5Etfw\">January 28, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+              "width": 550,
+              "height": null,
+              "type": "rich",
+              "cache_age": "3153600000",
+              "provider_name": "Twitter",
+              "provider_url": "http://www.twitter.com/",
+              "version": "1.0",
+              "__TYPE__": "EmbedContent",
+              "all": {
+                "embed_url": "https://twitter.com/prismicio/status/1354835716430319617",
+                "type": "rich",
+                "author_name": "Prismic",
+                "author_url": "https://twitter.com/prismicio",
+                "cache_age": "3153600000",
+                "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Does anyone want to create a wildly popular website for discussing &#39;Wall Street Bets&#39; using Prismic?<br><br>It may or may not have to look a lot like <a href=\"https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw\">#reddit</a> and we won&#39;t make it private.<br><br>Just asking for some friends...</p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1354835716430319617?ref_src=twsrc%5Etfw\">January 28, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+                "provider_name": "Twitter",
+                "provider_url": "http://www.twitter.com/",
+                "version": "1.0"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
             }
           ]
         }

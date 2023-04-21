@@ -2624,7 +2624,6 @@ export const UNCATEGORIZED_Dark = css`
 
   .about-cr .img img {
     width: 105%;
-    margin-left: -5%;
   }
 
   .about-cr .cont {

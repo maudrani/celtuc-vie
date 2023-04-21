@@ -46,48 +46,36 @@ const Footer = ({ hideBGCOLOR }) => {
                 <li>
                   <div className="img">
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <img src="/img/blog/1.jpg" alt="" />
-                      </a>
+                      <img src="/img/blog/1.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="sm-post">
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <p>
-                          The Start-Up Ultimate Guide to Make Your WordPress
-                          Journal.
-                        </p>
-                      </a>
+                      <p>
+                        The Start-Up Ultimate Guide to Make Your WordPress
+                        Journal.
+                      </p>
                     </Link>
                     <Link href="/blog">
-                      <a>
-                        <span className="date">14 sep 2022</span>
-                      </a>
+                      <span className="date">14 sep 2022</span>
                     </Link>
                   </div>
                 </li>
                 <li>
                   <div className="img">
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <img src="/img/blog/2.jpg" alt="" />
-                      </a>
+                      <img src="/img/blog/2.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="sm-post">
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        <p>
-                          The Start-Up Ultimate Guide to Make Your WordPress
-                          Journal.
-                        </p>
-                      </a>
+                      <p>
+                        The Start-Up Ultimate Guide to Make Your WordPress
+                        Journal.
+                      </p>
                     </Link>
                     <Link href="/blog">
-                      <a>
-                        <span className="date">14 sep 2022</span>
-                      </a>
+                      <span className="date">14 sep 2022</span>
                     </Link>
                   </div>
                 </li>
@@ -122,8 +110,11 @@ const Footer = ({ hideBGCOLOR }) => {
               <div className="copy-right">
                 <p>
                   © 2022, Vie Template. Made with passion by
-                  <Link href="https://themeforest.net/user/themescamp/portfolio">
-                    <a target="_blank">ThemesCamp</a>
+                  <Link
+                    href="https://themeforest.net/user/themescamp/portfolio"
+                    target="_blank"
+                  >
+                    ThemesCamp
                   </Link>
                   .
                 </p>

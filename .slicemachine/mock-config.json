@@ -31,6 +31,17 @@
         "primary": {},
         "items": {}
       }
+    },
+    "ImagesInfoData2": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "VideoDescriptionLauncher": {},
+    "VideoDescriptionLauncher1": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

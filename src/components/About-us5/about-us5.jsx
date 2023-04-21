@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import aboutSkillsProgress from '../../common/aboutSkillsProgress';
+import { useOnScreen } from 'src/utils/hooks';
 
 const AboutUs5 = () => {
+  const animationTriggerRef = useRef(null);
+
+  const isOnScreen = useOnScreen({ ref: animationTriggerRef, oneTime: true });
+
   React.useEffect(() => {
-    aboutSkillsProgress(
-      document.querySelector('.about-cr .skills-box'),
-      document.querySelectorAll('.skill-progress .progres'),
-      document.querySelector('.about-cr')
-    );
-  }, []);
+    if (!document || !isOnScreen) return;
+
+    aboutSkillsProgress({
+      skillsEl: document.querySelector('.about-cr .skills-box'),
+      progresEl: document.querySelectorAll('.skill-progress .progres'),
+    });
+  }, [isOnScreen]);
+
   return (
     <section className="about-cr">
       <div className="container-fluid">
@@ -26,7 +33,7 @@ const AboutUs5 = () => {
                 We are Vie. We create award-winning websites, remarkable brands
                 and cutting-edge apps.Nullam imperdie.
               </p>
-              <div className="skills-box mt-40">
+              <div className="skills-box mt-40" ref={animationTriggerRef}>
                 <div className="skill-item">
                   <h5 className="fz-14 mb-15">UI / UX Design</h5>
                   <div className="skill-progress">

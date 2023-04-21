@@ -1,4 +1,5 @@
 import { isArray, isEmpty } from 'lodash';
+import { GetCurrentImgIfColumn } from 'src/utils/adapters/components';
 
 export const getDataFromProps = ({ props, windowsWidth }) => {
   const { top_title, title, content, link, image1, image2, image3, features } =
@@ -10,31 +11,31 @@ export const getDataFromProps = ({ props, windowsWidth }) => {
     (isArray(content) && !isEmpty(content)) ||
     (isArray(features) && !isEmpty(features))
   );
-  
-
-  const getCurrentImg = img => {
-    const currentImg =
-      windowsWidth <= 767
-        ? img?.mobile
-        : windowsWidth <= 990
-        ? img?.tablet
-        : hasRightCol
-        ? img?.desktop
-        : img?.main;
-
-    return currentImg;
-  };
 
   const hasLeftCol = !!(!!(image1 || image2 || image3) && windowsWidth);
+  const imgData = {
+    windowsWidth,
+    breakpoints: { mobile: 767 },
+    hasCol: hasRightCol,
+  };
 
   return {
     top_title,
     title,
     content,
     link,
-    image1: getCurrentImg(image1),
-    image2: getCurrentImg(image2),
-    image3: getCurrentImg(image3),
+    image1: GetCurrentImgIfColumn({
+      img: image1,
+      ...imgData,
+    }),
+    image2: GetCurrentImgIfColumn({
+      img: image2,
+      ...imgData,
+    }),
+    image3: GetCurrentImgIfColumn({
+      img: image3,
+      ...imgData,
+    }),
     features,
     hasRightCol,
     hasLeftCol,

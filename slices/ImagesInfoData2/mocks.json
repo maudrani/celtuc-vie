@@ -1,0 +1,232 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading4",
+            "content": {
+              "text": "Having"
+            }
+          }
+        ]
+      },
+      "content": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Reprehenderit cillum dolore excepteur quis Lorem aliquip ipsum ex dolore magna in dolore commodo."
+            }
+          }
+        ]
+      },
+      "link_name": {
+        "__TYPE__": "FieldContent",
+        "value": "consonant",
+        "type": "Text"
+      },
+      "link_url": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
+      },
+      "image_1": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+          "width": 3560,
+          "height": 5340
+        },
+        "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?rect=0%2C641%2C3560%2C4058&w=500&h=570",
+        "width": 500,
+        "height": 570,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 641
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {
+          "desktop": {
+            "origin": {
+              "id": "desktop",
+              "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+              "width": 3882,
+              "height": 2584
+            },
+            "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?rect=808%2C0%2C2266%2C2584&w=435&h=496",
+            "width": 435,
+            "height": 496,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 808,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "tablet": {
+            "origin": {
+              "id": "tablet",
+              "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+              "width": 4380,
+              "height": 2895
+            },
+            "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?rect=918%2C0%2C2545%2C2895&w=472&h=537",
+            "width": 472,
+            "height": 537,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 918,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "mobile": {
+            "origin": {
+              "id": "mobile",
+              "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+              "width": 4172,
+              "height": 4000
+            },
+            "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?rect=0%2C371%2C4172%2C3258&w=730&h=570",
+            "width": 730,
+            "height": 570,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 0,
+                "y": 371
+              },
+              "background": "transparent"
+            }
+          }
+        }
+      },
+      "image_2": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+          "width": 3424,
+          "height": 3424
+        },
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?rect=668%2C0%2C2088%2C3424&w=500&h=820",
+        "width": 500,
+        "height": 820,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 668,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {
+          "desktop": {
+            "origin": {
+              "id": "desktop",
+              "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+              "width": 6597,
+              "height": 4398
+            },
+            "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?rect=1961%2C0%2C2676%2C4398&w=435&h=715",
+            "width": 435,
+            "height": 715,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 1961,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "tablet": {
+            "origin": {
+              "id": "tablet",
+              "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+              "width": 5848,
+              "height": 3899
+            },
+            "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?rect=1734%2C0%2C2381%2C3899&w=472&h=773",
+            "width": 472,
+            "height": 773,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 1734,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "mobile": {
+            "origin": {
+              "id": "mobile",
+              "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+              "width": 3277,
+              "height": 4092
+            },
+            "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?rect=390%2C0%2C2498%2C4092&w=730&h=1196",
+            "width": 730,
+            "height": 1196,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 390,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          }
+        }
+      },
+      "caption_title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Review"
+            }
+          }
+        ]
+      },
+      "caption_description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading6",
+            "content": {
+              "text": "Sound"
+            }
+          }
+        ]
+      },
+      "separator": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

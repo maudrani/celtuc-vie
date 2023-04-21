@@ -1,0 +1,134 @@
+{
+  "id": "images_info_data2",
+  "type": "SharedSlice",
+  "name": "ImagesInfoData2",
+  "description": "ImagesInfoData2",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImagesInfoData2",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "link_name": {
+          "type": "Text",
+          "config": {
+            "label": "Link Name",
+            "placeholder": ""
+          }
+        },
+        "link_url": {
+          "type": "Link",
+          "config": {
+            "label": "Link Url",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "image_1": {
+          "type": "Image",
+          "config": {
+            "label": "Image 1",
+            "constraint": {
+              "width": 500,
+              "height": 570
+            },
+            "thumbnails": [
+              {
+                "name": "desktop",
+                "width": 435,
+                "height": 496
+              },
+              {
+                "name": "tablet",
+                "width": 472,
+                "height": 537
+              },
+              {
+                "name": "mobile",
+                "width": 730,
+                "height": 570
+              }
+            ]
+          }
+        },
+        "image_2": {
+          "type": "Image",
+          "config": {
+            "label": "Image 2",
+            "constraint": {
+              "width": 500,
+              "height": 820
+            },
+            "thumbnails": [
+              {
+                "name": "desktop",
+                "width": 435,
+                "height": 715
+              },
+              {
+                "name": "tablet",
+                "width": 472,
+                "height": 773
+              },
+              {
+                "name": "mobile",
+                "width": 730,
+                "height": 1196
+              }
+            ]
+          }
+        },
+        "caption_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "caption_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading6"
+          }
+        },
+        "separator": {
+          "type": "Boolean",
+          "config": {
+            "label": "Separator",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

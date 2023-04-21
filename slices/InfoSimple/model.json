@@ -1,7 +1,7 @@
 {
   "id": "title_text1",
   "type": "SharedSlice",
-  "name": "TitleText1",
+  "name": "InfoSimple",
   "description": "TitleText1",
   "variations": [
     {

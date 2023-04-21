@@ -14,7 +14,7 @@ export const getSliceData = slice => {
     content: GetParagraphsContent(primary?.content),
     link: GetLink({
       link_name: primary?.link_name,
-      link_url: primary?.link_url.url,
+      link_url: primary?.link_url,
     }),
     image: GetImage(primary.image),
     stats: items.map((item, idx) => ({ id: idx, ...item })),

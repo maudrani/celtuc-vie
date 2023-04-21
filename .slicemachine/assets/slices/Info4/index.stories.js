@@ -1,7 +1,7 @@
-import MyComponent from '../../../../slices/VideoDescriptionLauncher1';
+import MyComponent from '../../../../slices/Info4';
 
 export default {
-  title: 'slices/VideoDescriptionLauncher1'
+  title: 'slices/Info4'
 }
 
 

@@ -45,7 +45,11 @@ const AboutUs4 = props => {
             </div>
           )}
           {hasRightCol && (
-            <div className={`col-lg-4 valign ${!hasLeftCol? 'margin-center pt-70' : ''}`}>
+            <div
+              className={`col-lg-${hasLeftCol ? '4' : '7'} valign ${
+                !hasLeftCol ? 'margin-center pt-70' : ''
+              }`}
+            >
               <div className="cont full-width">
                 {title && <h3 className="color-font">{title}</h3>}
                 {subtitle && <h6>{subtitle}</h6>}

@@ -4166,7 +4166,21 @@ span:hover {
   left: 30px;
   width: 360px;
   height: 360px;
+  padding: 10px;
   background: rgba(35, 35, 35, 0.9);
+}
+
+.about-ar .img .expand {
+  right: 30px;
+  width: 90% !important;
+  word-break: break-all;
+}
+
+@media (max-width: 480px) {
+  .about-ar .img .expand {
+    right: 15px;
+    left: 15px;
+  }
 }
 
 .about-ar .img .exp h2 {

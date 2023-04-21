@@ -1,7 +1,7 @@
-import MyComponent from '../../../../slices/ImagesInfoData2';
+import MyComponent from '../../../../slices/Info3';
 
 export default {
-  title: 'slices/ImagesInfoData2'
+  title: 'slices/Info3'
 }
 
 

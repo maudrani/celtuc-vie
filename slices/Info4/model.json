@@ -1,7 +1,7 @@
 {
   "id": "video_description_launcher",
   "type": "SharedSlice",
-  "name": "VideoDescriptionLauncher1",
+  "name": "Info4",
   "description": "VideoDescriptionLauncher",
   "variations": [
     {
@@ -34,6 +34,33 @@
           "config": {
             "label": "Video",
             "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 1344,
+              "height": 1344
+            },
+            "thumbnails": [
+              {
+                "name": "desktop",
+                "width": 1008,
+                "height": 1008
+              },
+              {
+                "name": "tablet",
+                "width": 1167,
+                "height": 1167
+              },
+              {
+                "name": "mobile",
+                "width": 693,
+                "height": 693
+              }
+            ]
           }
         },
         "caption_title": {

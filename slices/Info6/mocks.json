@@ -1,0 +1,148 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Beginning"
+            }
+          }
+        ]
+      },
+      "top_title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading6",
+            "content": {
+              "text": "Middle"
+            }
+          }
+        ]
+      },
+      "content": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ad sit cillum laborum labore consectetur. Nostrud exercitation est quis occaecat ullamco et officia mollit."
+            }
+          }
+        ]
+      },
+      "background_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+          "width": 6000,
+          "height": 4000
+        },
+        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?rect=0%2C114%2C6000%2C3771&w=700&h=440",
+        "width": 700,
+        "height": 440,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 114
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {
+          "desktop": {
+            "origin": {
+              "id": "desktop",
+              "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+              "width": 4000,
+              "height": 4000
+            },
+            "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?rect=107%2C0%2C3786%2C4000&w=265&h=280",
+            "width": 265,
+            "height": 280,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 107,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "tablet": {
+            "origin": {
+              "id": "tablet",
+              "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+              "width": 4024,
+              "height": 4024
+            },
+            "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?rect=0%2C575%2C4024%2C2874&w=392&h=280",
+            "width": 392,
+            "height": 280,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 0,
+                "y": 575
+              },
+              "background": "transparent"
+            }
+          },
+          "mobile": {
+            "origin": {
+              "id": "mobile",
+              "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+              "width": 3277,
+              "height": 4092
+            },
+            "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?rect=0%2C1022%2C3277%2C2048&w=728&h=455",
+            "width": 728,
+            "height": 455,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 0,
+                "y": 1022
+              },
+              "background": "transparent"
+            }
+          }
+        }
+      },
+      "caption_title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Brought"
+            }
+          }
+        ]
+      },
+      "caption_description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Eu sint tempor aute est proident ullamco duis do qui minim ex aute in quis cupidatat."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

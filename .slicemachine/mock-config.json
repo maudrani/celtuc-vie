@@ -42,6 +42,17 @@
       "default": {
         "primary": {}
       }
+    },
+    "ProgressInfo1": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Info6": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

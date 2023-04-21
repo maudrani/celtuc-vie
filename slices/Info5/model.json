@@ -1,0 +1,90 @@
+{
+  "id": "progress_info1",
+  "type": "SharedSlice",
+  "name": "Info5",
+  "description": "ProgressInfo1",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ProgressInfo1",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading5"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 1344,
+              "height": 1344
+            },
+            "thumbnails": [
+              {
+                "name": "desktop",
+                "width": 1008,
+                "height": 1008
+              },
+              {
+                "name": "tablet",
+                "width": 1167,
+                "height": 1167
+              },
+              {
+                "name": "mobile",
+                "width": 693,
+                "height": 693
+              }
+            ]
+          }
+        }
+      },
+      "items": {
+        "progress_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Progress Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading5"
+          }
+        },
+        "progress_percentage": {
+          "type": "Number",
+          "config": {
+            "label": "Progress percentage",
+            "placeholder": "from 0 to 100"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

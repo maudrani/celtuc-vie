@@ -1,30 +1,23 @@
 {
-  "id": "info_stats2",
+  "id": "images_info_data2",
   "type": "SharedSlice",
-  "name": "ImagesInfoData1",
-  "description": "InfoStats2",
+  "name": "Info3",
+  "description": "ImagesInfoData2",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "InfoStats2",
+      "description": "ImagesInfoData2",
       "primary": {
-        "top_title": {
-          "type": "Text",
-          "config": {
-            "label": "Top Title",
-            "placeholder": ""
-          }
-        },
         "title": {
           "type": "StructuredText",
           "config": {
             "label": "Title",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading3"
+            "single": "heading4"
           }
         },
         "content": {
@@ -36,29 +29,45 @@
             "multi": "paragraph"
           }
         },
+        "link_name": {
+          "type": "Text",
+          "config": {
+            "label": "Link Name",
+            "placeholder": ""
+          }
+        },
+        "link_url": {
+          "type": "Link",
+          "config": {
+            "label": "Link Url",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
         "image_1": {
           "type": "Image",
           "config": {
             "label": "Image 1",
             "constraint": {
-              "width": 700,
-              "height": 440
+              "width": 500,
+              "height": 570
             },
             "thumbnails": [
               {
                 "name": "desktop",
-                "width": 265,
-                "height": 280
+                "width": 435,
+                "height": 496
               },
               {
                 "name": "tablet",
-                "width": 392,
-                "height": 280
+                "width": 472,
+                "height": 537
               },
               {
                 "name": "mobile",
-                "width": 728,
-                "height": 455
+                "width": 730,
+                "height": 570
               }
             ]
           }
@@ -68,72 +77,57 @@
           "config": {
             "label": "Image 2",
             "constraint": {
-              "width": 700,
-              "height": 700
+              "width": 500,
+              "height": 820
             },
             "thumbnails": [
               {
                 "name": "desktop",
-                "width": 380,
-                "height": 336
+                "width": 435,
+                "height": 715
               },
               {
                 "name": "tablet",
-                "width": 560,
-                "height": 336
+                "width": 472,
+                "height": 773
               },
               {
                 "name": "mobile",
-                "width": 624,
-                "height": 391
+                "width": 730,
+                "height": 1196
               }
             ]
           }
         },
-        "image_3": {
-          "type": "Image",
+        "caption_title": {
+          "type": "StructuredText",
           "config": {
-            "label": "Image 1",
-            "constraint": {
-              "width": 700,
-              "height": 440
-            },
-            "thumbnails": [
-              {
-                "name": "desktop",
-                "width": 265,
-                "height": 280
-              },
-              {
-                "name": "tablet",
-                "width": 392,
-                "height": 280
-              },
-              {
-                "name": "mobile",
-                "width": 728,
-                "height": 455
-              }
-            ]
-          }
-        }
-      },
-      "items": {
-        "feature_icon": {
-          "type": "Text",
-          "config": {
-            "label": "Feature Icon",
-            "placeholder": "Icon name"
+            "label": "Caption Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
           }
         },
-        "feature_name": {
-          "type": "Text",
+        "caption_description": {
+          "type": "StructuredText",
           "config": {
-            "label": "Feature Name",
-            "placeholder": ""
+            "label": "Caption Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading6"
+          }
+        },
+        "separator": {
+          "type": "Boolean",
+          "config": {
+            "label": "Separator",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
           }
         }
       },
+      "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

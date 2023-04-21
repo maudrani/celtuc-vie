@@ -1,11 +1,25 @@
 import React, { useRef } from 'react';
 import aboutSkillsProgress from '../../common/aboutSkillsProgress';
-import { useOnScreen } from 'src/utils/hooks';
+import { useOnScreen, useWindowsWidth } from 'src/utils/hooks';
+import { getDataFromProps } from './adapters';
+import { isArray, isEmpty } from 'lodash';
+import Image from 'next/image';
 
-const AboutUs5 = () => {
+const AboutUs5 = props => {
   const animationTriggerRef = useRef(null);
-
   const isOnScreen = useOnScreen({ ref: animationTriggerRef, oneTime: true });
+  const windowsWidth = useWindowsWidth();
+
+  const {
+    title,
+    subtitle,
+    content,
+    image,
+    stats,
+
+    hasLeftCol,
+    hasRightCol,
+  } = getDataFromProps({ props, windowsWidth });
 
   React.useEffect(() => {
     if (!document || !isOnScreen) return;
@@ -16,39 +30,63 @@ const AboutUs5 = () => {
     });
   }, [isOnScreen]);
 
+  if (!hasLeftCol && !hasRightCol) return null;
+
   return (
     <section className="about-cr">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-6 img md-mb50">
-            <img src="/img/intro/4.jpg" alt="" />
-          </div>
-          <div className="col-lg-5 valign">
-            <div className="cont full-width">
-              <h3 className="color-font">UI / UX Designer</h3>
-              <h5 className="co-tit mb-15">
-                We help to create visual strategies.
-              </h5>
-              <p>
-                We are Vie. We create award-winning websites, remarkable brands
-                and cutting-edge apps.Nullam imperdie.
-              </p>
-              <div className="skills-box mt-40" ref={animationTriggerRef}>
-                <div className="skill-item">
-                  <h5 className="fz-14 mb-15">UI / UX Design</h5>
-                  <div className="skill-progress">
-                    <div className="progres" data-value="90%"></div>
+          {hasLeftCol && (
+            <div
+              className={`col-lg-${hasRightCol ? '6' : '7'} img md-mb50 p-0 ${
+                !hasRightCol ? 'margin-center' : ''
+              }`}
+            >
+              <Image
+                src={image.url}
+                alt={image.alt}
+                width={image.dimensions.width}
+                height={image.dimensions.height}
+              />
+            </div>
+          )}
+          {hasRightCol && (
+            <div
+              className={`col-lg-${hasLeftCol ? '5' : '7'} valign ${
+                !hasLeftCol ? 'margin-center pt-70' : ''
+              }`}
+            >
+              <div className="cont full-width">
+                {title && <h3 className="color-font">{title}</h3>}
+                {subtitle && <h5 className="co-tit mb-15">{subtitle}</h5>}
+                {isArray(content) &&
+                  !isEmpty(content) &&
+                  content.map((item, idx) => (
+                    <p
+                      key={`item-${idx}`}
+                      className={`${idx + 1 !== content.length ? 'mb-20' : ''}`}
+                    >
+                      {item}
+                    </p>
+                  ))}
+                {isArray(stats) && !isEmpty(stats) && (
+                  <div className="skills-box mt-40" ref={animationTriggerRef}>
+                    {stats.map(progress => (
+                      <div key={progress.id} className="skill-item">
+                        <h5 className="fz-14 mb-15">{progress.title}</h5>
+                        <div className="skill-progress">
+                          <div
+                            className="progres"
+                            data-value={`${progress.percentage}%`}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
-                <div className="skill-item">
-                  <h5 className="fz-14 mb-15">Apps Development</h5>
-                  <div className="skill-progress">
-                    <div className="progres" data-value="80%"></div>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

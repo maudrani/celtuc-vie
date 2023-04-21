@@ -1,0 +1,149 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Rather"
+            }
+          }
+        ]
+      },
+      "subtitle": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading5",
+            "content": {
+              "text": "Question"
+            }
+          }
+        ]
+      },
+      "content": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Cillum consectetur officia et tempor. Anim nostrud magna consectetur. Aute labore dolor labore."
+            }
+          }
+        ]
+      },
+      "image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+          "width": 4480,
+          "height": 4480
+        },
+        "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?rect=0%2C0%2C4480%2C4480&w=1344&h=1344",
+        "width": 1344,
+        "height": 1344,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {
+          "desktop": {
+            "origin": {
+              "id": "desktop",
+              "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+              "width": 3456,
+              "height": 3456
+            },
+            "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C0%2C3456%2C3456&w=1008&h=1008",
+            "width": 1008,
+            "height": 1008,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 0,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "tablet": {
+            "origin": {
+              "id": "tablet",
+              "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+              "width": 4752,
+              "height": 3168
+            },
+            "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?rect=792%2C0%2C3168%2C3168&w=1167&h=1167",
+            "width": 1167,
+            "height": 1167,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 792,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "mobile": {
+            "origin": {
+              "id": "mobile",
+              "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+              "width": 12288,
+              "height": 16384
+            },
+            "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?rect=0%2C2048%2C12288%2C12288&w=693&h=693",
+            "width": 693,
+            "height": 693,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 0,
+                "y": 2048
+              },
+              "background": "transparent"
+            }
+          }
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "progress_title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading5",
+                  "content": {
+                    "text": "Nails"
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "progress_percentage",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "6",
+              "type": "Number"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -4,6 +4,7 @@ import AboutUs2 from '@/components/About-us2/about-us2';
 import AboutUs3 from '@/components/About-us3/about-us3';
 import AboutUs4 from '@/components/About-us4/about-us4';
 import AboutUs5 from '@/components/About-us5/about-us5';
+import AboutUs6 from '@/components/About-us6/about-us6';
 import React from 'react';
 
 const SlicesTest = () => {
@@ -14,7 +15,8 @@ const SlicesTest = () => {
       {/* <AboutUs2 /> */}
       {/* <AboutUs3 /> */}
       {/* <AboutUs4 /> */}
-      <AboutUs5 />
+      {/* <AboutUs5 /> */}
+      {/* <AboutUs6 /> */}
     </div>
   );
 };

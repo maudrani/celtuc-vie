@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 const AboutUs4 = props => {
   const windowsWidth = useWindowsWidth();
+  const [isOpen, setOpen] = React.useState(false);
 
   const {
     title,
@@ -24,7 +25,6 @@ const AboutUs4 = props => {
 
   if (!hasLeftCol && !hasRightCol) return null;
 
-  const [isOpen, setOpen] = React.useState(false);
   return (
     <section className="about-cr">
       <div className="container-fluid">

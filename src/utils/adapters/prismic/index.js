@@ -39,7 +39,7 @@ export const GetParagraphsContent = content => {
 export const GetLink = ({ link_name, link_url }) => {
   if (!link_name || !link_url) return;
 
-  const validLink = link_name && link_url?.url;
+  const validLink = !!(link_name && link_url?.url);
 
   return {
     name: link_name,

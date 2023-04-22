@@ -5,6 +5,9 @@ import AboutUs3 from '@/components/About-us3/about-us3';
 import AboutUs4 from '@/components/About-us4/about-us4';
 import AboutUs5 from '@/components/About-us5/about-us5';
 import AboutUs6 from '@/components/About-us6/about-us6';
+import CallToAction from '@/components/Call-to-action/call-to-action';
+import CaseStudy from '@/components/Case-study/case-study';
+import Clients from '@/components/Clients/clients';
 import React from 'react';
 
 const SlicesTest = () => {
@@ -17,6 +20,10 @@ const SlicesTest = () => {
       {/* <AboutUs4 /> */}
       {/* <AboutUs5 /> */}
       {/* <AboutUs6 /> */}
+      {/* BLOGS LEFT */}
+      {/* <CallToAction /> */}
+      {/* <CaseStudy /> */}
+      <Clients />
     </div>
   );
 };

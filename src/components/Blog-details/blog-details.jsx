@@ -168,9 +168,7 @@ const BlogDetails = ({ theme }) => {
                 </span>
                 <span className="icon">
                   <Link href={`/blog/blog-dark`}>
-                    <a>
-                      <i className="fas fa-th-large"></i>
-                    </a>
+                    <i className="fas fa-th-large"></i>
                   </Link>
                 </span>
                 <span className="text-right">

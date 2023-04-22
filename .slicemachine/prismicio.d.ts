@@ -35,7 +35,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = TitleText1Slice | InfoStatusImage1Slice | VideoDescriptionLauncherSlice;
+type PageDocumentDataSlicesSlice = TitleText1Slice | InfoStatusImage1Slice | VideoDescriptionLauncherSlice | Cta1Slice | Carousel1Slice;
 /**
  * Page document from Prismic
  *
@@ -47,6 +47,285 @@ type PageDocumentDataSlicesSlice = TitleText1Slice | InfoStatusImage1Slice | Vid
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 export type AllDocumentTypes = PageDocument;
+/**
+ * Item in Carousel1 → Items
+ *
+ */
+export interface Carousel1SliceDefaultItem {
+    /**
+     * Tag field in *Carousel1 → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].tag
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    tag: prismicT.KeyTextField;
+    /**
+     * Top Title field in *Carousel1 → Items*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].top_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    top_title: prismicT.TitleField;
+    /**
+     * Title field in *Carousel1 → Items*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Image field in *Carousel1 → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<"desktop" | "tablet" | "mobile">;
+    /**
+     * Link url field in *Carousel1 → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+}
+/**
+ * Default variation for Carousel1 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Carousel1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type Carousel1SliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<Carousel1SliceDefaultItem>>;
+/**
+ * Slice variation for *Carousel1*
+ *
+ */
+type Carousel1SliceVariation = Carousel1SliceDefault;
+/**
+ * Carousel1 Shared Slice
+ *
+ * - **API ID**: `carousel1`
+ * - **Description**: `Carousel1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type Carousel1Slice = prismicT.SharedSlice<"carousel1", Carousel1SliceVariation>;
+/**
+ * Primary content in Cta1 → Primary
+ *
+ */
+interface Cta1SliceDefaultPrimary {
+    /**
+     * Top Title field in *Cta1 → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: cta1.primary.top_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    top_title: prismicT.TitleField;
+    /**
+     * Link Name field in *Cta1 → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta1.primary.link_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_name: prismicT.KeyTextField;
+    /**
+     * Link Url field in *Cta1 → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta1.primary.link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Background Image field in *Cta1 → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta1.primary.background_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    background_image: prismicT.ImageField<"desktop" | "tablet" | "mobile">;
+}
+/**
+ * Item in Cta1 → Items
+ *
+ */
+export interface Cta1SliceDefaultItem {
+    /**
+     * Text field in *Cta1 → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta1.items[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
+     * Style field in *Cta1 → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta1.items[].style
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    style: prismicT.SelectField<"outline" | "back color">;
+}
+/**
+ * Default variation for Cta1 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Cta1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type Cta1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<Cta1SliceDefaultPrimary>, Simplify<Cta1SliceDefaultItem>>;
+/**
+ * Slice variation for *Cta1*
+ *
+ */
+type Cta1SliceVariation = Cta1SliceDefault;
+/**
+ * Cta1 Shared Slice
+ *
+ * - **API ID**: `cta1`
+ * - **Description**: `Cta1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type Cta1Slice = prismicT.SharedSlice<"cta1", Cta1SliceVariation>;
+/**
+ * Primary content in IconLinks → Primary
+ *
+ */
+interface IconLinksSliceDefaultPrimary {
+    /**
+     * Top Title field in *IconLinks → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: icon_links.primary.top_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    top_title: prismicT.TitleField;
+    /**
+     * Title field in *IconLinks → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: icon_links.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Content field in *IconLinks → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.primary.content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    content: prismicT.RichTextField;
+}
+/**
+ * Item in IconLinks → Items
+ *
+ */
+export interface IconLinksSliceDefaultItem {
+    /**
+     * Light Theme Image field in *IconLinks → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].light_theme_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    light_theme_image: prismicT.ImageField<never>;
+    /**
+     * Dark Theme Image field in *IconLinks → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].dark_theme_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    dark_theme_image: prismicT.ImageField<never>;
+    /**
+     * Link Name field in *IconLinks → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].link_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_name: prismicT.KeyTextField;
+    /**
+     * Link Url field in *IconLinks → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+}
+/**
+ * Default variation for IconLinks Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `IconLinks`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IconLinksSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<IconLinksSliceDefaultPrimary>, Simplify<IconLinksSliceDefaultItem>>;
+/**
+ * Slice variation for *IconLinks*
+ *
+ */
+type IconLinksSliceVariation = IconLinksSliceDefault;
+/**
+ * IconLinks Shared Slice
+ *
+ * - **API ID**: `icon_links`
+ * - **Description**: `IconLinks`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IconLinksSlice = prismicT.SharedSlice<"icon_links", IconLinksSliceVariation>;
 /**
  * Primary content in Info1 → Primary
  *
@@ -754,6 +1033,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
+        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
     }
 }

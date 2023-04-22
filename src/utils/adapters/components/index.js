@@ -8,16 +8,33 @@ export const GetCurrentImgIfColumn = ({
 }) => {
   if (isEmpty(img)) return;
 
-  const { mobile, tablet } = breakpoints;
+  const { mobile = 570, tablet = 990, desktop = 1440 } = breakpoints;
 
-  const currentImg =
-    windowsWidth <= (mobile || 570)
-      ? img?.mobile
-      : windowsWidth <= (tablet || 990)
-      ? img?.tablet
-      : hasCol
-      ? img?.desktop
-      : img?.main;
+  const imageSize =
+    windowsWidth <= mobile
+      ? 'mobile'
+      : windowsWidth <= tablet
+      ? 'tablet'
+      : windowsWidth <= desktop || hasCol
+      ? 'desktop'
+      : 'main';
 
-  return currentImg;
+  return img[imageSize] || img.main;
+};
+
+export const GetCurrentImg = ({ img, breakpoints = {}, windowsWidth }) => {
+  if (isEmpty(img)) return;
+
+  const { mobile = 570, tablet = 990, desktop = 1440 } = breakpoints;
+
+  const imageSize =
+    windowsWidth <= mobile
+      ? 'mobile'
+      : windowsWidth <= tablet
+      ? 'tablet'
+      : windowsWidth <= desktop
+      ? 'desktop'
+      : 'main';
+
+  return img[imageSize] || img.main;
 };

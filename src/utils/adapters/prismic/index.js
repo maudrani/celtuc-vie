@@ -5,36 +5,27 @@ import { getVideoAutoplay, getVideoId } from '../components/video';
 export const GetRichTextContent = (richTextProp = []) => richTextProp[0]?.text;
 
 export const GetImage = imageObj => {
-  if (isEmpty(imageObj?.dimensions)) return;
+  if (isEmpty(imageObj?.dimensions) || !imageObj) return;
 
   const parsedImg = {
     main: {
       dimensions: imageObj.dimensions,
       alt: imageObj.alt,
       url: imageObj.url,
-    },
-    desktop: {
-      dimensions: {
-        ...imageObj.desktop.dimensions,
-      },
-      alt: imageObj.desktop.alt || imageObj.alt,
-      url: imageObj.desktop.url || imageObj.url,
-    },
-    tablet: {
-      dimensions: {
-        ...imageObj.tablet.dimensions,
-      },
-      alt: imageObj.tablet.alt || imageObj.alt,
-      url: imageObj.tablet.url || imageObj.url,
-    },
-    mobile: {
-      dimensions: {
-        ...imageObj.mobile.dimensions,
-      },
-      alt: imageObj.mobile.alt || imageObj.alt,
-      url: imageObj.mobile.url || imageObj.url,
-    },
+    }
   };
+
+  ['desktop', 'tablet', 'mobile'].forEach(_device => {
+    if(!imageObj[_device]?.dimensions) return 
+
+    parsedImg[_device] = {
+      dimensions: {
+        ...imageObj[_device].dimensions || imageObj.dimensions,
+      },
+      alt: imageObj[_device].alt || imageObj.alt,
+      url: imageObj[_device].url || imageObj.url,
+    }
+  })
 
   return parsedImg;
 };
@@ -52,7 +43,7 @@ export const GetLink = ({ link_name, link_url }) => {
 
   return {
     name: link_name,
-    url: link_url.url,
+    url: link_url,
     valid: validLink,
   };
 };
@@ -65,7 +56,7 @@ export const GetParsedVideoData = ({ video }) => {
   const parsedData = {
     channel: provider,
     videoId: getVideoId({ url: video.embed_url, provider }),
-    autoplay: getVideoAutoplay({provider})
+    autoplay: getVideoAutoplay({ provider }),
   };
 
   return parsedData;

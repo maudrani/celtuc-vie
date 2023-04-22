@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
-import caseStudyData from '../../data/sections/case-study.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, EffectFade } from 'swiper';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import removeSlashFromPagination from '../../common/removeSlashpagination';
+import { useWindowsWidth } from 'src/utils/hooks';
+import { getDataFromProps } from './adapters';
+
 SwiperCore.use([Navigation, Pagination, EffectFade]);
 
-const CaseStudy = () => {
+const SlideItem = ({ item }) => {
+  const slideRef = useRef();
+
+  const LinkWrapper = !item.link.url
+    ? ({ children }) => children
+    : ({ children }) => <Link href={item.link.url}>{children}</Link>;
+
+  return (
+    <div className="container d-flex align-items-end" ref={slideRef}>
+      <div className="cont">
+        <LinkWrapper>
+          {item.tag && <span>{item.tag}</span>}
+          {item.top_title && <h6 className="main-color">{item.top_title}</h6>}
+          {item.title && <h4>{item.title}</h4>}
+        </LinkWrapper>
+      </div>
+    </div>
+  );
+};
+
+const CaseStudy = props => {
   const [load, setLoad] = React.useState(true);
+  const windowsWidth = useWindowsWidth();
+
   React.useEffect(() => {
     setTimeout(() => {
       setLoad(false);
@@ -21,6 +45,11 @@ const CaseStudy = () => {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const paginationRef = React.useRef(null);
+
+  const { slides } = getDataFromProps({ props, windowsWidth });
+
+  if (!slides) return null;
+
   return (
     <section className="case-study">
       <h2 style={{ display: 'none' }}>&nbsp;</h2>
@@ -72,26 +101,20 @@ const CaseStudy = () => {
             className="swiper-wrapper"
             slidesPerView={1}
           >
-            {caseStudyData.map(item => (
-              <SwiperSlide
-                key={item.id}
-                className="swiper-slide bg-img"
-                style={{ backgroundImage: `url(${item.image})` }}
-                data-overlay-dark="7"
-              >
-                <div className="container d-flex align-items-end">
-                  <div className="cont">
-                    <Link href="/showcase/showcase-dark">
-                      <a>
-                        <span>Case Study</span>
-                        <h6 className="main-color">{item.date}</h6>
-                        <h4>{item.title}</h4>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+            {slides.map(item => {
+              return (
+                <SwiperSlide
+                  className="swiper-slide bg-img"
+                  style={{
+                    backgroundImage: item.image && `url(${item.image.url})`,
+                  }}
+                  data-overlay-dark="7"
+                  key={item.id}
+                >
+                  <SlideItem item={item} />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         ) : null}
         <div className="controls">

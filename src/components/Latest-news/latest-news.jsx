@@ -23,30 +23,27 @@ const LatestNews = () => {
               <div className="cont">
                 <div>
                   <div className="info">
-                    <Link href="/blog">
-                      <a className="date">
-                        <span>
-                          <i>06</i> August
-                        </span>
-                      </a>
+                    <Link href="/blog" className="date">
+                      <span>
+                        <i>06</i> August
+                      </span>
                     </Link>
                     <span>/</span>
-                    <Link href="/blog">
-                      <a className="tag">
-                        <span className="main-color">Architecture</span>
-                      </a>
+                    <Link href="/blog" className="tag">
+                      <span className="main-color">Architecture</span>
                     </Link>
                   </div>
                   <h5>
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        How to use solid color combine with simple furnitures.
-                      </a>
+                      How to use solid color combine with simple furnitures.
                     </Link>
                   </h5>
                   <div className="btn-more">
-                    <Link href="/blog-details/blog-details-dark">
-                      <a className="simple-btn main-color">Read More</a>
+                    <Link
+                      href="/blog-details/blog-details-dark"
+                      className="simple-btn main-color"
+                    >
+                      Read More
                     </Link>
                   </div>
                 </div>
@@ -61,30 +58,27 @@ const LatestNews = () => {
               <div className="cont">
                 <div>
                   <div className="info">
-                    <Link href="/blog">
-                      <a className="date">
-                        <span>
-                          <i>06</i> August
-                        </span>
-                      </a>
+                    <Link href="/blog" className="date">
+                      <span>
+                        <i>06</i> August
+                      </span>
                     </Link>
                     <span>/</span>
-                    <Link href="/blog">
-                      <a className="tag">
-                        <span className="main-color">Architecture</span>
-                      </a>
+                    <Link href="/blog" className="tag">
+                      <span className="main-color">Architecture</span>
                     </Link>
                   </div>
                   <h5>
                     <Link href="/blog-details/blog-details-dark">
-                      <a>
-                        How to use solid color combine with simple furnitures.
-                      </a>
+                      How to use solid color combine with simple furnitures.
                     </Link>
                   </h5>
                   <div className="btn-more">
-                    <Link href="/blog-details/blog-details-dark">
-                      <a className="simple-btn main-color">Read More</a>
+                    <Link
+                      href="/blog-details/blog-details-dark"
+                      className="simple-btn main-color"
+                    >
+                      Read More
                     </Link>
                   </div>
                 </div>

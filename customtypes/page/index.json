@@ -32,6 +32,12 @@
             },
             "video_description_launcher": {
               "type": "SharedSlice"
+            },
+            "cta1": {
+              "type": "SharedSlice"
+            },
+            "carousel1": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -1,3 +1,4 @@
+import React from 'react';
 import AboutIntro from '@/components/About-intro';
 import AboutUs from '@/components/About-us/about-us';
 import AboutUs2 from '@/components/About-us2/about-us2';
@@ -10,7 +11,7 @@ import CaseStudy from '@/components/Case-study/case-study';
 import Clients from '@/components/Clients/clients';
 import Clients2 from '@/components/Clients2/clients2';
 import Clients3 from '@/components/Clients3/clients3';
-import React from 'react';
+import ShowcasesFullScreen from '@/components/Showcases-full-screen/showcases-full-screen';
 
 const SlicesTest = () => {
   return (
@@ -32,6 +33,7 @@ const SlicesTest = () => {
       {/* <Clients3 /> */}
 
       {/* Selected for Natural   */}
+      <ShowcasesFullScreen />
     </div>
   );
 };

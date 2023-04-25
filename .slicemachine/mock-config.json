@@ -1,6 +1,9 @@
 {
   "_cts": {
-    "page": {}
+    "page": {},
+    "intro": {
+      "slides": {}
+    }
   },
   "slices": {
     "TitleText1": {

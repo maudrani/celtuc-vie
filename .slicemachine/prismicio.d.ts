@@ -6,6 +6,102 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Intro documents */
+interface IntroDocumentData {
+    /**
+     * Slides field in *Intro*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: intro.slides[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    slides: prismicT.GroupField<Simplify<IntroDocumentDataSlidesItem>>;
+    /**
+     * Slice Zone field in *Intro*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: intro.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<IntroDocumentDataSlicesSlice>;
+}
+/**
+ * Item in Intro → Slides
+ *
+ */
+export interface IntroDocumentDataSlidesItem {
+    /**
+     * Title field in *Intro → Slides*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: intro.slides[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Subtitle field in *Intro → Slides*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: intro.slides[].subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtitle: prismicT.TitleField;
+    /**
+     * Image field in *Intro → Slides*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: intro.slides[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<"desktop" | "tablet" | "mobile">;
+    /**
+     * Link Url field in *Intro → Slides*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: intro.slides[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Link Name field in *Intro → Slides*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: intro.slides[].link_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link_name: prismicT.RichTextField;
+}
+/**
+ * Slice for *Intro → Slice Zone*
+ *
+ */
+type IntroDocumentDataSlicesSlice = never;
+/**
+ * Intro document from Prismic
+ *
+ * - **API ID**: `intro`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type IntroDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<IntroDocumentData>, "intro", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -46,7 +142,7 @@ type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = PageDocument;
+export type AllDocumentTypes = IntroDocument | PageDocument;
 /**
  * Item in Carousel1 → Items
  *
@@ -1198,6 +1294,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceIconsLinkIconsOnlyPrimary, IconLinksSliceIconsLinkIconsOnlyItem, IconLinksSliceIconsLinkIconsOnly, IconLinksSliceTopContentPrimary, IconLinksSliceTopContentItem, IconLinksSliceTopContent, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
+        export type { IntroDocumentData, IntroDocumentDataSlidesItem, IntroDocumentDataSlicesSlice, IntroDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceIconsLinkIconsOnlyPrimary, IconLinksSliceIconsLinkIconsOnlyItem, IconLinksSliceIconsLinkIconsOnly, IconLinksSliceTopContentPrimary, IconLinksSliceTopContentItem, IconLinksSliceTopContent, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
     }
 }

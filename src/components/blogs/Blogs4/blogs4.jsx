@@ -179,10 +179,8 @@ const Blogs4 = () => {
                         </div>
                         <div className="info">
                           <Link href="/blog">
-                            <a>
-                              <i className="far fa-clock"></i>
-                              06 Aug 2022
-                            </a>
+                            <i className="far fa-clock"></i>
+                            06 Aug 2022
                           </Link>
                           <a href="#0">by Alex Morgan</a>
                         </div>
@@ -216,17 +214,15 @@ const Blogs4 = () => {
                         </div>
                         <div className="info">
                           <Link href="/blog">
-                            <a>
-                              <i className="far fa-clock"></i>
-                              06 Aug 2022
-                            </a>
+                            <i className="far fa-clock"></i>
+                            06 Aug 2022
                           </Link>
                           <a href="#0">by Alex Morgan</a>
                         </div>
                         <div className="title">
                           <h4>
                             <Link href="/blog-details/blog-details-dark">
-                              <a>List of The Best Investment Projects</a>
+                              List of The Best Investment Projects
                             </Link>
                           </h4>
                         </div>
@@ -253,17 +249,15 @@ const Blogs4 = () => {
                         </div>
                         <div className="info">
                           <Link href="/blog">
-                            <a>
-                              <i className="far fa-clock"></i>
-                              06 Aug 2022
-                            </a>
+                            <i className="far fa-clock"></i>
+                            06 Aug 2022
                           </Link>
                           <a href="#0">by Alex Morgan</a>
                         </div>
                         <div className="title">
                           <h4>
                             <Link href="/blog-details/blog-details-dark">
-                              <a>World Best Business Website Company</a>
+                              World Best Business Website Company
                             </Link>
                           </h4>
                         </div>

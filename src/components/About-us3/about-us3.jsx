@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Split from '../Split';
 import Link from 'next/link';
 import { thumparallax, thumparallaxDown } from '../../common/thumparallax';
@@ -21,17 +21,17 @@ const AboutUs3 = props => {
     hasLeftCol,
     hasRightCol,
     hasCaption,
-    separator
+    separator,
   } = getDataFromProps({ props, windowsWidth });
 
-  if (!hasLeftCol && !hasRightCol) return null;
-
-  React.useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       thumparallax();
       thumparallaxDown();
     }, 1000);
   }, []);
+
+  if (!hasLeftCol && !hasRightCol) return null;
 
   return (
     <section className="agency section-padding position-re">

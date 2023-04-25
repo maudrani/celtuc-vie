@@ -1,0 +1,150 @@
+{
+  "slides": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Experience"
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "subtitle",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Newspaper"
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+                "width": 3456,
+                "height": 3456
+              },
+              "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C756%2C3456%2C1944&w=2304&h=1296",
+              "width": 2304,
+              "height": 1296,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 756
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {
+                "desktop": {
+                  "origin": {
+                    "id": "desktop",
+                    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+                    "width": 6000,
+                    "height": 4000
+                  },
+                  "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?rect=0%2C313%2C6000%2C3375&w=1920&h=1080",
+                  "width": 1920,
+                  "height": 1080,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 313
+                    },
+                    "background": "transparent"
+                  }
+                },
+                "tablet": {
+                  "origin": {
+                    "id": "tablet",
+                    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+                    "width": 4000,
+                    "height": 6000
+                  },
+                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?rect=0%2C720%2C4000%2C4561&w=856&h=976",
+                  "width": 856,
+                  "height": 976,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 720
+                    },
+                    "background": "transparent"
+                  }
+                },
+                "mobile": {
+                  "origin": {
+                    "id": "mobile",
+                    "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+                    "width": 4024,
+                    "height": 4024
+                  },
+                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?rect=460%2C0%2C3104%2C4024&w=648&h=840",
+                  "width": 648,
+                  "height": 840,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 460,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            }
+          ],
+          [
+            "link_url",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ],
+          [
+            "link_name",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Deserunt laborum minim pariatur magna irure incididunt laboris aute."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": []
+  }
+}

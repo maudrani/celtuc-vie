@@ -66,75 +66,82 @@ const NavbarFullMenu = () => {
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home1-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">01.</span>Main Home
-                              </a>
+                            <Link
+                              href={`/homepage/home1-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">01.</span>Main Home
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home2-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">02.</span>Creative Agency
-                              </a>
+                            <Link
+                              href={`/homepage/home2-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">02.</span>Creative Agency
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home5-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">03.</span>Digital Agency
-                              </a>
+                            <Link
+                              href={`/homepage/home5-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">03.</span>Digital Agency
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home4-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">04.</span>Business One Page
-                              </a>
+                            <Link
+                              href={`/homepage/home4-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">04.</span>Business One Page
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home3-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">05.</span>Corporate
-                                Business
-                              </a>
+                            <Link
+                              href={`/homepage/home3-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">05.</span>Corporate Business
                             </Link>
                           </div>
                         </li>
 
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home6-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">06.</span>Modern Agency
-                              </a>
+                            <Link
+                              href={`/homepage/home6-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">06.</span>Modern Agency
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home7-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">07.</span>Freelancer
-                              </a>
+                            <Link
+                              href={`/homepage/home7-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">07.</span>Freelancer
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/homepage/home8-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">08.</span>Architecture
-                              </a>
+                            <Link
+                              href={`/homepage/home8-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">08.</span>Architecture
                             </Link>
                           </div>
                         </li>
@@ -143,10 +150,8 @@ const NavbarFullMenu = () => {
                   </li>
                   <li>
                     <div className="o-hidden">
-                      <Link href={`/about/about`}>
-                        <a className="link">
-                          <span className="nm">02.</span>About Us
-                        </a>
+                      <Link href={`/about/about`} className="link">
+                        <span className="nm">02.</span>About Us
                       </Link>
                     </div>
                   </li>
@@ -168,56 +173,61 @@ const NavbarFullMenu = () => {
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/showcase/showcase-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">01.</span>ShowCase Parallax
-                              </a>
+                            <Link
+                              href={`/showcase/showcase-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">01.</span>ShowCase Parallax
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/showcase4/showcase4-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">02.</span>ShowCase Carousel
-                              </a>
+                            <Link
+                              href={`/showcase4/showcase4-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">02.</span>ShowCase Carousel
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/showcase3/showcase3-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">03.</span>ShowCase Circle
-                              </a>
+                            <Link
+                              href={`/showcase3/showcase3-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">03.</span>ShowCase Circle
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/works/works-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">04.</span>Portfolio Masonry
-                              </a>
+                            <Link
+                              href={`/works/works-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">04.</span>Portfolio Masonry
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/works2/works2-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">05.</span>Portfolio
-                                Filtering
-                              </a>
+                            <Link
+                              href={`/works2/works2-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">05.</span>Portfolio Filtering
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/works3/works3-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">06.</span>Portfolio Gallery
-                              </a>
+                            <Link
+                              href={`/works3/works3-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">06.</span>Portfolio Gallery
                             </Link>
                           </div>
                         </li>
@@ -242,37 +252,38 @@ const NavbarFullMenu = () => {
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/blog/blog-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">01.</span>Blog Standerd
-                              </a>
+                            <Link href={`/blog/blog-dark`} className="sub-link">
+                              <span className="nm">01.</span>Blog Standerd
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/blog-list/blog-list-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">02.</span>Blog List
-                              </a>
+                            <Link
+                              href={`/blog-list/blog-list-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">02.</span>Blog List
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/blog-grid/blog-grid-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">03.</span>Blog Grid
-                              </a>
+                            <Link
+                              href={`/blog-grid/blog-grid-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">03.</span>Blog Grid
                             </Link>
                           </div>
                         </li>
                         <li>
                           <div className="o-hidden">
-                            <Link href={`/blog-details/blog-details-dark`}>
-                              <a className="sub-link">
-                                <span className="nm">04.</span>Blog Details
-                              </a>
+                            <Link
+                              href={`/blog-details/blog-details-dark`}
+                              className="sub-link"
+                            >
+                              <span className="nm">04.</span>Blog Details
                             </Link>
                           </div>
                         </li>
@@ -281,10 +292,8 @@ const NavbarFullMenu = () => {
                   </li>
                   <li>
                     <div className="o-hidden">
-                      <Link href={`/contact/contact-dark`}>
-                        <a className="link">
-                          <span className="nm">05.</span>Contact
-                        </a>
+                      <Link href={`/contact/contact-dark`} className="link">
+                        <span className="nm">05.</span>Contact
                       </Link>
                     </div>
                   </li>

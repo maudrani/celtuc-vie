@@ -1,0 +1,88 @@
+{
+  "id": "intro",
+  "label": "Intro",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slides": {
+        "type": "Group",
+        "config": {
+          "label": "Slides",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading1"
+              }
+            },
+            "subtitle": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Subtitle",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading1"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {
+                  "width": 2304,
+                  "height": 1296
+                },
+                "thumbnails": [
+                  {
+                    "name": "desktop",
+                    "width": 1920,
+                    "height": 1080
+                  },
+                  {
+                    "name": "tablet",
+                    "width": 856,
+                    "height": 976
+                  },
+                  {
+                    "name": "mobile",
+                    "width": 648,
+                    "height": 840
+                  }
+                ]
+              }
+            },
+            "link_url": {
+              "type": "Link",
+              "config": {
+                "label": "Link Url",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            },
+            "link_name": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Link Name",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

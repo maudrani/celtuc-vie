@@ -14,11 +14,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/mousewheel';
 import removeSlashFromPagination from '../../common/removeSlashpagination';
+import { PanelBottom } from './styled';
 
 SwiperCore.use([Navigation, Pagination, Parallax, Mousewheel]);
 
 const ShowcasesFullScreen = () => {
   const [load, setLoad] = React.useState(true);
+
   React.useEffect(() => {
     removeSlashFromPagination();
     setTimeout(() => {
@@ -29,6 +31,7 @@ const ShowcasesFullScreen = () => {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   const paginationRef = React.useRef(null);
+
   return (
     <header className="slider showcase-full">
       <div className="swiper-container parallax-slider">
@@ -91,27 +94,23 @@ const ShowcasesFullScreen = () => {
                             <Link
                               href={`/project-details2/project-details2-dark`}
                             >
-                              <a>
-                                <div
-                                  className="stroke"
-                                  data-swiper-parallax="-2000"
-                                >
-                                  {slide.title.first}
-                                </div>
-                                <span data-swiper-parallax="-5000">
-                                  {slide.title.second}
-                                </span>
-                              </a>
+                              <div
+                                className="stroke"
+                                data-swiper-parallax="-2000"
+                              >
+                                {slide.title.first}
+                              </div>
+                              <span data-swiper-parallax="-5000">
+                                {slide.title.second}
+                              </span>
                             </Link>
                             <div className="bord"></div>
                           </h1>
                           <div className="discover">
                             <Link href={`/works/works-dark`}>
-                              <a>
-                                <span>
-                                  Explore <br /> More
-                                </span>
-                              </a>
+                              <span>
+                                Explore <br /> More
+                              </span>
                             </Link>
                           </div>
                         </div>
@@ -125,7 +124,7 @@ const ShowcasesFullScreen = () => {
         ) : null}
       </div>
 
-      <div className="txt-botm">
+      <PanelBottom className="txt-botm">
         <div
           ref={navigationNextRef}
           className="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer"
@@ -150,7 +149,7 @@ const ShowcasesFullScreen = () => {
         </div>
 
         <div className="swiper-pagination dots" ref={paginationRef}></div>
-      </div>
+      </PanelBottom>
     </header>
   );
 };

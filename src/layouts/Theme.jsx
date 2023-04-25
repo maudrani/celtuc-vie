@@ -6,7 +6,7 @@ import { themes } from '@/styles/theme';
 
 const Theme = ({ children }) => {
   const { theme } = useContext(StylesContext);
-  const { themeName, useSkin, mobileappstyle } = theme;
+  const { themeName, useSkin, /* mobileappstyle  */} = theme;
 
   React.useEffect(() => {
     window.theme = themeName;
@@ -21,11 +21,11 @@ const Theme = ({ children }) => {
         ) : (
           ''
         )}
-        {mobileappstyle ? (
+        {/* {mobileappstyle ? (
           <link href={`/css/mobile-app-${themeName}.css`} rel="stylesheet" />
         ) : (
           ''
-        )}
+        )} */}
       </Head>
       {children}
     </ThemeProvider>

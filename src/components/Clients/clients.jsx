@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Split from '../Split';
 import { StylesContext } from '@/contexts/styles';
-import { useWindowsWidth } from 'src/utils/hooks';
 import { getDataFromProps } from './adapters';
 import { isArray, isEmpty } from 'lodash';
 import Link from 'next/link';
@@ -10,12 +9,10 @@ import Image from 'next/image';
 
 const Clients = props => {
   const { theme } = useContext(StylesContext);
-  const windowsWidth = useWindowsWidth();
 
-  let { top_title, title, content, links, hasLeftCol, hasRightCol } =
+  const { top_title, title, content, links, hasLeftCol, hasRightCol } =
     getDataFromProps({
       props,
-      windowsWidth,
     });
 
   if (!hasLeftCol && !hasRightCol) return null;
@@ -30,7 +27,9 @@ const Clients = props => {
                 !hasRightCol ? 'margin-center' : ''
               } valign md-mb50`}
             >
-              <div className={`sec-head mb-0 ${hasRightCol ? 'ml-0 mr-2' : ''}`}>
+              <div
+                className={`sec-head mb-0 ${hasRightCol ? 'ml-0 mr-2' : ''}`}
+              >
                 {top_title && (
                   <h6 className="wow fadeIn" data-wow-delay=".5s">
                     {top_title}
@@ -39,13 +38,24 @@ const Clients = props => {
                 {title && <h3 className="wow mb-20 color-font">{title}</h3>}
                 {isArray(content) &&
                   !isEmpty(content) &&
-                  content.map((item, idx) => <p key={item.id} className={`${idx !== content.lenght && 'mb-10'}`}>{item.text}</p>)}
+                  content.map((item, idx) => (
+                    <p
+                      key={item.id}
+                      className={`${idx !== content.lenght && 'mb-10'}`}
+                    >
+                      {item.text}
+                    </p>
+                  ))}
               </div>
             </div>
           )}
           {hasRightCol && (
-            <div className={`col-lg-${hasLeftCol ? '8' : '10'} margin-center valign`}>
-              <div className='w-100'>
+            <div
+              className={`col-lg-${
+                hasLeftCol ? '8' : '10'
+              } margin-center valign`}
+            >
+              <div className="w-100">
                 <div className="row bord">
                   {links.map((item, _idx) => {
                     const idx = _idx + 1;

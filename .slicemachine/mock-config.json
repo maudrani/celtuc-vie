@@ -70,6 +70,13 @@
       "default": {
         "items": {},
         "primary": {}
+      },
+      "iconsLinkIconsOnly": {
+        "primary": {}
+      },
+      "topContent": {
+        "items": {},
+        "primary": {}
       }
     }
   }

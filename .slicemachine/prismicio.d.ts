@@ -35,7 +35,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = TitleText1Slice | InfoStatusImage1Slice | VideoDescriptionLauncherSlice | Cta1Slice | Carousel1Slice;
+type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1Slice | IconLinksSlice | ImagesInfoData2Slice | InfoStats2Slice | Info6Slice | ProgressInfo1Slice | VideoDescriptionLauncherSlice | TitleText1Slice;
 /**
  * Page document from Prismic
  *
@@ -313,10 +313,175 @@ export interface IconLinksSliceDefaultItem {
  */
 export type IconLinksSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<IconLinksSliceDefaultPrimary>, Simplify<IconLinksSliceDefaultItem>>;
 /**
+ * Primary content in IconLinks → Primary
+ *
+ */
+interface IconLinksSliceIconsLinkIconsOnlyPrimary {
+    /**
+     * Center Items field in *IconLinks → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: icon_links.primary.center_items
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    center_items: prismicT.BooleanField;
+}
+/**
+ * Item in IconLinks → Items
+ *
+ */
+export interface IconLinksSliceIconsLinkIconsOnlyItem {
+    /**
+     * Light Theme Image field in *IconLinks → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].light_theme_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    light_theme_image: prismicT.ImageField<never>;
+    /**
+     * Dark Theme Image field in *IconLinks → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].dark_theme_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    dark_theme_image: prismicT.ImageField<never>;
+    /**
+     * Link Name field in *IconLinks → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].link_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_name: prismicT.KeyTextField;
+    /**
+     * Link Url field in *IconLinks → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+}
+/**
+ * IconsLink - Icons Only variation for IconLinks Slice
+ *
+ * - **API ID**: `iconsLinkIconsOnly`
+ * - **Description**: `IconLinks`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IconLinksSliceIconsLinkIconsOnly = prismicT.SharedSliceVariation<"iconsLinkIconsOnly", Simplify<IconLinksSliceIconsLinkIconsOnlyPrimary>, Simplify<IconLinksSliceIconsLinkIconsOnlyItem>>;
+/**
+ * Primary content in IconLinks → Primary
+ *
+ */
+interface IconLinksSliceTopContentPrimary {
+    /**
+     * Title field in *IconLinks → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: icon_links.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Content field in *IconLinks → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.primary.content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    content: prismicT.RichTextField;
+    /**
+     * Background Details field in *IconLinks → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: icon_links.primary.background_details
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    background_details: prismicT.BooleanField;
+}
+/**
+ * Item in IconLinks → Items
+ *
+ */
+export interface IconLinksSliceTopContentItem {
+    /**
+     * Image field in *IconLinks → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].dark_theme_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    dark_theme_image: prismicT.ImageField<never>;
+    /**
+     * Link Name field in *IconLinks → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].link_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_name: prismicT.KeyTextField;
+    /**
+     * Link Url field in *IconLinks → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: icon_links.items[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Hide on Mobile field in *IconLinks → Items*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: icon_links.items[].hideOnMobile
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    hideOnMobile: prismicT.BooleanField;
+}
+/**
+ * TopContent variation for IconLinks Slice
+ *
+ * - **API ID**: `topContent`
+ * - **Description**: `IconLinks`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IconLinksSliceTopContent = prismicT.SharedSliceVariation<"topContent", Simplify<IconLinksSliceTopContentPrimary>, Simplify<IconLinksSliceTopContentItem>>;
+/**
  * Slice variation for *IconLinks*
  *
  */
-type IconLinksSliceVariation = IconLinksSliceDefault;
+type IconLinksSliceVariation = IconLinksSliceDefault | IconLinksSliceIconsLinkIconsOnly | IconLinksSliceTopContent;
 /**
  * IconLinks Shared Slice
  *
@@ -1033,6 +1198,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
+        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceIconsLinkIconsOnlyPrimary, IconLinksSliceIconsLinkIconsOnlyItem, IconLinksSliceIconsLinkIconsOnly, IconLinksSliceTopContentPrimary, IconLinksSliceTopContentItem, IconLinksSliceTopContent, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
     }
 }

@@ -32,18 +32,16 @@ const NavbarMobileApp = ({ lr, nr }) => {
       }`}
     >
       <div className="container">
-        <Link href="/">
-          <a className="logo">
-            {theme ? (
-              theme.isLight ? (
-                <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
-              ) : (
-                <img ref={lr || logoRef} src={appData.lightLogo} alt="logo" />
-              )
+        <Link href="/" className="logo">
+          {theme ? (
+            theme.isLight ? (
+              <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
             ) : (
               <img ref={lr || logoRef} src={appData.lightLogo} alt="logo" />
-            )}
-          </a>
+            )
+          ) : (
+            <img ref={lr || logoRef} src={appData.lightLogo} alt="logo" />
+          )}
         </Link>
 
         <button
@@ -75,55 +73,55 @@ const NavbarMobileApp = ({ lr, nr }) => {
                 Home
               </span>
               <div className="dropdown-menu">
-                <Link href="/homepage/home1-dark">
-                  <a className="dropdown-item">Main Home</a>
+                <Link href="/homepage/home1-dark" className="dropdown-item">
+                  Main Home
                 </Link>
-                <Link href="/homepage/home2-dark">
-                  <a className="dropdown-item">Creative Agency</a>
+                <Link href="/homepage/home2-dark" className="dropdown-item">
+                  Creative Agency
                 </Link>
-                <Link href="/homepage/home5-dark">
-                  <a className="dropdown-item">Digital Agency</a>
+                <Link href="/homepage/home5-dark" className="dropdown-item">
+                  Digital Agency
                 </Link>
-                <Link href="/homepage/home4-dark">
-                  <a className="dropdown-item">Business One Page</a>
+                <Link href="/homepage/home4-dark" className="dropdown-item">
+                  Business One Page
                 </Link>
-                <Link href="/homepage/home3-dark">
-                  <a className="dropdown-item">Corporate Business</a>
+                <Link href="/homepage/home3-dark" className="dropdown-item">
+                  Corporate Business
                 </Link>
-                <Link href="/homepage/home6-dark">
-                  <a className="dropdown-item">Modern Agency</a>
+                <Link href="/homepage/home6-dark" className="dropdown-item">
+                  Modern Agency
                 </Link>
-                <Link href="/homepage/home7-dark">
-                  <a className="dropdown-item">Freelancer</a>
+                <Link href="/homepage/home7-dark" className="dropdown-item">
+                  Freelancer
                 </Link>
-                <Link href="/homepage/home8-dark">
-                  <a className="dropdown-item">Architecture</a>
+                <Link href="/homepage/home8-dark" className="dropdown-item">
+                  Architecture
                 </Link>
               </div>
             </li>
             <li className="nav-item">
-              <Link href="/mobile-app/services-dark">
-                <a className="nav-link">Services</a>
+              <Link href="/mobile-app/services-dark" className="nav-link">
+                Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/mobile-app/pricing-plan-dark">
-                <a className="nav-link">Pricing</a>
+              <Link href="/mobile-app/pricing-plan-dark" className="nav-link">
+                Pricing
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/mobile-app/portfolio-dark">
-                <a className="nav-link">Portfolio</a>
+              <Link href="/mobile-app/portfolio-dark" className="nav-link">
+                Portfolio
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/mobile-app/shop-dark">
-                <a className="nav-link">Products</a>
+              <Link href="/mobile-app/shop-dark" className="nav-link">
+                Products
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/contact/contact-dark">
-                <a className="nav-link">Contact</a>
+              <Link href="/contact/contact-dark" className="nav-link">
+                Contact
               </Link>
             </li>
           </ul>

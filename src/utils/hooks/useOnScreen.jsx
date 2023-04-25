@@ -14,7 +14,7 @@ export default function useOnScreen({
       // Update our state when observer callback fires
 
       setIntersecting(
-        oneTime ? (e) => (!e ? entry.isIntersecting : e) : entry.isIntersecting
+        oneTime ? e => (!e ? entry.isIntersecting : e) : entry.isIntersecting
       );
     }, options);
 
@@ -28,7 +28,7 @@ export default function useOnScreen({
       try {
         observer.unobserve(el);
       } catch (err) {
-        console.log(err);
+        console.warn(err);
       }
     };
   }, [ref, options, oneTime]); // Empty array ensures that effect is only run on mount and unmount

@@ -8,6 +8,8 @@ import AboutUs6 from '@/components/About-us6/about-us6';
 import CallToAction from '@/components/Call-to-action/call-to-action';
 import CaseStudy from '@/components/Case-study/case-study';
 import Clients from '@/components/Clients/clients';
+import Clients2 from '@/components/Clients2/clients2';
+import Clients3 from '@/components/Clients3/clients3';
 import React from 'react';
 
 const SlicesTest = () => {
@@ -20,10 +22,16 @@ const SlicesTest = () => {
       {/* <AboutUs4 /> */}
       {/* <AboutUs5 /> */}
       {/* <AboutUs6 /> */}
+
       {/* BLOGS LEFT */}
+
       {/* <CallToAction /> */}
       {/* <CaseStudy /> */}
-      <Clients />
+      {/* <Clients /> */}
+      {/* <Clients2 /> */}
+      {/* <Clients3 /> */}
+
+      {/* Selected for Natural   */}
     </div>
   );
 };

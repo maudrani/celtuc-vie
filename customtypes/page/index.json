@@ -24,19 +24,34 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "title_text1": {
-              "type": "SharedSlice"
-            },
             "info_status_image1": {
-              "type": "SharedSlice"
-            },
-            "video_description_launcher": {
               "type": "SharedSlice"
             },
             "cta1": {
               "type": "SharedSlice"
             },
             "carousel1": {
+              "type": "SharedSlice"
+            },
+            "icon_links": {
+              "type": "SharedSlice"
+            },
+            "images_info_data2": {
+              "type": "SharedSlice"
+            },
+            "info_stats2": {
+              "type": "SharedSlice"
+            },
+            "info6": {
+              "type": "SharedSlice"
+            },
+            "progress_info1": {
+              "type": "SharedSlice"
+            },
+            "video_description_launcher": {
+              "type": "SharedSlice"
+            },
+            "title_text1": {
               "type": "SharedSlice"
             }
           }

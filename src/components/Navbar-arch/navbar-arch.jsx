@@ -33,12 +33,12 @@ const NavbarArch = () => {
         <a className="logo" href="/">
           {theme ? (
             !theme.isLight ? (
-              <img src={appData.darkLogo} alt="logo" />
+              <img src={appData.brand.dark_logo} alt="logo" />
             ) : (
-              <img src={appData.lightLogo} alt="logo" />
+              <img src={appData.brand.light_logo} alt="logo" />
             )
           ) : (
-            <img src={appData.lightLogo} alt="logo" />
+            <img src={appData.brand.light_logo} alt="logo" />
           )}
         </a>
 

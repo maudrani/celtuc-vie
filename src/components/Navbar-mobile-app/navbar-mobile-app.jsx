@@ -35,12 +35,24 @@ const NavbarMobileApp = ({ lr, nr }) => {
         <Link href="/" className="logo">
           {theme ? (
             theme.isLight ? (
-              <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
+              <img
+                ref={lr || logoRef}
+                src={appData.brand.dark_logo}
+                alt="logo"
+              />
             ) : (
-              <img ref={lr || logoRef} src={appData.lightLogo} alt="logo" />
+              <img
+                ref={lr || logoRef}
+                src={appData.brand.light_logo}
+                alt="logo"
+              />
             )
           ) : (
-            <img ref={lr || logoRef} src={appData.lightLogo} alt="logo" />
+            <img
+              ref={lr || logoRef}
+              src={appData.brand.light_logo}
+              alt="logo"
+            />
           )}
         </Link>
 

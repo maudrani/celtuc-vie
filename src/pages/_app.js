@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 import Cursor from '@/components/cursor';
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       <Contexts>
         <GlobalStyles />
         <Cursor />
-        <LoadingScreen />
+        {/* <LoadingScreen /> */}
         <Component {...pageProps} />
         <ScrollToTop />
       </Contexts>

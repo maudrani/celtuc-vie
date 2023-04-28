@@ -1,0 +1,175 @@
+{
+  "brand_name": {
+    "__TYPE__": "FieldContent",
+    "value": "image",
+    "type": "Text"
+  },
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+      "width": 4000,
+      "height": 4000
+    },
+    "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+    "width": 4000,
+    "height": 4000,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "logo_negative": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+      "width": 3456,
+      "height": 4320
+    },
+    "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+    "width": 3456,
+    "height": 4320,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "phone_number": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "phone_number",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "hurried",
+              "type": "Text"
+            }
+          ],
+          [
+            "zone",
+            {
+              "__TYPE__": "GeoPointContent",
+              "position": {
+                "lat": 48.8841267,
+                "lng": 2.3300579
+              }
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "road",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "addresses": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "address",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "snake",
+              "type": "Text"
+            }
+          ],
+          [
+            "zone",
+            {
+              "__TYPE__": "GeoPointContent",
+              "position": {
+                "lat": 48.8583736,
+                "lng": 2.2922926
+              }
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "far",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "mails": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "mail",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "parent",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "social_media": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "told",
+              "type": "Text"
+            }
+          ],
+          [
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pet",
+              "type": "Text"
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

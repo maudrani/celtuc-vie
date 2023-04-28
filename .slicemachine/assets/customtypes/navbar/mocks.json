@@ -1,0 +1,54 @@
+{
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "navigation_item$cb07676e-77e2-4ed0-88bd-7b8bb968b50c",
+        "name": "navigation_item",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "item_name": {
+              "__TYPE__": "FieldContent",
+              "value": "chain",
+              "type": "Text"
+            },
+            "item_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "sub_item_name",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "hall",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "sub_item_link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://google.com"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

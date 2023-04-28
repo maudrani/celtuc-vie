@@ -78,7 +78,7 @@ const FooterArch = () => {
           <div className="col-lg-4">
             <div className="item">
               <div className="logo">
-                <img src={appData.lightLogo} alt="" />
+                <img src={appData.brand.light_logo} alt="" />
               </div>
               <div className="social">
                 <a href="#0">

@@ -6,28 +6,28 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "title",
+            "title_top",
             {
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Experience"
+                    "text": "Motion"
                   }
                 }
               ]
             }
           ],
           [
-            "subtitle",
+            "title_bottom",
             {
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Newspaper"
+                    "text": "Somebody"
                   }
                 }
               ]
@@ -39,18 +39,18 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-                "width": 3456,
-                "height": 3456
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                "width": 3168,
+                "height": 4752
               },
-              "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C756%2C3456%2C1944&w=2304&h=1296",
+              "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?rect=0%2C1485%2C3168%2C1782&w=2304&h=1296",
               "width": 2304,
               "height": 1296,
               "edit": {
                 "zoom": 1,
                 "crop": {
                   "x": 0,
-                  "y": 756
+                  "y": 1485
                 },
                 "background": "transparent"
               },
@@ -58,18 +58,18 @@
                 "desktop": {
                   "origin": {
                     "id": "desktop",
-                    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-                    "width": 6000,
+                    "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+                    "width": 4172,
                     "height": 4000
                   },
-                  "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?rect=0%2C313%2C6000%2C3375&w=1920&h=1080",
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?rect=0%2C827%2C4172%2C2347&w=1920&h=1080",
                   "width": 1920,
                   "height": 1080,
                   "edit": {
                     "zoom": 1,
                     "crop": {
                       "x": 0,
-                      "y": 313
+                      "y": 827
                     },
                     "background": "transparent"
                   }
@@ -77,18 +77,18 @@
                 "tablet": {
                   "origin": {
                     "id": "tablet",
-                    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
-                    "width": 4000,
-                    "height": 6000
+                    "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+                    "width": 4480,
+                    "height": 4480
                   },
-                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?rect=0%2C720%2C4000%2C4561&w=856&h=976",
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?rect=275%2C0%2C3929%2C4480&w=856&h=976",
                   "width": 856,
                   "height": 976,
                   "edit": {
                     "zoom": 1,
                     "crop": {
-                      "x": 0,
-                      "y": 720
+                      "x": 275,
+                      "y": 0
                     },
                     "background": "transparent"
                   }
@@ -96,17 +96,17 @@
                 "mobile": {
                   "origin": {
                     "id": "mobile",
-                    "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
-                    "width": 4024,
-                    "height": 4024
+                    "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+                    "width": 4480,
+                    "height": 4480
                   },
-                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?rect=460%2C0%2C3104%2C4024&w=648&h=840",
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?rect=512%2C0%2C3456%2C4480&w=648&h=840",
                   "width": 648,
                   "height": 840,
                   "edit": {
                     "zoom": 1,
                     "crop": {
-                      "x": 460,
+                      "x": 512,
                       "y": 0
                     },
                     "background": "transparent"
@@ -133,7 +133,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Deserunt laborum minim pariatur magna irure incididunt laboris aute."
+                    "text": "Enim sit pariatur dolore in et sunt nulla exercitation mollit in."
                   }
                 }
               ]

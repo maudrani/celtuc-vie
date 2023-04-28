@@ -1,12 +1,59 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import Link from 'next/link';
-import appData from '../../data/app.json';
 import initFullNavbarMenu from '../../common/initFullNavbarMenu';
 import { StylesContext } from '@/contexts/styles';
+import { AppDataContext } from '@/contexts/appdata';
+import { isEmpty } from 'lodash';
+import PhonesList from '../Brand/PhonesList';
+import AddressList from '../Brand/AdressList';
+import MailList from '../Brand/MailList';
+import SocialMediaList from '../Brand/SocialMediaList';
 
 const NavbarFullMenu = () => {
   const { theme } = useContext(StylesContext);
+  const { brand } = useContext(AppDataContext);
 
+  const links = [
+    {
+      name: 'Home',
+      url: '',
+      links: [
+        { name: 'Main Home', url: '/homepage/home1', links: [] },
+        { name: 'Creative Agency', url: '/homepage/home2', links: [] },
+        { name: 'Digital Agency', url: '/homepage/home5', links: [] },
+        { name: 'Business One Page', url: '/homepage/home4', links: [] },
+        { name: 'Corporate Business', url: '/homepage/home3', links: [] },
+        { name: 'Modern Agency', url: '/homepage/home6', links: [] },
+        { name: 'Freelancer', url: '/homepage/home7', links: [] },
+        { name: 'Architecture', url: '/homepage/home8', links: [] },
+      ],
+    },
+    { name: 'About Us', url: '/about', links: [] },
+    {
+      name: 'Works',
+      url: '',
+      links: [
+        { name: 'ShowCase Parallax', url: '/showcase/showcase', links: [] },
+        { name: 'ShowCase Carousel', url: '/showcase/showcase4', links: [] },
+        { name: 'ShowCase Circle', url: '/showcase/showcase3', links: [] },
+        { name: 'ShowCase Masonry', url: '/works', links: [] },
+        { name: 'Portfolio Filtering', url: '/works2', links: [] },
+        { name: 'Portfolio Gallery', url: '/works3', links: [] },
+      ],
+    },
+    {
+      name: 'Blogs',
+      url: '',
+      links: [
+        { name: 'Blog Standerd', url: '/blog', links: [] },
+        { name: 'Blog List', url: '/blog-list', links: [] },
+        { name: 'Blog Grid', url: '/blog-grid', links: [] },
+        { name: 'Blog Details', url: '/blog-details', links: [] },
+      ],
+    },
+    { name: 'Contact', url: '/contact', links: [] },
+  ];
+  
   React.useEffect(() => {
     initFullNavbarMenu();
   }, []);
@@ -21,12 +68,12 @@ const NavbarFullMenu = () => {
             <a href="#0">
               {theme ? (
                 theme.isLight ? (
-                  <img src={appData.darkLogo} alt="logo" />
+                  <img src={brand.dark_logo} alt="logo" />
                 ) : (
-                  <img src={appData.lightLogo} alt="logo" />
+                  <img src={brand.light_logo} alt="logo" />
                 )
               ) : (
-                <img src={appData.lightLogo} alt="logo" />
+                <img src={brand.light_logo} alt="logo" />
               )}
             </a>
           </div>
@@ -48,276 +95,104 @@ const NavbarFullMenu = () => {
             <div className="col-lg-9 col-md-8">
               <div className="menu-links">
                 <ul className="main-menu">
-                  <li>
-                    <div className="o-hidden">
-                      <span className="link dmenu">
-                        <span className="nm">01.</span>Home
-                        <i className="fas fa-angle-right"></i>
-                      </span>
-                    </div>
-                    <div className="sub-menu">
-                      <ul>
-                        <li>
-                          <div className="o-hidden">
-                            <span className="sub-link back">
-                              <i className="pe-7s-angle-left"></i> Go Back
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home1-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">01.</span>Main Home
+                  {links.map((link, idx) => {
+                    const LinkName = ({ link, hasSubLinks, prefix }) => {
+                      const LinkContainer = hasSubLinks
+                        ? ({ children }) => <div>{children}</div>
+                        : ({ children }) => (
+                            <Link href={link.url} className="sub-link">
+                              {children}
                             </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home2-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">02.</span>Creative Agency
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home5-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">03.</span>Digital Agency
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home4-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">04.</span>Business One Page
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home3-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">05.</span>Corporate Business
-                            </Link>
-                          </div>
-                        </li>
+                          );
 
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home6-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">06.</span>Modern Agency
-                            </Link>
+                      return (
+                        <LinkContainer>
+                          <span className="nm">
+                            {prefix.toLocaleString(2)}.
+                          </span>{' '}
+                          {link.name}
+                          {hasSubLinks && <i className="fas fa-angle-right" />}
+                        </LinkContainer>
+                      );
+                    };
+
+                    return (
+                      <li>
+                        <div className="o-hidden">
+                          <span className="link dmenu">
+                            <LinkName
+                              link={link}
+                              hasSubLinks={!isEmpty(link.links)}
+                              prefix={idx + 1}
+                            />
+                          </span>
+                        </div>
+
+                        {!isEmpty(link.links) && (
+                          <div className="sub-menu">
+                            <ul>
+                              {link.links.map((subLink, idx) => (
+                                <Fragment key={subLink.id}>
+                                  {idx === 0 && (
+                                    <li>
+                                      <div className="o-hidden">
+                                        <span className="sub-link back">
+                                          <i className="pe-7s-angle-left" /> Go
+                                          Back
+                                        </span>
+                                      </div>
+                                    </li>
+                                  )}
+
+                                  <li>
+                                    <div className="o-hidden">
+                                      <LinkName
+                                        link={subLink}
+                                        hasSubLinks={!isEmpty(subLink.links)}
+                                        prefix={idx + 1}
+                                      />
+                                    </div>
+                                  </li>
+                                </Fragment>
+                              ))}
+                            </ul>
                           </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home7-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">07.</span>Freelancer
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/homepage/home8-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">08.</span>Architecture
-                            </Link>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="o-hidden">
-                      <Link href={`/about/about`} className="link">
-                        <span className="nm">02.</span>About Us
-                      </Link>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="o-hidden">
-                      <span className="link dmenu">
-                        <span className="nm">03.</span>Works
-                        <i className="fas fa-angle-right"></i>
-                      </span>
-                    </div>
-                    <div className="sub-menu">
-                      <ul>
-                        <li>
-                          <div className="o-hidden">
-                            <span className="sub-link back">
-                              <i className="pe-7s-angle-left"></i> Go Back
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/showcase/showcase-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">01.</span>ShowCase Parallax
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/showcase4/showcase4-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">02.</span>ShowCase Carousel
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/showcase3/showcase3-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">03.</span>ShowCase Circle
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/works/works-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">04.</span>Portfolio Masonry
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/works2/works2-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">05.</span>Portfolio Filtering
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/works3/works3-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">06.</span>Portfolio Gallery
-                            </Link>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="o-hidden">
-                      <span className="link dmenu">
-                        <span className="nm">04.</span>Blogs
-                        <i className="fas fa-angle-right"></i>
-                      </span>
-                    </div>
-                    <div className="sub-menu">
-                      <ul>
-                        <li>
-                          <div className="o-hidden">
-                            <span className="sub-link back">
-                              <i className="pe-7s-angle-left"></i> Go Back
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link href={`/blog/blog-dark`} className="sub-link">
-                              <span className="nm">01.</span>Blog Standerd
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/blog-list/blog-list-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">02.</span>Blog List
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/blog-grid/blog-grid-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">03.</span>Blog Grid
-                            </Link>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="o-hidden">
-                            <Link
-                              href={`/blog-details/blog-details-dark`}
-                              className="sub-link"
-                            >
-                              <span className="nm">04.</span>Blog Details
-                            </Link>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="o-hidden">
-                      <Link href={`/contact/contact-dark`} className="link">
-                        <span className="nm">05.</span>Contact
-                      </Link>
-                    </div>
-                  </li>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
             <div className="col-lg-3 col-md-4">
               <div className="cont-info">
-                <div className="item">
-                  <h6>Phone :</h6>
-                  <p>+03 762-2367-723</p>
-                </div>
-                <div className="item">
-                  <h6>Address :</h6>
-                  <p>
-                    541 Melville Ave, Palo Alto, CA 94301, ask@ohio.colabr.io
-                  </p>
-                </div>
-                <div className="item">
-                  <h6>Email :</h6>
-                  <p>
-                    <a href="#0">Vie_website@gmail.com</a>
-                  </p>
-                </div>
+                {!isEmpty(brand.phone_number) && (
+                  <div className="item">
+                    <h6>Phone :</h6>
+                    <PhonesList
+                      component={({ children }) => <p>{children}</p>}
+                    />
+                  </div>
+                )}
+                {!isEmpty(brand.addresses) && (
+                  <div className="item">
+                    <h6>Address :</h6>
+                    <AddressList
+                      component={({ children }) => <p>{children}</p>}
+                    />
+                  </div>
+                )}
+                {!isEmpty(brand.mails) && (
+                  <div className="item">
+                    <h6>Email :</h6>
+                    <MailList component={({ children }) => <p>{children}</p>} />
+                  </div>
+                )}
+                {!isEmpty(brand.mails) && (
+                  <div className="item">
+                    <SocialMediaList component={({ children }) => <span className='mr-4'>{children}</span>}/>
+                  </div>
+                )}
               </div>
             </div>
           </div>

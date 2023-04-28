@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash';
+import { isArray, isEmpty, isString } from 'lodash';
 import { getVideoAutoplay, getVideoId } from '../components/video';
 
 // @richTextProp parameter is the one you use on the PrismicRichText component
@@ -12,26 +12,26 @@ export const GetImage = imageObj => {
       dimensions: imageObj.dimensions,
       alt: imageObj.alt,
       url: imageObj.url,
-    }
+    },
   };
 
   ['desktop', 'tablet', 'mobile'].forEach(_device => {
-    if(!imageObj[_device]?.dimensions) return 
+    if (!imageObj[_device]?.dimensions) return;
 
     parsedImg[_device] = {
       dimensions: {
-        ...imageObj[_device].dimensions || imageObj.dimensions,
+        ...(imageObj[_device].dimensions || imageObj.dimensions),
       },
       alt: imageObj[_device].alt || imageObj.alt,
       url: imageObj[_device].url || imageObj.url,
-    }
-  })
+    };
+  });
 
   return parsedImg;
 };
 
 export const GetParagraphsContent = content => {
-  if (!content) return;
+  if (!content || !isArray(content)) return;
 
   return content.filter(item => !!item.text).map(item => item.text);
 };
@@ -60,4 +60,10 @@ export const GetParsedVideoData = ({ video }) => {
   };
 
   return parsedData;
+};
+
+export const GetHeadingsContent = heading => {
+  if (!heading || !isString(heading)) return;
+
+  return heading.split('\n');
 };

@@ -24,7 +24,7 @@ const initFullNavbarMenu = () => {
           navDark.classList.add('navlit');
         }
         if (logoChan) {
-          logoChan.setAttribute('src', appData.lightLogo);
+          logoChan.setAttribute('src', appData.brand.light_logo);
         }
         window.addEventListener('scroll', noScroll);
       } else {
@@ -36,7 +36,7 @@ const initFullNavbarMenu = () => {
           navDark.classList.remove('navlit');
         }
         if (logoChan) {
-          logoChan.setAttribute('src', appData.darkLogo);
+          logoChan.setAttribute('src', appData.brand.dark_logo);
         }
         window.removeEventListener('scroll', noScroll);
       }
@@ -51,7 +51,7 @@ const initFullNavbarMenu = () => {
           navDark.classList.remove('navlit');
         }
         if (logoChan) {
-          logoChan.setAttribute('src', appData.darkLogo);
+          logoChan.setAttribute('src', appData.brand.dark_logo);
         }
         window.removeEventListener('scroll', noScroll);
       });

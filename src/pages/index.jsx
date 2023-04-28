@@ -1,30 +1,48 @@
-import * as prismicH from '@prismicio/helpers';
-import { SliceZone } from '@prismicio/react';
-import { createClient, linkResolver } from 'prismicio';
-import { components } from 'slices';
+import NavbarFullMenu from '@/components/Navbar-full-menu/navbar.full-menu';
+import ShowcasesFullScreen from '@/components/Showcases-full-screen/showcases-full-screen';
+import { AppDataContext } from '@/contexts/appdata';
+import { StylesContext } from '@/contexts/styles';
+import { createClient } from 'prismicio';
+import { useContext, useEffect } from 'react';
 
-const Intro = ({ page, navigation, settings }) => {
-  return <SliceZone slices={page.data.slices} components={components} />;
+const Intro = ({ page, brandData, navigation }) => {
+  const { changeTheme } = useContext(StylesContext);
+  const { getBrandData } = useContext(AppDataContext);
+
+  if (!page?.slides) return;
+
+  useEffect(() => {
+    changeTheme('dark');
+    getBrandData(brandData);
+    console.log(navigation)
+  }, []);
+
+  return (
+    <>
+      <NavbarFullMenu />
+      <ShowcasesFullScreen slides={page.slides} />
+    </>
+  );
 };
 
 export default Intro;
 
-export async function getStaticProps({ params, previewData }) {
+export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
-  const page = await client.getByUID('page', params.uid);
+
+  const introRes = await client.getSingle('intro');
+  const brandInfoRes = await client.getSingle('brand_info');
+  const nagivationRes = await client.getSingle('navbar');
+
+  const { data: introData } = introRes || {};
+  const { data: brandInfoData } = brandInfoRes || {};
+  const { data: nagivationData } = nagivationRes || {};
+
   return {
     props: {
-      page,
+      page: introData,
+      brandData: brandInfoData,
+      navigation: nagivationData,
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const client = createClient();
-  const pages = await client.getAllByType('page');
-
-  return {
-    paths: pages.map(page => prismicH.asLink(page, linkResolver)),
-    fallback: false,
   };
 }

@@ -1,0 +1,45 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "item_name": {
+        "__TYPE__": "FieldContent",
+        "value": "known",
+        "type": "Text"
+      },
+      "item_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "sub_item_name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "therefore",
+              "type": "Text"
+            }
+          ],
+          [
+            "sub_item_link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

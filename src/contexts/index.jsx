@@ -1,10 +1,13 @@
+import { AppData } from './appdata';
 import Prismic from './prismic';
 import { StylesProvider } from './styles';
 
 const Contexts = ({ children }) => {
   return (
     <Prismic>
-      <StylesProvider>{children}</StylesProvider>
+      <AppData>
+        <StylesProvider>{children}</StylesProvider>
+      </AppData>
     </Prismic>
   );
 };

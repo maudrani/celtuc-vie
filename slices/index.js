@@ -10,6 +10,7 @@ import Info4 from './Info4';
 import Info5 from './Info5';
 import Info6 from './Info6';
 import InfoSimple from './InfoSimple';
+import NavigationItem from './NavigationItem';
 
 export {
 	Carousel1,
@@ -22,6 +23,7 @@ export {
 	Info5,
 	Info6,
 	InfoSimple,
+	NavigationItem,
 };
 
 export const components = {
@@ -35,4 +37,5 @@ export const components = {
 	progress_info1: Info5,
 	info6: Info6,
 	title_text1: InfoSimple,
+	navigation_item: NavigationItem,
 };

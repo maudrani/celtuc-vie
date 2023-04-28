@@ -6,6 +6,220 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Brand Info documents */
+interface BrandInfoDocumentData {
+    /**
+     * Brand Name field in *Brand Info*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.brand_name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    brand_name: prismicT.KeyTextField;
+    /**
+     * Logo field in *Brand Info*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * Logo negative field in *Brand Info*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.logo_negative
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo_negative: prismicT.ImageField<never>;
+    /**
+     * Phones field in *Brand Info*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.phone_number[]
+     * - **Tab**: Phones
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    phone_number: prismicT.GroupField<Simplify<BrandInfoDocumentDataPhoneNumberItem>>;
+    /**
+     * Addresses  field in *Brand Info*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.addresses[]
+     * - **Tab**: Addresses
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    addresses: prismicT.GroupField<Simplify<BrandInfoDocumentDataAddressesItem>>;
+    /**
+     * Mails field in *Brand Info*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.mails[]
+     * - **Tab**: Mails
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    mails: prismicT.GroupField<Simplify<BrandInfoDocumentDataMailsItem>>;
+    /**
+     * Social Media field in *Brand Info*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.social_media[]
+     * - **Tab**: Social Media
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    social_media: prismicT.GroupField<Simplify<BrandInfoDocumentDataSocialMediaItem>>;
+}
+/**
+ * Item in Brand Info → Phones
+ *
+ */
+export interface BrandInfoDocumentDataPhoneNumberItem {
+    /**
+     * Number field in *Brand Info → Phones*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.phone_number[].phone_number
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    phone_number: prismicT.KeyTextField;
+    /**
+     * Zone field in *Brand Info → Phones*
+     *
+     * - **Field Type**: GeoPoint
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.phone_number[].zone
+     * - **Documentation**: https://prismic.io/docs/core-concepts/geopoint
+     *
+     */
+    zone: prismicT.GeoPointField;
+    /**
+     * Name field in *Brand Info → Phones*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.phone_number[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+}
+/**
+ * Item in Brand Info → Addresses
+ *
+ */
+export interface BrandInfoDocumentDataAddressesItem {
+    /**
+     * Address field in *Brand Info → Addresses *
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.addresses[].address
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    address: prismicT.KeyTextField;
+    /**
+     * Zone field in *Brand Info → Addresses *
+     *
+     * - **Field Type**: GeoPoint
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.addresses[].zone
+     * - **Documentation**: https://prismic.io/docs/core-concepts/geopoint
+     *
+     */
+    zone: prismicT.GeoPointField;
+    /**
+     * Name field in *Brand Info → Addresses *
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.addresses[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+}
+/**
+ * Item in Brand Info → Mails
+ *
+ */
+export interface BrandInfoDocumentDataMailsItem {
+    /**
+     * Mail field in *Brand Info → Mails*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.mails[].mail
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    mail: prismicT.KeyTextField;
+}
+/**
+ * Item in Brand Info → Social Media
+ *
+ */
+export interface BrandInfoDocumentDataSocialMediaItem {
+    /**
+     * Name field in *Brand Info → Social Media*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.social_media[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Icon field in *Brand Info → Social Media*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.social_media[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    icon: prismicT.KeyTextField;
+    /**
+     * Link field in *Brand Info → Social Media*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: brand_info.social_media[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Brand Info document from Prismic
+ *
+ * - **API ID**: `brand_info`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BrandInfoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<BrandInfoDocumentData>, "brand_info", Lang>;
 /** Content for Intro documents */
 interface IntroDocumentData {
     /**
@@ -37,25 +251,25 @@ interface IntroDocumentData {
  */
 export interface IntroDocumentDataSlidesItem {
     /**
-     * Title field in *Intro → Slides*
+     * Title Top field in *Intro → Slides*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
-     * - **API ID Path**: intro.slides[].title
+     * - **API ID Path**: intro.slides[].title_top
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title_top: prismicT.TitleField;
     /**
-     * Subtitle field in *Intro → Slides*
+     * Title Bottom field in *Intro → Slides*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
-     * - **API ID Path**: intro.slides[].subtitle
+     * - **API ID Path**: intro.slides[].title_bottom
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    subtitle: prismicT.TitleField;
+    title_bottom: prismicT.TitleField;
     /**
      * Image field in *Intro → Slides*
      *
@@ -102,6 +316,35 @@ type IntroDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type IntroDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<IntroDocumentData>, "intro", Lang>;
+/** Content for Navigation documents */
+interface NavbarDocumentData {
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navbar.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavbarDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavbarDocumentDataSlicesSlice = NavigationItemSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navbar`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavbarDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavbarDocumentData>, "navbar", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -142,7 +385,7 @@ type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = IntroDocument | PageDocument;
+export type AllDocumentTypes = BrandInfoDocument | IntroDocument | NavbarDocument | PageDocument;
 /**
  * Item in Carousel1 → Items
  *
@@ -1289,11 +1532,86 @@ type TitleText1SliceVariation = TitleText1SliceDefault;
  *
  */
 export type TitleText1Slice = prismicT.SharedSlice<"title_text1", TitleText1SliceVariation>;
+/**
+ * Primary content in NavigationItem → Primary
+ *
+ */
+interface NavigationItemSliceDefaultPrimary {
+    /**
+     * Item Name field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.item_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    item_name: prismicT.KeyTextField;
+    /**
+     * Item Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.item_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    item_link: prismicT.LinkField;
+}
+/**
+ * Item in NavigationItem → Items
+ *
+ */
+export interface NavigationItemSliceDefaultItem {
+    /**
+     * Sub Item Name field in *NavigationItem → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.items[].sub_item_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    sub_item_name: prismicT.KeyTextField;
+    /**
+     * Sub Item Link field in *NavigationItem → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.items[].sub_item_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    sub_item_link: prismicT.LinkField;
+}
+/**
+ * Default variation for NavigationItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavigationItemSliceDefaultPrimary>, Simplify<NavigationItemSliceDefaultItem>>;
+/**
+ * Slice variation for *NavigationItem*
+ *
+ */
+type NavigationItemSliceVariation = NavigationItemSliceDefault;
+/**
+ * NavigationItem Shared Slice
+ *
+ * - **API ID**: `navigation_item`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { IntroDocumentData, IntroDocumentDataSlidesItem, IntroDocumentDataSlicesSlice, IntroDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceIconsLinkIconsOnlyPrimary, IconLinksSliceIconsLinkIconsOnlyItem, IconLinksSliceIconsLinkIconsOnly, IconLinksSliceTopContentPrimary, IconLinksSliceTopContentItem, IconLinksSliceTopContent, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice };
+        export type { BrandInfoDocumentData, BrandInfoDocumentDataPhoneNumberItem, BrandInfoDocumentDataAddressesItem, BrandInfoDocumentDataMailsItem, BrandInfoDocumentDataSocialMediaItem, BrandInfoDocument, IntroDocumentData, IntroDocumentDataSlidesItem, IntroDocumentDataSlicesSlice, IntroDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceIconsLinkIconsOnlyPrimary, IconLinksSliceIconsLinkIconsOnlyItem, IconLinksSliceIconsLinkIconsOnly, IconLinksSliceTopContentPrimary, IconLinksSliceTopContentItem, IconLinksSliceTopContent, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice };
     }
 }

@@ -1,0 +1,142 @@
+{
+  "id": "brand_info",
+  "label": "Brand Info",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "brand_name": {
+        "type": "Text",
+        "config": {
+          "label": "Brand Name",
+          "placeholder": ""
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "logo_negative": {
+        "type": "Image",
+        "config": {
+          "label": "Logo negative",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    },
+    "Phones": {
+      "phone_number": {
+        "type": "Group",
+        "config": {
+          "label": "Phones",
+          "fields": {
+            "phone_number": {
+              "type": "Text",
+              "config": {
+                "label": "Number",
+                "placeholder": ""
+              }
+            },
+            "zone": {
+              "type": "GeoPoint",
+              "config": {
+                "label": "Zone"
+              }
+            },
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "Addresses": {
+      "addresses": {
+        "type": "Group",
+        "config": {
+          "label": "Addresses ",
+          "fields": {
+            "address": {
+              "type": "Text",
+              "config": {
+                "label": "Address",
+                "placeholder": ""
+              }
+            },
+            "zone": {
+              "type": "GeoPoint",
+              "config": {
+                "label": "Zone"
+              }
+            },
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "Mails": {
+      "mails": {
+        "type": "Group",
+        "config": {
+          "label": "Mails",
+          "fields": {
+            "mail": {
+              "type": "Text",
+              "config": {
+                "label": "Mail",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "Social Media": {
+      "social_media": {
+        "type": "Group",
+        "config": {
+          "label": "Social Media",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            },
+            "icon": {
+              "type": "Text",
+              "config": {
+                "label": "Icon",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

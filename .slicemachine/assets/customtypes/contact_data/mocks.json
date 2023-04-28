@@ -1,0 +1,149 @@
+{
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+      "width": 3199,
+      "height": 3199
+    },
+    "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+    "width": 3199,
+    "height": 3199,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "phone_number": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "phone_number",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "clothing",
+              "type": "Text"
+            }
+          ],
+          [
+            "zone",
+            {
+              "__TYPE__": "GeoPointContent",
+              "position": {
+                "lat": 48.8606111,
+                "lng": 2.337644
+              }
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "composed",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "addresses": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "address",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "must",
+              "type": "Text"
+            }
+          ],
+          [
+            "zone",
+            {
+              "__TYPE__": "GeoPointContent",
+              "position": {
+                "lat": 48.8583736,
+                "lng": 2.2922926
+              }
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "fully",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "mails": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "mail",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "mysterious",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "social_media": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "lake",
+              "type": "Text"
+            }
+          ],
+          [
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "famous",
+              "type": "Text"
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

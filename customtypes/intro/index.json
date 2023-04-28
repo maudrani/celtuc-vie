@@ -10,19 +10,19 @@
         "config": {
           "label": "Slides",
           "fields": {
-            "title": {
+            "title_top": {
               "type": "StructuredText",
               "config": {
-                "label": "Title",
+                "label": "Title Top",
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "heading1"
               }
             },
-            "subtitle": {
+            "title_bottom": {
               "type": "StructuredText",
               "config": {
-                "label": "Subtitle",
+                "label": "Title Bottom",
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "heading1"

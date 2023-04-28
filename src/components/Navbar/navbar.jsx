@@ -27,9 +27,13 @@ const Navbar = ({ lr, nr }) => {
 
     const checkLogoStyle = () => {
       if (window.pageYOffset > 300) {
-        logo.src = theme.isLight ? appData.darkLogo : appData.lightLogo;
+        logo.src = theme.isLight
+          ? appData.brand.dark_logo
+          : appData.brand.light_logo;
       } else {
-        logo.src = !theme.isLight ? appData.lightLogo : appData.darkLogo;
+        logo.src = !theme.isLight
+          ? appData.brand.light_logo
+          : appData.brand.dark_logo;
       }
     };
 
@@ -51,7 +55,7 @@ const Navbar = ({ lr, nr }) => {
     >
       <div className="container">
         <Link href="/" className="logo">
-          <img ref={lr || logoRef} src={appData.darkLogo} alt="logo" />
+          <img ref={lr || logoRef} src={appData.brand.dark_logo} alt="logo" />
         </Link>
 
         <div

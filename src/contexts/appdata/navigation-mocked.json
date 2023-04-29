@@ -1,0 +1,120 @@
+[
+    {
+      "name": "Home",
+      "url": "",
+      "links": [
+        {
+          "name": "Main Home",
+          "url": "/homepage/home1",
+          "links": []
+        },
+        {
+          "name": "Creative Agency",
+          "url": "/homepage/home2",
+          "links": []
+        },
+        {
+          "name": "Digital Agency",
+          "url": "/homepage/home5",
+          "links": []
+        },
+        {
+          "name": "Business One Page",
+          "url": "/homepage/home4",
+          "links": []
+        },
+        {
+          "name": "Corporate Business",
+          "url": "/homepage/home3",
+          "links": []
+        },
+        {
+          "name": "Modern Agency",
+          "url": "/homepage/home6",
+          "links": []
+        },
+        {
+          "name": "Freelancer",
+          "url": "/homepage/home7",
+          "links": []
+        },
+        {
+          "name": "Architecture",
+          "url": "/homepage/home8",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "About Us",
+      "url": "/about",
+      "links": []
+    },
+    {
+      "name": "Works",
+      "url": "",
+      "links": [
+        {
+          "name": "ShowCase Parallax",
+          "url": "/showcase/showcase",
+          "links": []
+        },
+        {
+          "name": "ShowCase Carousel",
+          "url": "/showcase/showcase4",
+          "links": []
+        },
+        {
+          "name": "ShowCase Circle",
+          "url": "/showcase/showcase3",
+          "links": []
+        },
+        {
+          "name": "ShowCase Masonry",
+          "url": "/works",
+          "links": []
+        },
+        {
+          "name": "Portfolio Filtering",
+          "url": "/works2",
+          "links": []
+        },
+        {
+          "name": "Portfolio Gallery",
+          "url": "/works3",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Blogs",
+      "url": "",
+      "links": [
+        {
+          "name": "Blog Standerd",
+          "url": "/blog",
+          "links": []
+        },
+        {
+          "name": "Blog List",
+          "url": "/blog-list",
+          "links": []
+        },
+        {
+          "name": "Blog Grid",
+          "url": "/blog-grid",
+          "links": []
+        },
+        {
+          "name": "Blog Details",
+          "url": "/blog-details",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "links": []
+    }
+  ]

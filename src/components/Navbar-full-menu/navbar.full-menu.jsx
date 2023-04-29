@@ -8,52 +8,13 @@ import PhonesList from '../Brand/PhonesList';
 import AddressList from '../Brand/AdressList';
 import MailList from '../Brand/MailList';
 import SocialMediaList from '../Brand/SocialMediaList';
+import { GetAnchorTagDataOnPrismicLink } from 'src/utils/adapters/prismic';
 
 const NavbarFullMenu = () => {
   const { theme } = useContext(StylesContext);
-  const { brand } = useContext(AppDataContext);
+  const { brand, navigation } = useContext(AppDataContext);
 
-  const links = [
-    {
-      name: 'Home',
-      url: '',
-      links: [
-        { name: 'Main Home', url: '/homepage/home1', links: [] },
-        { name: 'Creative Agency', url: '/homepage/home2', links: [] },
-        { name: 'Digital Agency', url: '/homepage/home5', links: [] },
-        { name: 'Business One Page', url: '/homepage/home4', links: [] },
-        { name: 'Corporate Business', url: '/homepage/home3', links: [] },
-        { name: 'Modern Agency', url: '/homepage/home6', links: [] },
-        { name: 'Freelancer', url: '/homepage/home7', links: [] },
-        { name: 'Architecture', url: '/homepage/home8', links: [] },
-      ],
-    },
-    { name: 'About Us', url: '/about', links: [] },
-    {
-      name: 'Works',
-      url: '',
-      links: [
-        { name: 'ShowCase Parallax', url: '/showcase/showcase', links: [] },
-        { name: 'ShowCase Carousel', url: '/showcase/showcase4', links: [] },
-        { name: 'ShowCase Circle', url: '/showcase/showcase3', links: [] },
-        { name: 'ShowCase Masonry', url: '/works', links: [] },
-        { name: 'Portfolio Filtering', url: '/works2', links: [] },
-        { name: 'Portfolio Gallery', url: '/works3', links: [] },
-      ],
-    },
-    {
-      name: 'Blogs',
-      url: '',
-      links: [
-        { name: 'Blog Standerd', url: '/blog', links: [] },
-        { name: 'Blog List', url: '/blog-list', links: [] },
-        { name: 'Blog Grid', url: '/blog-grid', links: [] },
-        { name: 'Blog Details', url: '/blog-details', links: [] },
-      ],
-    },
-    { name: 'Contact', url: '/contact', links: [] },
-  ];
-  
+
   React.useEffect(() => {
     initFullNavbarMenu();
   }, []);
@@ -65,7 +26,7 @@ const NavbarFullMenu = () => {
       >
         <div className="container-fluid">
           <div className="logo">
-            <a href="#0">
+            <Link href="/">
               {theme ? (
                 theme.isLight ? (
                   <img src={brand.dark_logo} alt="logo" />
@@ -75,7 +36,7 @@ const NavbarFullMenu = () => {
               ) : (
                 <img src={brand.light_logo} alt="logo" />
               )}
-            </a>
+            </Link>
           </div>
           <div className="menu-icon">
             <span className="icon">
@@ -88,19 +49,22 @@ const NavbarFullMenu = () => {
           </div>
         </div>
       </div>
-
+      
       <div className="hamenu">
         <div className="container">
           <div className="row">
             <div className="col-lg-9 col-md-8">
               <div className="menu-links">
                 <ul className="main-menu">
-                  {links.map((link, idx) => {
+                  {navigation.map((link, idx) => {
                     const LinkName = ({ link, hasSubLinks, prefix }) => {
                       const LinkContainer = hasSubLinks
                         ? ({ children }) => <div>{children}</div>
                         : ({ children }) => (
-                            <Link href={link.url} className="sub-link">
+                            <Link
+                              {...GetAnchorTagDataOnPrismicLink(link.url)}
+                              className="sub-link"
+                            >
                               {children}
                             </Link>
                           );
@@ -111,7 +75,7 @@ const NavbarFullMenu = () => {
                             {prefix.toLocaleString(2)}.
                           </span>{' '}
                           {link.name}
-                          {hasSubLinks && <i className="fas fa-angle-right" />}
+                          {hasSubLinks && <span className="fas fa-xs ml-2 fa-angle-right" />}
                         </LinkContainer>
                       );
                     };
@@ -137,7 +101,7 @@ const NavbarFullMenu = () => {
                                     <li>
                                       <div className="o-hidden">
                                         <span className="sub-link back">
-                                          <i className="pe-7s-angle-left" /> Go
+                                          <i className="fas fa-angle-left" /> Go
                                           Back
                                         </span>
                                       </div>
@@ -190,7 +154,11 @@ const NavbarFullMenu = () => {
                 )}
                 {!isEmpty(brand.mails) && (
                   <div className="item">
-                    <SocialMediaList component={({ children }) => <span className='mr-4'>{children}</span>}/>
+                    <SocialMediaList
+                      component={({ children }) => (
+                        <span className="mr-4">{children}</span>
+                      )}
+                    />
                   </div>
                 )}
               </div>

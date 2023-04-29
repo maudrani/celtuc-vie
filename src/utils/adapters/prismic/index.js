@@ -67,3 +67,9 @@ export const GetHeadingsContent = heading => {
 
   return heading.split('\n');
 };
+
+export const GetAnchorTagDataOnPrismicLink = linkObj => {
+  const isWeb = linkObj.link_type === 'Web';
+
+  return { href: linkObj.url || '', target: isWeb ? '_blank' : '_self' };
+};

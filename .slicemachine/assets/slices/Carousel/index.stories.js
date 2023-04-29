@@ -1,0 +1,12 @@
+import MyComponent from '../../../../slices/Carousel';
+
+export default {
+  title: 'slices/Carousel'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"tag":"lovely","top_title":[{"type":"heading6","text":"Simply","spans":[]}],"title":[{"type":"heading4","text":"Jungle","spans":[]}],"image":{"dimensions":{"width":2304,"height":1296},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1547082299-de196ea013d6?rect=0%2C223%2C4272%2C2403&w=2304&h=1296","desktop":{"dimensions":{"width":1920,"height":1080},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?rect=0%2C900%2C5000%2C2813&w=1920&h=1080"},"tablet":{"dimensions":{"width":856,"height":976},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?rect=247%2C0%2C3517%2C4010&w=856&h=976"},"mobile":{"dimensions":{"width":648,"height":840},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1586952518485-11b180e92764?rect=543%2C0%2C3086%2C4000&w=648&h=840"}},"link_url":{"link_type":"Web","url":"http://twitter.com"}}],"primary":{},"id":"_Default","slice_type":"carousel1"}} />
+_Default.storyName = ''
+
+export const _WithTitle = () => <MyComponent slice={{"variation":"withTitle","version":"sktwi1xtmkfgx8626","items":[{"top_title":[{"type":"heading6","text":"Adult","spans":[]}],"title":[{"type":"heading4","text":"Available","spans":[]}],"image":{"dimensions":{"width":1345,"height":756},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C1039%2C3024%2C1700&w=1345&h=756","desktop":{"dimensions":{"width":1034,"height":582},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?rect=0%2C1287%2C2747%2C1546&w=1034&h=582"},"tablet":{"dimensions":{"width":795,"height":529},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?rect=0%2C5%2C3500%2C2329&w=795&h=529"},"mobile":{"dimensions":{"width":508,"height":380},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1587905069134-008460d7a636?rect=0%2C1475%2C3935%2C2944&w=508&h=380"}},"link_url":{"link_type":"Web","url":"https://prismic.io"}}],"primary":{"top_title":[{"type":"heading6","text":"Helpful","spans":[]}],"title":[{"type":"heading3","text":"Struck","spans":[]}]},"id":"_WithTitle","slice_type":"carousel1"}} />
+_WithTitle.storyName = ''

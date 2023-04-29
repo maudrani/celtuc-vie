@@ -1,4 +1,6 @@
 import React, { createContext, useReducer } from 'react';
+import { ParseBrandData, ParseNavigationData } from './adapters';
+import mockedNav from './navigation-mocked.json'
 
 export const AppDataContext = createContext();
 
@@ -8,11 +10,13 @@ const initialState = {
     dark_logo: '/img/logo-dark.png',
   },
 
-  showLoading: true,
+  navigation: mockedNav,
+  showLoading: false,
 };
 
 export const appDataActionTypes = {
   GET_BRAND_DATA: 'GET_BRAND_DATA',
+  GET_NAVIGATION_DATA: 'GET_NAVIGATION_DATA',
 };
 
 export const reducer = (state, action) => {
@@ -20,19 +24,18 @@ export const reducer = (state, action) => {
     case appDataActionTypes.GET_BRAND_DATA: {
       const { brandData } = action;
 
-      const brand = {
-        brand_name: brandData.brand_name,
-        addresses: brandData.addresses,
-        mails: brandData.mails,
-        phone_number: brandData.phone_number,
-        dark_logo: brandData.logo.url,
-        light_logo: brandData.logo_negative.url,
-        social_media: brandData.social_media,
+      return {
+        ...state,
+        brand: ParseBrandData(brandData),
       };
+    }
+
+    case appDataActionTypes.GET_NAVIGATION_DATA: {
+      const { navigationData } = action;
 
       return {
         ...state,
-        brand,
+        navigation: ParseNavigationData(navigationData),
       };
     }
 
@@ -50,6 +53,12 @@ export const AppData = ({ children }) => {
       dispatch({
         type: appDataActionTypes.GET_BRAND_DATA,
         brandData,
+      });
+    },
+    getNavigationData: navigationData => {
+      dispatch({
+        type: appDataActionTypes.GET_NAVIGATION_DATA,
+        navigationData,
       });
     },
   };

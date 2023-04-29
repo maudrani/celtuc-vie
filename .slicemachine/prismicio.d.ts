@@ -374,7 +374,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1Slice | IconLinksSlice | ImagesInfoData2Slice | InfoStats2Slice | Info6Slice | ProgressInfo1Slice | VideoDescriptionLauncherSlice | TitleText1Slice;
+type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1Slice | IconLinksSlice | ImagesInfoData2Slice | InfoStats2Slice | Info6Slice | ProgressInfo1Slice | VideoDescriptionLauncherSlice | TitleText1Slice | VideoSlice;
 /**
  * Page document from Prismic
  *
@@ -387,12 +387,12 @@ type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 export type AllDocumentTypes = BrandInfoDocument | IntroDocument | NavbarDocument | PageDocument;
 /**
- * Item in Carousel1 → Items
+ * Item in Carousel → Items
  *
  */
 export interface Carousel1SliceDefaultItem {
     /**
-     * Tag field in *Carousel1 → Items*
+     * Tag field in *Carousel → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -402,7 +402,7 @@ export interface Carousel1SliceDefaultItem {
      */
     tag: prismicT.KeyTextField;
     /**
-     * Top Title field in *Carousel1 → Items*
+     * Top Title field in *Carousel → Items*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
@@ -412,7 +412,7 @@ export interface Carousel1SliceDefaultItem {
      */
     top_title: prismicT.TitleField;
     /**
-     * Title field in *Carousel1 → Items*
+     * Title field in *Carousel → Items*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
@@ -422,7 +422,7 @@ export interface Carousel1SliceDefaultItem {
      */
     title: prismicT.TitleField;
     /**
-     * Image field in *Carousel1 → Items*
+     * Image field in *Carousel → Items*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -432,7 +432,7 @@ export interface Carousel1SliceDefaultItem {
      */
     image: prismicT.ImageField<"desktop" | "tablet" | "mobile">;
     /**
-     * Link url field in *Carousel1 → Items*
+     * Link url field in *Carousel → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -443,7 +443,7 @@ export interface Carousel1SliceDefaultItem {
     link_url: prismicT.LinkField;
 }
 /**
- * Default variation for Carousel1 Slice
+ * Default variation for Carousel Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Carousel1`
@@ -452,12 +452,93 @@ export interface Carousel1SliceDefaultItem {
  */
 export type Carousel1SliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<Carousel1SliceDefaultItem>>;
 /**
- * Slice variation for *Carousel1*
+ * Primary content in Carousel → Primary
  *
  */
-type Carousel1SliceVariation = Carousel1SliceDefault;
+interface Carousel1SliceWithTitlePrimary {
+    /**
+     * Top title field in *Carousel → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.primary.top_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    top_title: prismicT.TitleField;
+    /**
+     * Title field in *Carousel → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+}
 /**
- * Carousel1 Shared Slice
+ * Item in Carousel → Items
+ *
+ */
+export interface Carousel1SliceWithTitleItem {
+    /**
+     * Top Title field in *Carousel → Items*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].top_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    top_title: prismicT.TitleField;
+    /**
+     * Title field in *Carousel → Items*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Image field in *Carousel → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<"desktop" | "tablet" | "mobile">;
+    /**
+     * Link url field in *Carousel → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: carousel1.items[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+}
+/**
+ * WithTitle variation for Carousel Slice
+ *
+ * - **API ID**: `withTitle`
+ * - **Description**: `Carousel1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type Carousel1SliceWithTitle = prismicT.SharedSliceVariation<"withTitle", Simplify<Carousel1SliceWithTitlePrimary>, Simplify<Carousel1SliceWithTitleItem>>;
+/**
+ * Slice variation for *Carousel*
+ *
+ */
+type Carousel1SliceVariation = Carousel1SliceDefault | Carousel1SliceWithTitle;
+/**
+ * Carousel Shared Slice
  *
  * - **API ID**: `carousel1`
  * - **Description**: `Carousel1`
@@ -1607,11 +1688,86 @@ type NavigationItemSliceVariation = NavigationItemSliceDefault;
  *
  */
 export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
+/**
+ * Primary content in Video → Primary
+ *
+ */
+interface VideoSliceDefaultPrimary {
+    /**
+     * Video field in *Video → Primary*
+     *
+     * - **Field Type**: Embed
+     * - **Placeholder**: *None*
+     * - **API ID Path**: video.primary.video
+     * - **Documentation**: https://prismic.io/docs/core-concepts/embed
+     *
+     */
+    video: prismicT.EmbedField;
+    /**
+     * Video Thumbnail field in *Video → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: video.primary.video_thumbnail
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    video_thumbnail: prismicT.ImageField<"desktop" | "tablet" | "mobile">;
+}
+/**
+ * Item in Video → Items
+ *
+ */
+export interface VideoSliceDefaultItem {
+    /**
+     * Caption Title field in *Video → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: video.items[].caption_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    caption_title: prismicT.RichTextField;
+    /**
+     * Caption Description field in *Video → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: video.items[].caption_description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    caption_description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Video Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Video`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type VideoSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<VideoSliceDefaultPrimary>, Simplify<VideoSliceDefaultItem>>;
+/**
+ * Slice variation for *Video*
+ *
+ */
+type VideoSliceVariation = VideoSliceDefault;
+/**
+ * Video Shared Slice
+ *
+ * - **API ID**: `video`
+ * - **Description**: `Video`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type VideoSlice = prismicT.SharedSlice<"video", VideoSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BrandInfoDocumentData, BrandInfoDocumentDataPhoneNumberItem, BrandInfoDocumentDataAddressesItem, BrandInfoDocumentDataMailsItem, BrandInfoDocumentDataSocialMediaItem, BrandInfoDocument, IntroDocumentData, IntroDocumentDataSlidesItem, IntroDocumentDataSlicesSlice, IntroDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceIconsLinkIconsOnlyPrimary, IconLinksSliceIconsLinkIconsOnlyItem, IconLinksSliceIconsLinkIconsOnly, IconLinksSliceTopContentPrimary, IconLinksSliceTopContentItem, IconLinksSliceTopContent, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice };
+        export type { BrandInfoDocumentData, BrandInfoDocumentDataPhoneNumberItem, BrandInfoDocumentDataAddressesItem, BrandInfoDocumentDataMailsItem, BrandInfoDocumentDataSocialMediaItem, BrandInfoDocument, IntroDocumentData, IntroDocumentDataSlidesItem, IntroDocumentDataSlicesSlice, IntroDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, Carousel1SliceDefaultItem, Carousel1SliceDefault, Carousel1SliceWithTitlePrimary, Carousel1SliceWithTitleItem, Carousel1SliceWithTitle, Carousel1SliceVariation, Carousel1Slice, Cta1SliceDefaultPrimary, Cta1SliceDefaultItem, Cta1SliceDefault, Cta1SliceVariation, Cta1Slice, IconLinksSliceDefaultPrimary, IconLinksSliceDefaultItem, IconLinksSliceDefault, IconLinksSliceIconsLinkIconsOnlyPrimary, IconLinksSliceIconsLinkIconsOnlyItem, IconLinksSliceIconsLinkIconsOnly, IconLinksSliceTopContentPrimary, IconLinksSliceTopContentItem, IconLinksSliceTopContent, IconLinksSliceVariation, IconLinksSlice, InfoStatusImage1SliceDefaultPrimary, InfoStatusImage1SliceDefaultItem, InfoStatusImage1SliceDefault, InfoStatusImage1SliceVariation, InfoStatusImage1Slice, InfoStats2SliceDefaultPrimary, InfoStats2SliceDefaultItem, InfoStats2SliceDefault, InfoStats2SliceVariation, InfoStats2Slice, ImagesInfoData2SliceDefaultPrimary, ImagesInfoData2SliceDefault, ImagesInfoData2SliceVariation, ImagesInfoData2Slice, VideoDescriptionLauncherSliceDefaultPrimary, VideoDescriptionLauncherSliceDefault, VideoDescriptionLauncherSliceVariation, VideoDescriptionLauncherSlice, ProgressInfo1SliceDefaultPrimary, ProgressInfo1SliceDefaultItem, ProgressInfo1SliceDefault, ProgressInfo1SliceVariation, ProgressInfo1Slice, Info6SliceDefaultPrimary, Info6SliceDefault, Info6SliceVariation, Info6Slice, TitleText1SliceDefaultPrimary, TitleText1SliceDefault, TitleText1SliceVariation, TitleText1Slice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, VideoSliceDefaultPrimary, VideoSliceDefaultItem, VideoSliceDefault, VideoSliceVariation, VideoSlice };
     }
 }

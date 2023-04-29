@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       <Contexts>
         <GlobalStyles />
         <Cursor />
-        {/* <LoadingScreen /> */}
+        <LoadingScreen />
         <Component {...pageProps} />
         <ScrollToTop />
       </Contexts>

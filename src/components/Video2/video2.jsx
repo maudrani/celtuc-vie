@@ -1,53 +1,72 @@
 import React from 'react';
 import ModalVideo from 'react-modal-video';
 import 'react-modal-video/css/modal-video.css';
+import { useWindowsWidth } from 'src/utils/hooks';
+import { getDataFromProps } from './adapters';
 
-const Video2 = () => {
+const Video2 = props => {
   const [isOpen, setOpen] = React.useState(false);
-  React.useEffect(() => {}, []);
+  const windowsWidth = useWindowsWidth();
+
+  const { video, image, captions, hasImage, hasCaptions } = getDataFromProps({
+    props,
+    windowsWidth,
+  });
+
   return (
     <section
       className="video bg-img parallaxie"
-      style={{ backgroundImage: 'url(/img/bg-vid.jpg)' }}
+      style={{
+        backgroundImage: hasImage ? `url(${image.url})` : 'url()',
+        backgroundPosition: 'center',
+      }}
     >
-      {typeof window !== 'undefined' && (
+      {typeof window !== 'undefined' && video && (
         <ModalVideo
-          channel="vimeo"
+          {...video}
           autoplay
           isOpen={isOpen}
-          videoId="127203262"
           onClose={() => setOpen(false)}
         />
       )}
-      <a
-        className="vid valign"
-        onClick={e => {
-          e.preventDefault();
-          setOpen(true);
-        }}
-      >
-        <div className="vid-butn">
-          <span className="icon">
-            <i className="pe-7s-play"></i>
-          </span>
-        </div>
-      </a>
-      <div className="container">
-        <div className="stauts">
-          <div className="item">
-            <h4>
-              3<span>K</span> +
-            </h4>
-            <h6>Happy Clients</h6>
+      {video && (
+        <a
+          className="vid valign"
+          onClick={e => {
+            e.preventDefault();
+            setOpen(true);
+          }}
+        >
+          <div className="vid-butn">
+            <span className="icon">
+              <i className="pe-7s-play"></i>
+            </span>
           </div>
-          <div className="item">
-            <h4>
-              14<span>K</span> +
-            </h4>
-            <h6>Success Projects</h6>
+        </a>
+      )}
+      {hasCaptions && (
+        <div className="container">
+          <div className="stauts">
+            {captions.map(cap => (
+              <div key={cap.id} className="item">
+                {cap.title &&
+                  cap.title.map((_t, idx) => <h4 key={`_t-$${idx}}`}>{_t}</h4>)}
+                {cap.description &&
+                  cap.description.map((_d, idx) => (
+                    <h6
+                      key={`_t-$${idx}}`}
+                      className={`${idx === 0 ? 'mt-30' : ''} ${
+                        idx + 1 != cap.description.length ? 'mb-15' : ''
+                      }`}
+                    >
+                      {_d}
+                    </h6>
+                  ))}
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

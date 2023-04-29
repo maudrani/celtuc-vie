@@ -53,6 +53,9 @@
             },
             "title_text1": {
               "type": "SharedSlice"
+            },
+            "video": {
+              "type": "SharedSlice"
             }
           }
         }

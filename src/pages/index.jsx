@@ -7,14 +7,14 @@ import { useContext, useEffect } from 'react';
 
 const Intro = ({ page, brandData, navigation }) => {
   const { changeTheme } = useContext(StylesContext);
-  const { getBrandData } = useContext(AppDataContext);
+  const { getBrandData, getNavigationData } = useContext(AppDataContext);
 
   if (!page?.slides) return;
 
   useEffect(() => {
     changeTheme('dark');
     getBrandData(brandData);
-    console.log(navigation)
+    getNavigationData(navigation);
   }, []);
 
   return (

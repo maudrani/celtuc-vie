@@ -93,6 +93,22 @@
         "primary": {},
         "items": {}
       }
+    },
+    "Carousel": {
+      "default": {
+        "primary": {},
+        "items": {}
+      },
+      "withTitle": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "Video": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

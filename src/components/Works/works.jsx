@@ -12,10 +12,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 const Works = () => {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
-  const [pageLoaded, setPageLoaded] = React.useState(false);
-  React.useEffect(() => {
-    setPageLoaded(true);
-  }, [pageLoaded]);
+
   return (
     <section className="work-carousel metro position-re">
       <div className="container-fluid">
@@ -68,37 +65,36 @@ const Works = () => {
                   },
                 }}
               >
-                {pageLoaded &&
-                  worksData.map((item, index) => (
-                    <SwiperSlide className="swiper-slide" key={item.id}>
+                {worksData.map((item, index) => (
+                  <SwiperSlide className="swiper-slide" key={item.id}>
+                    <div
+                      className="content wow noraidus fadeInUp"
+                      data-wow-delay=".3s"
+                    >
                       <div
-                        className="content wow noraidus fadeInUp"
-                        data-wow-delay=".3s"
-                      >
-                        <div
-                          className="item-img bg-img wow imago"
-                          style={{
-                            backgroundImage: `url(${item.image})`,
-                          }}
-                        />
-                        <div className="cont">
-                          <h6 className="color-font">
-                            <a href="#0">{item.title}</a>
-                          </h6>
-                          <h4>
-                            <Link
-                              href={`/project-details2/project-details2-dark`}
-                            >
-                              {item.secTex}
-                            </Link>
-                          </h4>
-                        </div>
+                        className="item-img bg-img wow imago"
+                        style={{
+                          backgroundImage: `url(${item.image})`,
+                        }}
+                      />
+                      <div className="cont">
+                        <h6 className="color-font">
+                          <a href="#0">{item.title}</a>
+                        </h6>
+                        <h4>
+                          <Link
+                            href={`/project-details2/project-details2-dark`}
+                          >
+                            {item.secTex}
+                          </Link>
+                        </h4>
                       </div>
-                    </SwiperSlide>
-                  ))}
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
 
-              <div
+              {/* <div
                 ref={navigationNextRef}
                 className="swiper-button-next swiper-nav-ctrl simp-next cursor-pointer"
               >
@@ -109,7 +105,7 @@ const Works = () => {
                 className="swiper-button-prev swiper-nav-ctrl simp-prev cursor-pointer"
               >
                 <span className="simple-btn">Prev</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

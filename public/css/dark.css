@@ -2074,6 +2074,7 @@ span:hover {
 .hamenu .menu-links {
   color: #fff;
   margin-top: 30px;
+  min-height: 45vh;
 }
 
 .hamenu .menu-links .o-hidden {
@@ -9022,7 +9023,16 @@ footer .item .copy-right p a {
   }
 
   .video .container .stauts {
-    display: none;
+    margin: 0 auto;
+  }
+  .video .container .stauts .item {
+    padding: 15px 20px;
+    min-width: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    max-height: 100px;
+    overflow-y: auto;
   }
 
   .testimonials .item {

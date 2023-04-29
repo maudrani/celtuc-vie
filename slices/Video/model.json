@@ -1,0 +1,72 @@
+{
+  "id": "video",
+  "type": "SharedSlice",
+  "name": "Video",
+  "description": "Video",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Video",
+      "primary": {
+        "video": {
+          "type": "Embed",
+          "config": {
+            "label": "Video",
+            "placeholder": ""
+          }
+        },
+        "video_thumbnail": {
+          "type": "Image",
+          "config": {
+            "label": "Video Thumbnail",
+            "constraint": {
+              "width": 2304,
+              "height": 1296
+            },
+            "thumbnails": [
+              {
+                "name": "desktop",
+                "width": 1920,
+                "height": 1080
+              },
+              {
+                "name": "tablet",
+                "width": 856,
+                "height": 976
+              },
+              {
+                "name": "mobile",
+                "width": 648,
+                "height": 840
+              }
+            ]
+          }
+        }
+      },
+      "items": {
+        "caption_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading4"
+          }
+        },
+        "caption_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

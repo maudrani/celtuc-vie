@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Script from 'next/script';
 import loadingPace from '../../common/loadingPace';
-import appData from '../../data/app.json';
+import { AppDataContext } from '@/contexts/appdata';
 
 const LoadingScreen = () => {
+  const { showLoading } = useContext(AppDataContext);
+
   React.useEffect(() => {
     let bodyEl = document.querySelector('body');
-    if (appData.showLoading) {
+    if (showLoading) {
       loadingPace();
 
       if (bodyEl.classList.contains('hideX')) {
@@ -16,9 +18,12 @@ const LoadingScreen = () => {
       bodyEl.classList.add('hideX');
     }
   });
+
+  if (!showLoading) return;
+  
   return (
     <>
-      <div className={`${appData.showLoading === true ? 'showX' : 'hideX'}`}>
+      <div className={`${showLoading === true ? 'showX' : 'hideX'}`}>
         <div className="loading">
           <span>L</span>
           <span>o</span>
@@ -30,7 +35,7 @@ const LoadingScreen = () => {
         </div>
         <div id="preloader"></div>
       </div>
-      {appData.showLoading ? (
+      {showLoading ? (
         <Script
           id="pace"
           strategy="beforeInteractive"

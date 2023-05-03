@@ -21,11 +21,6 @@ const Theme = ({ children }) => {
         ) : (
           ''
         )}
-        {/* {mobileappstyle ? (
-          <link href={`/css/mobile-app-${themeName}.css`} rel="stylesheet" />
-        ) : (
-          ''
-        )} */}
       </Head>
       {children}
     </ThemeProvider>

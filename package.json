@@ -26,6 +26,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
+    "react-grid-gallery": "^1.0.0",
     "react-modal-video": "^1.2.10",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
@@ -36,7 +37,8 @@
     "styled-components": "^5.3.9",
     "swiper": "^9.2.3",
     "tsparticles": "^2.9.3",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.19.0",
+    "yet-another-react-lightbox": "^3.5.3"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",

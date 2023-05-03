@@ -6,7 +6,7 @@ export const getDataFromProps = ({ props, windowsWidth }) => {
   const { video, image, captions } = props;
 
   const hasImage = !!(!!image && windowsWidth);
-  const hasCaptions = isArray(captions) || !isEmpty(caption_description);
+  const hasCaptions = isArray(captions) || !isEmpty(captions);
 
   return {
     video: GetParsedVideoData({ video }),

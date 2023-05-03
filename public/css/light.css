@@ -78,8 +78,9 @@ body {
 }
 
 img {
-  width: 100%;
-  height: auto;
+/* IMAGE GALLERY */
+/*   width: 100%;
+  height: auto; */
 }
 
 span,
@@ -2793,12 +2794,12 @@ body {
 }
 
 .particles {
-  min-height: 100vh;
+
   position: relative;
   z-index: 2;
 }
 
-.particles .cont h1 {
+.particles .cont .title{
   font-size: 90px;
   font-weight: 800;
 }
@@ -6588,17 +6589,15 @@ body {
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
-  background: -webkit-linear-gradient(
-    323.53deg,
-    #ccc 6.69%,
-    rgba(2, 2, 30, 0) 85.43%
-  );
-  background: -o-linear-gradient(
-    323.53deg,
-    #ccc 6.69%,
-    rgba(2, 2, 30, 0) 85.43%
-  );
-  background: linear-gradient(126.47deg, #ccc 6.69%, rgba(2, 2, 30, 0) 85.43%);
+  background: -webkit-linear-gradient(323.53deg,
+      #18191d 6.69%,
+      rgba(2, 2, 30, 0) 85.43%);
+  background: -o-linear-gradient(323.53deg,
+      #18191d 6.69%,
+      rgba(2, 2, 30, 0) 85.43%);
+  background: linear-gradient(126.47deg,
+      #18191d 6.69%,
+      rgba(2, 2, 30, 0) 85.43%);
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
@@ -6614,22 +6613,26 @@ body {
 }
 
 .testimonials .item p {
-  color: #111;
+  color: #fff;
   font-size: 28px;
   font-weight: 600;
   padding-left: 30px;
   margin-left: 30px;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .testimonials .item .info {
   min-width: 120px;
 }
 
+.testimonials .item .info.inf-lrg {
+  min-width: 160px;
+}
+
 .testimonials .item .info .img {
   width: 80px;
   height: 80px;
-  border: 7px solid #eee;
+  border: 7px solid #25262c;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 20px;
@@ -8437,7 +8440,6 @@ footer .item .copy-right p a {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
-    display: block !important;
   }
 
   .testimonials .container-fluid {
@@ -8707,7 +8709,7 @@ footer .item .copy-right p a {
     font-size: 40px;
   }
 
-  .particles .cont h1 {
+  .particles .cont .title{
     font-size: 55px;
   }
 
@@ -8975,7 +8977,7 @@ footer .item .copy-right p a {
     bottom: 60px;
   }
 
-  .particles .cont h1 {
+  .particles .cont .title{
     font-size: 30px;
     font-weight: 700;
   }
@@ -9098,7 +9100,7 @@ footer .item .copy-right p a {
   }
 
   .testimonials .item {
-    display: block;
+    display: block !important;
     padding: 60px 30px;
   }
 

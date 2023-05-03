@@ -1,17 +1,23 @@
 import React from 'react';
-import worksData from '../../data/sections/works.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { getDataFromProps } from './adapters';
 // import Swiper core and required modules
 import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
-import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
+import LinkWrapper from '../ParsedLink';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
-const Works = () => {
+const Works = props => {
+  const windowsWidth = useWindowWidth();
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+
+  const { slides, indicators } = getDataFromProps({ props, windowsWidth });
+
+  if(!slides) return
 
   return (
     <section className="work-carousel metro position-re">
@@ -65,47 +71,52 @@ const Works = () => {
                   },
                 }}
               >
-                {worksData.map((item, index) => (
-                  <SwiperSlide className="swiper-slide" key={item.id}>
-                    <div
-                      className="content wow noraidus fadeInUp"
-                      data-wow-delay=".3s"
-                    >
+                {slides.map((item) => {
+                  const { link, image, top_title, title } = item;
+
+                  return (
+                    <SwiperSlide className="swiper-slide" key={item.id}>
                       <div
-                        className="item-img bg-img wow imago"
-                        style={{
-                          backgroundImage: `url(${item.image})`,
-                        }}
-                      />
-                      <div className="cont">
-                        <h6 className="color-font">
-                          <a href="#0">{item.title}</a>
-                        </h6>
-                        <h4>
-                          <Link
-                            href={`/project-details2/project-details2-dark`}
-                          >
-                            {item.secTex}
-                          </Link>
-                        </h4>
+                        className="content wow noraidus fadeInUp"
+                        data-wow-delay=".3s"
+                      >
+                        <div
+                          className="item-img bg-img wow imago"
+                          style={{
+                            backgroundImage: `url(${image?.url || ''})`,
+                            backgroundPosition: 'center',
+                          }}
+                        />
+                        <div className="cont">
+                          <h6 className="color-font">
+                          <LinkWrapper linkObj={link}>{top_title}</LinkWrapper>
+                          </h6>
+                          <h4>
+                            <LinkWrapper linkObj={link}>{title}</LinkWrapper>
+                          </h4>
+                        </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
+                    </SwiperSlide>
+                  );
+                })}
               </Swiper>
 
-              {/* <div
-                ref={navigationNextRef}
-                className="swiper-button-next swiper-nav-ctrl simp-next cursor-pointer"
-              >
-                <span className="simple-btn right">Next</span>
-              </div>
-              <div
-                ref={navigationPrevRef}
-                className="swiper-button-prev swiper-nav-ctrl simp-prev cursor-pointer"
-              >
-                <span className="simple-btn">Prev</span>
-              </div> */}
+              {indicators && (
+                <>
+                  <div
+                    ref={navigationNextRef}
+                    className="swiper-button-next swiper-nav-ctrl simp-next cursor-pointer"
+                  >
+                    <span className="simple-btn right">Next</span>
+                  </div>
+                  <div
+                    ref={navigationPrevRef}
+                    className="swiper-button-prev swiper-nav-ctrl simp-prev cursor-pointer"
+                  >
+                    <span className="simple-btn">Prev</span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

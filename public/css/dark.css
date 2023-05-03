@@ -81,8 +81,9 @@ body {
 }
 
 img {
-  width: 100%;
-  height: auto;
+/* IMAGE GALLERY */
+/*   width: 100%;
+  height: auto; */
 }
 
 span,
@@ -2745,13 +2746,13 @@ span:hover {
 }
 
 .particles {
-  min-height: 100vh;
+
   position: relative;
   z-index: 2;
   overflow: hidden;
 }
 
-.particles .cont h1 {
+.particles .cont .title {
   font-size: 90px;
   font-weight: 800;
 }
@@ -8645,7 +8646,7 @@ footer .item .copy-right p a {
     font-size: 40px;
   }
 
-  .particles .cont h1 {
+  .particles .cont .title {
     font-size: 55px;
   }
 
@@ -8913,7 +8914,7 @@ footer .item .copy-right p a {
     bottom: 60px;
   }
 
-  .particles .cont h1 {
+  .particles .cont .title {
     font-size: 30px;
     font-weight: 700;
   }
@@ -9036,8 +9037,8 @@ footer .item .copy-right p a {
   }
 
   .testimonials .item {
-    display: block !important;
     padding: 60px 30px;
+    display: block !important;
   }
 
   .testimonials .item p {

@@ -67,6 +67,10 @@
       "default": {
         "primary": {},
         "items": {}
+      },
+      "titleWithParticles": {
+        "primary": {},
+        "items": {}
       }
     },
     "Carousel1": {
@@ -102,9 +106,35 @@
       "withTitle": {
         "items": {},
         "primary": {}
+      },
+      "centerCaption": {
+        "items": {}
+      },
+      "testimonialStyle": {
+        "items": {},
+        "primary": {}
+      },
+      "leftOrientedCard": {
+        "primary": {}
       }
     },
     "Video": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Cta": {
+      "default": {
+        "primary": {},
+        "items": {}
+      },
+      "titleWithParticles": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Grid": {
       "default": {
         "primary": {},
         "items": {}

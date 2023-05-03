@@ -11,6 +11,7 @@ import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
 import Image from 'next/image';
 import { GetAnchorTagDataOnPrismicLink } from 'src/utils/adapters/prismic';
 import { SlideContainer } from './styled';
+import LinkWrapper from '../ParsedLink';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const Works3 = props => {
@@ -21,9 +22,9 @@ const Works3 = props => {
   const { top_title, title, slides, showIndicators, hasTopRow, hasBottomRow } =
     getDataFromProps({ props, windowsWidth });
 
-  if (!hasTopRow && !hasBottomRow && !windowsWidth) return;
+  if ((!hasTopRow && !hasBottomRow) || !windowsWidth) return;
 
-  const slidesPerView = {
+  const slidesPerView = slides && {
     2900: slides.length >= 3 ? 2.5 : 2,
     2300: slides.length >= 3 ? 2.5 : 2,
     1520: slides.length >= 2 ? 2 : 1.5,
@@ -117,21 +118,16 @@ const Works3 = props => {
                   {slides.map(item => {
                     const { top_title, title, link, image } = item;
 
-                    const LinkWrapper = !link.url
-                      ? ({ children }) => children
-                      : ({ children }) => (
-                          <Link {...GetAnchorTagDataOnPrismicLink(link.url)}>
-                            {children}
-                          </Link>
-                        );
-
                     return (
                       <SwiperSlide
                         key={item.id}
                         className="swiper-slide"
                         style={{ transition: '1s ease-in-out', height: 'auto' }}
                       >
-                        <SlideContainer className="content" style={{ height: '100%' }}>
+                        <SlideContainer
+                          className="content"
+                          style={{ height: '100%' }}
+                        >
                           {image && (
                             <div className="img" style={{ height: '100%' }}>
                               <span
@@ -159,12 +155,16 @@ const Works3 = props => {
                             <div className="cont">
                               {top_title && (
                                 <h6>
-                                  <LinkWrapper>{top_title}</LinkWrapper>
+                                  <LinkWrapper linkObj={link}>
+                                    {top_title}
+                                  </LinkWrapper>
                                 </h6>
                               )}
                               {title && (
                                 <h4>
-                                  <LinkWrapper>{title}</LinkWrapper>
+                                  <LinkWrapper linkObj={link}>
+                                    {title}
+                                  </LinkWrapper>
                                 </h4>
                               )}
                             </div>

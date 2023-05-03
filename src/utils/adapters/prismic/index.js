@@ -4,7 +4,10 @@ import { getVideoAutoplay, getVideoId } from '../components/video';
 // @richTextProp parameter is the one you use on the PrismicRichText component
 export const GetRichTextContent = (richTextProp = []) => richTextProp[0]?.text;
 
-export const GetImage = imageObj => {
+export const GetImage = (
+  imageObj,
+  separators = ['desktop', 'tablet', 'mobile']
+) => {
   if (isEmpty(imageObj?.dimensions) || !imageObj) return;
 
   const parsedImg = {
@@ -15,7 +18,7 @@ export const GetImage = imageObj => {
     },
   };
 
-  ['desktop', 'tablet', 'mobile'].forEach(_device => {
+  separators.forEach(_device => {
     if (!imageObj[_device]?.dimensions) return;
 
     parsedImg[_device] = {
@@ -37,8 +40,6 @@ export const GetParagraphsContent = content => {
 };
 
 export const GetLink = ({ link_name, link_url }) => {
-  if (!link_name || !link_url) return;
-
   const validLink = !!(link_name && link_url?.url);
 
   return {
@@ -68,8 +69,8 @@ export const GetHeadingsContent = heading => {
   return heading.split('\n');
 };
 
-export const GetAnchorTagDataOnPrismicLink = linkObj => {
-  const isWeb = linkObj.link_type === 'Web';
+export const GetAnchorTagDataOnPrismicLink = linkUrlObj => {
+  const isWeb = linkUrlObj.link_type === 'Web';
 
-  return { href: linkObj.url || '', target: isWeb ? '_blank' : '_self' };
+  return { href: linkUrlObj.url || '', target: isWeb ? '_blank' : '_self' };
 };

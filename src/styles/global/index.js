@@ -13,11 +13,6 @@ export const global = css`
     font-family: 'Poppins', sans-serif;
   }
 
-  img {
-    width: 100%;
-    height: auto;
-  }
-
   ${CssReset}
   ${ScrollbarStyles}
   ${cursor}

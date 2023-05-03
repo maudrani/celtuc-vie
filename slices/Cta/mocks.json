@@ -1,0 +1,176 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "top_title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading6",
+            "content": {
+              "text": "Climb"
+            }
+          }
+        ]
+      },
+      "link_name": {
+        "__TYPE__": "FieldContent",
+        "value": "if",
+        "type": "Text"
+      },
+      "link_url": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "background_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+          "width": 5243,
+          "height": 3495
+        },
+        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?rect=874%2C0%2C3495%2C3495&w=1344&h=1344",
+        "width": 1344,
+        "height": 1344,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 874,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {
+          "desktop": {
+            "origin": {
+              "id": "desktop",
+              "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+              "width": 5243,
+              "height": 3495
+            },
+            "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?rect=874%2C0%2C3495%2C3495&w=1008&h=1008",
+            "width": 1008,
+            "height": 1008,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 874,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          },
+          "tablet": {
+            "origin": {
+              "id": "tablet",
+              "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+              "width": 3024,
+              "height": 3778
+            },
+            "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C377%2C3024%2C3024&w=1167&h=1167",
+            "width": 1167,
+            "height": 1167,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 0,
+                "y": 377
+              },
+              "background": "transparent"
+            }
+          },
+          "mobile": {
+            "origin": {
+              "id": "mobile",
+              "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+              "width": 3958,
+              "height": 3958
+            },
+            "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?rect=0%2C0%2C3958%2C3958&w=693&h=693",
+            "width": 693,
+            "height": 693,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 0,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          }
+        }
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "window",
+              "type": "Text"
+            }
+          ],
+          [
+            "style",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "outline",
+              "type": "Select"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "titleWithParticles",
+    "primary": {
+      "content": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Syllable"
+            }
+          }
+        ]
+      },
+      "link_name": {
+        "__TYPE__": "FieldContent",
+        "value": "sound",
+        "type": "Text"
+      },
+      "link_url": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "particles": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "details": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

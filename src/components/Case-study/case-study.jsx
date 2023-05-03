@@ -8,20 +8,17 @@ import 'swiper/css/navigation';
 import removeSlashFromPagination from '../../common/removeSlashpagination';
 import { useWindowsWidth } from 'src/utils/hooks';
 import { getDataFromProps } from './adapters';
+import LinkWrapper from '../ParsedLink';
 
 SwiperCore.use([Navigation, Pagination, EffectFade]);
 
 const SlideItem = ({ item }) => {
   const slideRef = useRef();
 
-  const LinkWrapper = !item.link.url
-    ? ({ children }) => children
-    : ({ children }) => <Link href={item.link.url}>{children}</Link>;
-
   return (
     <div className="container d-flex align-items-end" ref={slideRef}>
       <div className="cont">
-        <LinkWrapper>
+        <LinkWrapper linkObj={item.link}>
           {item.tag && <span>{item.tag}</span>}
           {item.top_title && <h6 className="main-color">{item.top_title}</h6>}
           {item.title && <h4>{item.title}</h4>}

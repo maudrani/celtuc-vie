@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
-import appData from '../../data/app.json';
+import { AppDataContext } from '@/contexts/appdata';
 
 const Footer = ({ hideBGCOLOR }) => {
+  const { brand } = useContext(AppDataContext);
+
   return (
     <footer className={`${!hideBGCOLOR ? 'sub-bg' : ''}`}>
       <div className="container">
@@ -91,7 +93,7 @@ const Footer = ({ hideBGCOLOR }) => {
           <div className="col-lg-4">
             <div className="item">
               <div className="logo">
-                <img src={appData.brand.light_logo} alt="" />
+                <img src={brand.light_logo} alt="" />
               </div>
               <div className="social">
                 <a href="#0">

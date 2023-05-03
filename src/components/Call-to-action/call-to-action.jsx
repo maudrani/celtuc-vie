@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useWindowsWidth } from 'src/utils/hooks';
 import { getDataFromProps } from './adapters';
 import { isArray, isEmpty } from 'lodash';
+import { GetAnchorTagDataOnPrismicLink } from 'src/utils/adapters/prismic';
+import { Container } from './styled';
 
 const CallToAction = props => {
   const windowsWidth = useWindowsWidth();
@@ -14,12 +16,13 @@ const CallToAction = props => {
   if (!hasLeftCol && !hasRightCol) return null;
 
   return (
-    <section
-      className="call-action section-padding sub-bg bg-img"
+    <Container
+      className="call-action section-padding bg-img"
       style={{
         backgroundImage: background_image && `url(${background_image.url})`,
         backgroundSize: 'cover',
       }}
+      data-overlay-dark={9}
     >
       <div className="container">
         <div className="row">
@@ -59,7 +62,7 @@ const CallToAction = props => {
               } pl-lg-5 pl-sm-3 col-lg-${hasLeftCol ? '3' : '8'} valign`}
             >
               <Link
-                href={link.url}
+                {...GetAnchorTagDataOnPrismicLink(link.url)}
                 className="butn bord curve wow fadeInUp"
                 data-wow-delay=".5s"
               >
@@ -69,7 +72,7 @@ const CallToAction = props => {
           )}
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

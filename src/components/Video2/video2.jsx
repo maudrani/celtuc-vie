@@ -3,6 +3,7 @@ import ModalVideo from 'react-modal-video';
 import 'react-modal-video/css/modal-video.css';
 import { useWindowsWidth } from 'src/utils/hooks';
 import { getDataFromProps } from './adapters';
+import { Container } from './styled';
 
 const Video2 = props => {
   const [isOpen, setOpen] = React.useState(false);
@@ -14,7 +15,7 @@ const Video2 = props => {
   });
 
   return (
-    <section
+    <Container
       className="video bg-img parallaxie"
       style={{
         backgroundImage: hasImage ? `url(${image.url})` : 'url()',
@@ -67,7 +68,7 @@ const Video2 = props => {
           </div>
         </div>
       )}
-    </section>
+    </Container>
   );
 };
 

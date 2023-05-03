@@ -1,5 +1,5 @@
 export const getDataFromProps = ({ props }) => {
-  const { content, link, particles, details } = props;
+  const { content, link, particles, details, height } = props;
 
   const hasContent = !!content || link?.valid
 
@@ -8,6 +8,7 @@ export const getDataFromProps = ({ props }) => {
     link,
     particles,
     details,
-    hasContent
+    hasContent,
+    height
   };
 };

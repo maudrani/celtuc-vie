@@ -6,6 +6,7 @@ import React, { useContext } from 'react';
 import { resizeImage } from 'src/utils/adapters/components/image';
 import Split from '../Split';
 import { getDataFromProps } from './adapters';
+import { Container } from './styled';
 
 const Clients2 = props => {
   const { theme } = useContext(StylesContext);
@@ -16,7 +17,7 @@ const Clients2 = props => {
   if (isEmpty(links)) return;
 
   return (
-    <section className="clients sub-bg pt-50 pb-50">
+    <Container className="clients sub-bg pt-50 pb-50">
       <h2 style={{ display: 'none' }}>&nbsp;</h2>
       <div className="container">
         <div className="row">
@@ -34,7 +35,7 @@ const Clients2 = props => {
                 return (
                   <div key={item.id} className="col-lg-3 brands">
                     <div
-                      className="item no-bord wow fadeIn"
+                      className="item no-bord wow fadeIn "
                       data-wow-delay=".3s"
                     >
                       <div className="img">
@@ -62,7 +63,7 @@ const Clients2 = props => {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

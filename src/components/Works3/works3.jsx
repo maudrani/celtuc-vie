@@ -1,16 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ChangeSwiperStyles, getDataFromProps } from './adapters';
 // import Swiper core and required modules
 import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
-import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
 import Image from 'next/image';
-import { GetAnchorTagDataOnPrismicLink } from 'src/utils/adapters/prismic';
-import { SlideContainer } from './styled';
+import { Container, SlideContainer } from './styled';
 import LinkWrapper from '../ParsedLink';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -35,7 +33,7 @@ const Works3 = props => {
   };
 
   return (
-    <section className="work-carousel2 metro section-padding">
+    <Container className="work-carousel2 metro section-padding-lg">
       {hasTopRow && (
         <div className="container">
           <div className="row">
@@ -46,7 +44,7 @@ const Works3 = props => {
                     {top_title}
                   </h6>
                 )}
-                {title && <h3 className="wow color-font">{title}</h3>}
+                {title && <h2 className="wow color-font">{title}</h2>}
               </div>
             </div>
           </div>
@@ -122,7 +120,7 @@ const Works3 = props => {
                       <SwiperSlide
                         key={item.id}
                         className="swiper-slide"
-                        style={{ transition: '1s ease-in-out', height: 'auto' }}
+                        style={{ transition: '1s ease-in-out', height: 'auto', paddingBottom: '0' }}
                       >
                         <SlideContainer
                           className="content"
@@ -196,7 +194,7 @@ const Works3 = props => {
           </div>
         </div>
       )}
-    </section>
+    </Container>
   );
 };
 

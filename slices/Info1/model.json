@@ -15,7 +15,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Top title",
-            "placeholder": "",
+            "placeholder": "Top title",
             "allowTargetBlank": true,
             "single": "heading6"
           }
@@ -24,7 +24,7 @@
           "type": "StructuredText",
           "config": {
             "label": "Title",
-            "placeholder": "",
+            "placeholder": "Main title",
             "allowTargetBlank": true,
             "single": "heading3"
           }
@@ -33,23 +33,23 @@
           "type": "StructuredText",
           "config": {
             "label": "Content",
-            "placeholder": "",
+            "placeholder": "Paragraph",
             "allowTargetBlank": true,
-            "multi": "paragraph"
+            "multi": "preformatted"
           }
         },
         "link_name": {
           "type": "Text",
           "config": {
             "label": "Link Name",
-            "placeholder": ""
+            "placeholder": "Join, View More, etc"
           }
         },
         "link_url": {
           "type": "Link",
           "config": {
             "label": "Link Url",
-            "placeholder": "",
+            "placeholder": "Where the link goes",
             "allowTargetBlank": true,
             "select": null
           }
@@ -80,6 +80,15 @@
               }
             ]
           }
+        },
+        "details": {
+          "type": "Boolean",
+          "config": {
+            "label": "Details",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
         }
       },
       "items": {
@@ -94,14 +103,14 @@
           "type": "Text",
           "config": {
             "label": "Stat Suffix",
-            "placeholder": ""
+            "placeholder": "%, K, M, none"
           }
         },
         "stat_name": {
           "type": "Text",
           "config": {
             "label": "Stat Name",
-            "placeholder": ""
+            "placeholder": "Trips, People, etc"
           }
         }
       },

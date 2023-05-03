@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
 import { getDataFromProps } from './adapters';
 import Image from 'next/image';
+import { Container } from './styled';
 
 const FullTestimonials = props => {
   const slickRef = useRef();
@@ -19,7 +20,7 @@ const FullTestimonials = props => {
   if (!slides && !hasHeading) return;
 
   return (
-    <section
+    <Container
       className={`testimonials ${
         background_image && 'section-padding bg-img'
       } ${props.withCOLOR && 'section-padding back-color'} ${
@@ -30,7 +31,7 @@ const FullTestimonials = props => {
           background_image ? `url(${background_image.url})` : 'none'
         }`,
       }}
-      data-overlay-dark={6}
+      data-overlay-dark={8}
     >
       {hasHeading && (
         <div className="container">
@@ -63,7 +64,7 @@ const FullTestimonials = props => {
                 infinite={true}
                 arrows={false}
                 centerMode={true}
-                autoplay={false}
+                autoplay={true}
                 rows={1}
                 slidesToScroll={1}
                 slidesToShow={3}
@@ -139,7 +140,7 @@ const FullTestimonials = props => {
           </div>
         </div>
       )}
-    </section>
+    </Container>
   );
 };
 

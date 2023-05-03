@@ -374,7 +374,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1Slice | IconLinksSlice | ImagesInfoData2Slice | InfoStats2Slice | Info6Slice | ProgressInfo1Slice | VideoDescriptionLauncherSlice | TitleText1Slice | VideoSlice;
+type PageDocumentDataSlicesSlice = InfoStatusImage1Slice | Cta1Slice | Carousel1Slice | IconLinksSlice | ImagesInfoData2Slice | InfoStats2Slice | Info6Slice | ProgressInfo1Slice | VideoDescriptionLauncherSlice | TitleText1Slice | VideoSlice | GridSlice;
 /**
  * Page document from Prismic
  *
@@ -830,6 +830,16 @@ interface Cta1SliceTitleWithParticlesPrimary {
      *
      */
     details: prismicT.BooleanField;
+    /**
+     * Height field in *Cta → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cta1.primary.height
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    height: prismicT.NumberField;
 }
 /**
  * TitleWithParticles variation for Cta Slice
@@ -1229,7 +1239,7 @@ interface InfoStatusImage1SliceDefaultPrimary {
      * Top title field in *Info1 → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Top title
      * - **API ID Path**: info_status_image1.primary.top_title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -1239,7 +1249,7 @@ interface InfoStatusImage1SliceDefaultPrimary {
      * Title field in *Info1 → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Main title
      * - **API ID Path**: info_status_image1.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -1249,7 +1259,7 @@ interface InfoStatusImage1SliceDefaultPrimary {
      * Content field in *Info1 → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Paragraph
      * - **API ID Path**: info_status_image1.primary.content
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -1259,7 +1269,7 @@ interface InfoStatusImage1SliceDefaultPrimary {
      * Link Name field in *Info1 → Primary*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Join, View More, etc
      * - **API ID Path**: info_status_image1.primary.link_name
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
@@ -1269,7 +1279,7 @@ interface InfoStatusImage1SliceDefaultPrimary {
      * Link Url field in *Info1 → Primary*
      *
      * - **Field Type**: Link
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Where the link goes
      * - **API ID Path**: info_status_image1.primary.link_url
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
@@ -1285,6 +1295,17 @@ interface InfoStatusImage1SliceDefaultPrimary {
      *
      */
     image: prismicT.ImageField<"tablet" | "mobile" | "desktop">;
+    /**
+     * Details field in *Info1 → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: true
+     * - **API ID Path**: info_status_image1.primary.details
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    details: prismicT.BooleanField;
 }
 /**
  * Item in Info1 → Items
@@ -1305,7 +1326,7 @@ export interface InfoStatusImage1SliceDefaultItem {
      * Stat Suffix field in *Info1 → Items*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: %, K, M, none
      * - **API ID Path**: info_status_image1.items[].stat_suffix
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
@@ -1315,7 +1336,7 @@ export interface InfoStatusImage1SliceDefaultItem {
      * Stat Name field in *Info1 → Items*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: Trips, People, etc
      * - **API ID Path**: info_status_image1.items[].stat_name
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *

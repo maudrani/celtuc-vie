@@ -6,6 +6,7 @@ import { useWindowsWidth } from 'src/utils/hooks';
 import { getDataFromProps } from './adapters';
 import { isArray, isEmpty } from 'lodash';
 import Image from 'next/image';
+import { Container } from './styled';
 
 const AboutUs3 = props => {
   const windowsWidth = useWindowsWidth();
@@ -34,7 +35,7 @@ const AboutUs3 = props => {
   if (!hasLeftCol && !hasRightCol) return null;
 
   return (
-    <section className="agency section-padding position-re">
+    <Container className="agency section-padding position-re">
       <div className="container">
         <div className="row">
           {hasLeftCol && (
@@ -96,7 +97,7 @@ const AboutUs3 = props => {
           {hasRightCol && (
             <div
               className={`col-lg-${
-                hasRightCol ? '5' : '7'
+                hasLeftCol ? '5' : '10'
               } margin-center valign`}
             >
               <div className="content">
@@ -138,7 +139,7 @@ const AboutUs3 = props => {
         </div>
       </div>
       {separator && <div className="line bottom right"></div>}
-    </section>
+    </Container>
   );
 };
 

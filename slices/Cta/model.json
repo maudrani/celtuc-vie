@@ -135,6 +135,13 @@
             "placeholder_true": "true",
             "default_value": true
           }
+        },
+        "height": {
+          "type": "Number",
+          "config": {
+            "label": "Height",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

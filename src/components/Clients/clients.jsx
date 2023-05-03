@@ -6,6 +6,7 @@ import { isArray, isEmpty } from 'lodash';
 import Link from 'next/link';
 import { resizeImage } from 'src/utils/adapters/components/image';
 import Image from 'next/image';
+import { Container } from './styled';
 
 const Clients = props => {
   const { theme } = useContext(StylesContext);
@@ -18,7 +19,7 @@ const Clients = props => {
   if (!hasLeftCol && !hasRightCol) return null;
 
   return (
-    <section className="clients section-padding">
+    <Container className="clients section-padding-md">
       <div className="container">
         <div className="row">
           {hasLeftCol && (
@@ -111,7 +112,7 @@ const Clients = props => {
           )}
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

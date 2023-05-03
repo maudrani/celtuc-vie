@@ -18,6 +18,8 @@ export const getDataFromProps = ({ props, windowsWidth }) => {
   const hasCaption = !!(caption_title || caption_description);
   const hasLeftCol = hasImages || hasCaption;
 
+  
+
   return {
     title,
     content,

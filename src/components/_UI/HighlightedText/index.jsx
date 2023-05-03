@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HighlightedText = ({ text }) => {
+const HighlightedText = ({ text, ...rest }) => {
   const regex = /::(.*?)::/g;
   const parts = [];
 
@@ -9,7 +9,7 @@ const HighlightedText = ({ text }) => {
 
   while ((match = regex.exec(text)) !== null) {
     parts.push(text.slice(lastIndex, match.index));
-    parts.push(<span key={`highlight-${lastIndex}`} className="color-font">{match[1]}</span>);
+    parts.push(<span key={`highlight-${lastIndex}`} className={`color-font ${rest.className}`}>{match[1]}</span>);
     lastIndex = regex.lastIndex;
   }
 

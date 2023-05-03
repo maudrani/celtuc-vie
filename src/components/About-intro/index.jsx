@@ -5,7 +5,7 @@ import Split from '../Split';
 const AboutIntro = ({ title, content }) => {
 
   return (
-    <section className="intro-section section-padding">
+    <section className="intro-section section-padding-md">
       <div className="container">
         <div className="row">
           {title && (

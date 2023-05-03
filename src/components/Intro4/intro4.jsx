@@ -13,7 +13,7 @@ import { GetAnchorTagDataOnPrismicLink } from 'src/utils/adapters/prismic';
 const Intro4 = props => {
   const { theme } = useContext(StylesContext);
 
-  const { content, link, particles, details, hasContent } = getDataFromProps({ props });
+  const { content, link, particles, details, height, hasContent } = getDataFromProps({ props });
 
   if(!hasContent) return
 
@@ -22,8 +22,8 @@ const Intro4 = props => {
   }, []);
 
   return (
-    <Container className="particles circle-bg valign" height={100}>
-      <div className="container">
+    <Container className="particles circle-bg valign pb-20" height={height}>
+      <div className="container pt-30 pb-30">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div
@@ -35,8 +35,8 @@ const Intro4 = props => {
               }}
             >
               {!!content && (
-                <Title className="title">
-                  <HighlightedText text={content} />
+                <Title className="title font-montserrat fw-600">
+                  <HighlightedText text={content} className='fw-900' />
                 </Title>
               )}
 
@@ -63,6 +63,7 @@ const Intro4 = props => {
           id="tsparticles"
           options={theme.isLight ? particlesBlackConfig : particlesConfig}
           init={particlesInit}
+          style={{position: 'relative', zIndex: '0'}}
         />
       )}
 

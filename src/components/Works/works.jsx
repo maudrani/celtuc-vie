@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import useWindowWidth from 'src/utils/hooks/useWindowsWidth';
 import LinkWrapper from '../ParsedLink';
+import { Container } from './styled';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const Works = props => {
@@ -20,7 +21,7 @@ const Works = props => {
   if(!slides) return
 
   return (
-    <section className="work-carousel metro position-re">
+    <Container className="work-carousel metro position-re">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12 no-padding">
@@ -121,7 +122,7 @@ const Works = props => {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

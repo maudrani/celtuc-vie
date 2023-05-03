@@ -4,7 +4,7 @@ import { general } from './general';
 import { heading } from './heading';
 
 export const typography = css`
-  // ${font_family}
+  ${font_family}
   ${general}
   ${heading}
 `;

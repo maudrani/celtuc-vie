@@ -14,19 +14,22 @@ const NavbarFullMenu = () => {
   const { theme } = useContext(StylesContext);
   const { brand, navigation } = useContext(AppDataContext);
 
-
   React.useEffect(() => {
     initFullNavbarMenu();
   }, []);
+
   return (
     <>
       <div
         id="navi"
         className={`topnav ${theme ? (theme.isLight ? 'light' : '') : ''}`}
       >
-        <div className="container-fluid">
+        <div
+          className="container-fluid"
+          style={{ display: 'flex', alignItems: 'center' }}
+        >
           <div className="logo">
-            <Link href="/">
+            <Link href="/" style={{ width: '70%', filter: 'drop-shadow(5px 5px 5px rgba(0,0,0,0.5))' }}>
               {theme ? (
                 theme.isLight ? (
                   <img src={brand.dark_logo} alt="logo" />
@@ -49,7 +52,7 @@ const NavbarFullMenu = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="hamenu">
         <div className="container">
           <div className="row">
@@ -75,7 +78,9 @@ const NavbarFullMenu = () => {
                             {prefix.toLocaleString(2)}.
                           </span>{' '}
                           {link.name}
-                          {hasSubLinks && <span className="fas fa-xs ml-2 fa-angle-right" />}
+                          {hasSubLinks && (
+                            <span className="fas fa-xs ml-2 fa-angle-right" />
+                          )}
                         </LinkContainer>
                       );
                     };

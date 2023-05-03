@@ -33,7 +33,7 @@ export const getSliceData = slice => {
       ),
     },
     iconsLinkIconsOnly: {
-      center: primary.center,
+      center: primary?.center_items,
       links: links.filter(
         item => item.img_dark && item.img_light && item.link?.valid
       ),

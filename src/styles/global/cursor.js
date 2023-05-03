@@ -20,7 +20,7 @@ export const cursor = css`
     width: 6px;
     height: 6px;
     z-index: 10000001;
-    background-color: ${({theme}) => theme.colors.bright_turquoise};
+    background-color: ${({theme}) => theme.colors.cursor};
     -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
       margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
@@ -33,7 +33,7 @@ export const cursor = css`
     margin-top: -40px;
     width: 80px;
     height: 80px;
-    background-color: ${({theme}) => theme.colors.bright_turquoise};
+    background-color: ${({theme}) => theme.colors.cursor};
     opacity: 0.3;
   }
   .cursor-outer {
@@ -41,7 +41,7 @@ export const cursor = css`
     margin-top: -15px;
     width: 40px;
     height: 40px;
-    border: 1px solid ${({theme}) => theme.colors.bright_turquoise};
+    border: 1px solid ${({theme}) => theme.colors.cursor};
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 10000000;

@@ -24,6 +24,7 @@ export const getSliceData = slice => {
       content: GetRichTextContent(primary?.content),
       particles: primary?.particles,
       details: primary?.details,
+      height: primary?.height
     },
   };
 

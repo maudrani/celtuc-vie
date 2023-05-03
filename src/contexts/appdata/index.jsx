@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import { ParseBrandData, ParseNavigationData } from './adapters';
-import mockedNav from './navigation-mocked.json'
+import mockedNav from './navigation-mocked.json';
 
 export const AppDataContext = createContext();
 
@@ -17,6 +17,7 @@ const initialState = {
 export const appDataActionTypes = {
   GET_BRAND_DATA: 'GET_BRAND_DATA',
   GET_NAVIGATION_DATA: 'GET_NAVIGATION_DATA',
+  GET_APP_DATA: 'GET_APP_DATA',
 };
 
 export const reducer = (state, action) => {
@@ -36,6 +37,13 @@ export const reducer = (state, action) => {
       return {
         ...state,
         navigation: ParseNavigationData(navigationData),
+      };
+    }
+
+    case appDataActionTypes.GET_BRAND_DATA: {
+      return {
+        ...state,
+        appData: { ...action },
       };
     }
 
@@ -59,6 +67,12 @@ export const AppData = ({ children }) => {
       dispatch({
         type: appDataActionTypes.GET_NAVIGATION_DATA,
         navigationData,
+      });
+    },
+    getAppData: appData => {
+      dispatch({
+        type: appDataActionTypes.GET_APP_DATA,
+        appData,
       });
     },
   };

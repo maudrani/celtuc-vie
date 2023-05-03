@@ -1,8 +1,10 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 import mouseEffect from '../../common/mouseEffect';
 
 const Cursor = () => {
   React.useEffect(() => {
+    if (isMobile) return;
     mouseEffect();
   }, []);
   return (

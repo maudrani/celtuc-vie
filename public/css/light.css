@@ -1298,7 +1298,7 @@ span:hover {
   line-height: 44px;
   font-size: 13px;
   font-weight: 900;
-  color: #12c2e9;
+  color: white;
   left: 0;
   top: 0;
   height: 44px;
@@ -1316,7 +1316,7 @@ span:hover {
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #12c2e9;
+  stroke: white;
   stroke-width: 4;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

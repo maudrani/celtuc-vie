@@ -56,7 +56,7 @@ const Video2 = props => {
                   cap.description.map((_d, idx) => (
                     <h6
                       key={`_t-$${idx}}`}
-                      className={`${idx === 0 ? 'mt-30' : ''} ${
+                      className={`${idx === 0 && cap.title ? 'mt-30' : ''} ${
                         idx + 1 != cap.description.length ? 'mb-15' : ''
                       }`}
                     >

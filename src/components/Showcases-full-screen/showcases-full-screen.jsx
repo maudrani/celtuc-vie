@@ -41,7 +41,7 @@ const SlideContent = ({ slide }) => {
       style={{
         backgroundImage: slide.image?.url && `url(${slide.image?.url})`,
       }}
-      data-overlay-dark={isOnView ? 3 : 10}
+      data-overlay-dark={isOnView ? 6 : 10}
       isOnView={isOnView}
     >
       <div className="container">
@@ -125,6 +125,7 @@ const ShowcasesFullScreen = props => {
               prevEl: navigationPrevRef.current,
               nextEl: navigationNextRef.current,
             }}
+            loop={true}
             pagination={{
               clickable: true,
               el: paginationRef.current,

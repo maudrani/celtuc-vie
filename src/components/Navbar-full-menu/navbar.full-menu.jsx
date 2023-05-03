@@ -1,6 +1,9 @@
-import React, { Fragment, useContext } from 'react';
+import React, {
+  Fragment,
+  useContext,
+  useEffect,
+} from 'react';
 import Link from 'next/link';
-import initFullNavbarMenu from '../../common/initFullNavbarMenu';
 import { StylesContext } from '@/contexts/styles';
 import { AppDataContext } from '@/contexts/appdata';
 import { isEmpty } from 'lodash';
@@ -9,12 +12,14 @@ import AddressList from '../Brand/AdressList';
 import MailList from '../Brand/MailList';
 import SocialMediaList from '../Brand/SocialMediaList';
 import { GetAnchorTagDataOnPrismicLink } from 'src/utils/adapters/prismic';
+import { Hamenu } from './styled';
+import initFullNavbarMenu from '@/common/initFullNavbarMenu';
 
 const NavbarFullMenu = () => {
   const { theme } = useContext(StylesContext);
   const { brand, navigation } = useContext(AppDataContext);
 
-  React.useEffect(() => {
+  useEffect(() => {
     initFullNavbarMenu();
   }, []);
 
@@ -29,7 +34,13 @@ const NavbarFullMenu = () => {
           style={{ display: 'flex', alignItems: 'center' }}
         >
           <div className="logo">
-            <Link href="/" style={{ width: '70%', filter: 'drop-shadow(5px 5px 5px rgba(0,0,0,0.5))' }}>
+            <Link
+              href="/"
+              style={{
+                width: '70%',
+                filter: 'drop-shadow(5px 5px 5px rgba(0,0,0,0.5))',
+              }}
+            >
               {theme ? (
                 theme.isLight ? (
                   <img src={brand.dark_logo} alt="logo" />
@@ -46,14 +57,11 @@ const NavbarFullMenu = () => {
               <i></i>
               <i></i>
             </span>
-            <span className="text" data-splitting>
-              <span className="menu-text word">Menu</span>
-            </span>
           </div>
         </div>
       </div>
 
-      <div className="hamenu">
+      <Hamenu className="hamenu">
         <div className="container">
           <div className="row">
             <div className="col-lg-9 col-md-8">
@@ -62,11 +70,16 @@ const NavbarFullMenu = () => {
                   {navigation.map((link, idx) => {
                     const LinkName = ({ link, hasSubLinks, prefix }) => {
                       const LinkContainer = hasSubLinks
-                        ? ({ children }) => <div>{children}</div>
+                        ? ({ children }) => (
+                            <div onClick={() => launchSubMenu()}>
+                              {children}
+                            </div>
+                          )
                         : ({ children }) => (
                             <Link
                               {...GetAnchorTagDataOnPrismicLink(link.url)}
                               className="sub-link"
+                              onClick={() => launchSubMenu()}
                             >
                               {children}
                             </Link>
@@ -170,7 +183,7 @@ const NavbarFullMenu = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Hamenu>
     </>
   );
 };
